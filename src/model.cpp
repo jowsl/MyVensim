@@ -20,12 +20,12 @@ void Model::execute(double time_ini, double time_final) {
         vector<double> v(flows.size());
 
         //executa a função de dado fluxo e armazena o resultado no vetor
-        for (int i = 0; i < flows.size(); i++) {
+        for (size_t i = 0; i < flows.size(); i++) {
             v[i] = flows[i]->execute();
         }
 
         //Atualiza os estoques (subtrai origem, soma destino) 
-        for (int i = 0; i < flows.size(); i++) {
+        for (size_t i = 0; i < flows.size(); i++) {
             System* orig = flows[i]->getOrigin();
             System* dest = flows[i]->getDestination();
 
