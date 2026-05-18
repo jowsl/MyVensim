@@ -12,6 +12,5 @@ make
 ## Como executar testes
 
 ```bash
-make test
 ./bin/testes_funcionais
 ```
