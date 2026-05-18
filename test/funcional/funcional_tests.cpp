@@ -102,9 +102,6 @@ void logisticalFuncionalTest() {
     
     model->execute(0, 100);
 
-    cout << "P1 :" << (int)trunc(p1->getValue() * 10000 + 0.5) << endl;
-    cout << "P2 :" << (int)trunc(p2->getValue() * 10000 + 0.5) << endl;
-    
     assert((int)trunc(p1->getValue() * 10000 + 0.5) == 882167);
     assert((int)trunc(p2->getValue() * 10000 + 0.5) == 217833);
 
@@ -145,6 +142,13 @@ void complexFuncionalTest() {
     assert((int)trunc(q3->getValue() * 10000 + 0.5) == 771143);
     assert((int)trunc(q4->getValue() * 10000 + 0.5) == 561728);
     assert((int)trunc(q5->getValue() * 10000 + 0.5) == 164612);
+
+    //prints para facilitar a visualização dos resultados
+    cout << "Q1 :" << (int)trunc(q1->getValue() * 10000 + 0.5) << endl;
+    cout << "Q2 :" << (int)trunc(q2->getValue() * 10000 + 0.5) << endl;
+    cout << "Q3 :" << (int)trunc(q3->getValue() * 10000 + 0.5) << endl;
+    cout << "Q4 :" << (int)trunc(q4->getValue() * 10000 + 0.5) << endl;
+    cout << "Q5 :" << (int)trunc(q5->getValue() * 10000 + 0.5) << endl;
 
     delete model; delete q1; delete q2; delete q3; delete q4; delete q5;
     delete f; delete g; delete r; delete t; delete u; delete v;
