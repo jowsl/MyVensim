@@ -12,6 +12,23 @@ void Model::add(Flow* flow) {
     flows.push_back(flow);
 }
 
+//implementação dos iteradores
+Model::systemIterator Model::beginSystems() {
+    return systems.begin();
+}
+
+Model::systemIterator Model::endSystems() {
+    return systems.end();
+}
+
+Model::flowIterator Model::beginFlows() {
+    return flows.begin();
+}
+
+Model::flowIterator Model::endFlows() {
+    return flows.end();
+}
+
 void Model::execute(double time_ini, double time_final) {
     //loop principal
     for (double tempo = time_ini; tempo < time_final; tempo++) {
