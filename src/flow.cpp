@@ -1,18 +1,55 @@
 #include "flow.h"
 
-// Inicializa com ponteiros nulos
-Flow::Flow(string name) : name(name), origin(nullptr), destination(nullptr) {}
+// Default Constructor
+Flow::Flow(string name, System* origin, System* destination) {
+    this->name = name;
+    this->origin = origin;
+    this->destination = destination;
+}
 
+// Copy Constructor
+Flow::Flow(const Flow& other) {
+    this->name = other.name;
+    this->origin = other.origin;
+    this->destination = other.destination;
+}
+
+// Destructor
 Flow::~Flow() {}
 
-void Flow::setName(string name) { this->name = name; }
-string Flow::getName() const { return name; }
+// Attribution Operator
+Flow& Flow::operator=(const Flow& other) {
+    name = other.name;
+    origin = other.origin;
+    destination = other.destination;
 
-void Flow::setOrigin(System* origin) { this->origin = origin; }
-System* Flow::getOrigin() const { return origin; }
+    return *this;
+}
 
-void Flow::setDestination(System* destination) { this->destination = destination; }
-System* Flow::getDestination() const { return destination; }
+// Getters and Setters
+void Flow::setName(string name) {
+    this->name = name;
+}
+
+string Flow::getName() const {
+    return name;
+}
+
+void Flow::setOrigin(System* origin) {
+    this->origin = origin;
+}
+
+System* Flow::getOrigin() const {
+    return origin;
+}
+
+void Flow::setDestination(System* destination) {
+    this->destination = destination;
+}
+
+System* Flow::getDestination() const {
+    return destination;
+}
 
 void Flow::connect(System* orig, System* dest) {
     this->origin = orig;

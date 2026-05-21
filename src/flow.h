@@ -13,11 +13,19 @@ private:
     System* destination;
 
 public:
-    // Construtor
-    Flow(string name = "");
+    // Default Constructor
+    Flow(string name = "", System* origin = nullptr, System* destination = nullptr);
+
+    // Copy Constructor
+    Flow(const Flow& other);
+
+    // Destructor
     virtual ~Flow();
 
-    // Getters e Setters
+    // Attribution Operator
+    Flow& operator=(const Flow& other);
+
+    // Getters and Setters
     void setName(string name);
     string getName() const;
 
@@ -27,11 +35,11 @@ public:
     void setDestination(System* destination);
     System* getDestination() const;
 
-    // Conecta origem e destino de uma vez
+    // Connect origin and destination
     void connect(System* orig, System* dest);
 
-    // Método virtual puro (torna a classe abstrata)
-    virtual double execute() = 0; 
+    // Pure virtual method
+    virtual double execute() = 0;
 };
 
 #endif
