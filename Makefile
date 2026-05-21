@@ -1,23 +1,9 @@
-CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17
-
-SRC = \
-	src/system.cpp \
-	src/flow.cpp \
-	src/model.cpp \
-	test/funcional/main.cpp \
-	test/funcional/funcional_tests.cpp
-
-TARGET = bin/testes_funcionais
-
-all: $(TARGET)
-
-$(TARGET): $(SRC)
+all: 
 	mkdir -p bin
-	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
+	g++ src/*.cpp test/funcional/*.cpp -o bin/funcional_tests
 
 run: all
-	./$(TARGET)
+	./bin/funcional_tests
 
 clean:
-	rm -f $(TARGET)
+	rm -f bin/funcional_tests
