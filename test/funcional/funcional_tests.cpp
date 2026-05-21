@@ -9,7 +9,10 @@
 using namespace std;
 
 // Flow classes
-// exponentialFlow
+/**
+ * @brief Exponential flow implementation.
+ * Transfers a percentage of the origin system value to the destination.
+ */
 class ExponentialFlow : public Flow {
 public:
     ExponentialFlow(string name = "") : Flow(name) {}
@@ -22,7 +25,10 @@ public:
     }
 };
 
-// logisticFlow
+/**
+ * @brief Logistic flow implementation.
+ * Computes a logistic transfer based on the destination system value.
+ */
 class LogisticFlow : public Flow {
 public:
     LogisticFlow(string name = "") : Flow(name) {}
@@ -36,7 +42,10 @@ public:
     }
 };
 
-// ComplexFlow
+/**
+ * @brief Complex flow implementation.
+ * Uses the same transfer rule as the exponential flow for complex network tests.
+ */
 class ComplexFlow : public Flow {
 public:
     ComplexFlow(string name = "") : Flow(name) {}

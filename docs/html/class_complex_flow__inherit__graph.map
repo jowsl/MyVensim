@@ -1,0 +1,5 @@
+<map id="ComplexFlow" name="ComplexFlow">
+<area shape="rect" id="Node000001" title="Complex flow implementation. Uses the same transfer rule as the exponential flow for complex network ..." alt="" coords="7,400,119,491"/>
+<area shape="rect" id="Node000002" href="$class_flow.html" title="Represents a transfer channel between two Systems." alt="" coords="5,5,121,352"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,364,66,401,61,400,62,369"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Flow" name="Flow">
+<area shape="rect" id="Node000001" title="Represents a transfer channel between two Systems." alt="" coords="147,5,263,352"/>
+<area shape="rect" id="Node000002" href="$class_complex_flow.html" title="Complex flow implementation. Uses the same transfer rule as the exponential flow for complex network ..." alt="" coords="5,400,117,491"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,299,88,402,83,399,138,300"/>
+<area shape="rect" id="Node000003" href="$class_exponential_flow.html" title="Exponential flow implementation. Transfers a percentage of the origin system value to the destination..." alt="" coords="141,400,269,491"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,365,208,401,203,399,204,369"/>
+<area shape="rect" id="Node000004" href="$class_logistic_flow.html" title="Logistic flow implementation. Computes a logistic transfer based on the destination system value." alt="" coords="293,400,398,491"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="272,300,325,401,320,400,269,305"/>
+</map>

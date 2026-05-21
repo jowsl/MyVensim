@@ -5,28 +5,64 @@
 
 using namespace std;
 
+/**
+ * @brief Represents a stock or reservoir in the simulation.
+ *
+ * A System stores a name and a numeric value that can be modified by Flows.
+ */
 class System {
 private:
     string name;
     double value;
 
 public:
-    // Default Contructor
+    /**
+     * @brief Construct a new System object.
+     * @param name The name of the system.
+     * @param value The initial stored value.
+     */
     System(string name = "", double value = 0.0);
 
-    // Copy Constructor
+    /**
+     * @brief Copy constructor.
+     * @param param_system The System to copy.
+     */
     System(const System& param_system);
 
-    // Destructor
+    /**
+     * @brief Destroy the System object.
+     */
     ~System();
 
-    // Attribution Operator
+    /**
+     * @brief Assignment operator.
+     * @param outra The System to assign from.
+     * @return System& Reference to this object.
+     */
     System& operator=(const System& outra);
 
-    // Getters and Setters
+    /**
+     * @brief Set the system name.
+     * @param name New name for the system.
+     */
     void setName(string name);
+
+    /**
+     * @brief Get the system name.
+     * @return string The current name.
+     */
     string getName() const;
+
+    /**
+     * @brief Set the system value.
+     * @param value New numeric value for the system.
+     */
     void setValue(double value);
+
+    /**
+     * @brief Get the current system value.
+     * @return double The current numeric value.
+     */
     double getValue() const;
 };
 
