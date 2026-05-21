@@ -1,0 +1,7 @@
+<map id="Model::Model" name="Model::Model">
+<area shape="rect" id="Node000001" title="Construct a new Model object." alt="" coords="173,31,272,57"/>
+<area shape="rect" id="Node000002" href="$class_model.html#a48858e5f328ba822b430d86a76a6ceeb" title="Copy constructor." alt="" coords="15,5,115,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,34,115,29,115,24,160,33"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a8c13d044cf584e1e6ff8409723593eac" title="Assignment operator." alt="" coords="5,56,125,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,55,126,62,125,57,160,54"/>
+</map>
