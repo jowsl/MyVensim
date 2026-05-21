@@ -18,10 +18,12 @@ Flow::Flow(const Flow& other) {
 Flow::~Flow() {}
 
 // Attribution Operator
-Flow& Flow::operator=(const Flow& other) {
-    name = other.name;
-    origin = other.origin;
-    destination = other.destination;
+Flow& Flow::operator=(const Flow& param_flow) {
+    if (this == &param_flow)
+        return *this;
+    name = param_flow.name;
+    origin = param_flow.origin;
+    destination = param_flow.destination;
 
     return *this;
 }

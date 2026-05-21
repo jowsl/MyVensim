@@ -13,12 +13,12 @@ Model::Model(const Model& other) {
 Model::~Model() {}
 
 // Attribution Operator
-Model& Model::operator=(const Model& other) {
-    if (this == &other)
+Model& Model::operator=(const Model& param_model) {
+    if (this == &param_model)
         return *this;
 
-    systems = other.systems;
-    flows = other.flows;
+    systems = param_model.systems;
+    flows = param_model.flows;
 
     return *this;
 }

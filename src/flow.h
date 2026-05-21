@@ -23,7 +23,7 @@ public:
     virtual ~Flow();
 
     // Attribution Operator
-    Flow& operator=(const Flow& other);
+    Flow& operator=(const Flow& param_flow);
 
     // Getters and Setters
     void setName(string name);

@@ -16,9 +16,11 @@ System::System(const System& param_system){
 System::~System() {}
 
 // Attribution Operator
-System& System::operator=(const System& outra){
-    name = outra.name;
-    value = outra.value;
+System& System::operator=(const System& param_system){
+    if (this == &param_system) 
+        return *this;
+    name = param_system.name;
+    value = param_system.value;
 
     return *this;
 }

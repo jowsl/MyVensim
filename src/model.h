@@ -27,7 +27,7 @@ public:
     virtual ~Model();
 
     // Attribution Operator
-    Model& operator=(const Model& other);
+    Model& operator=(const Model& param_model);
 
     void add(System* sys);
     void add(Flow* flow);
