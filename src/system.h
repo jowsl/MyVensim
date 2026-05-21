@@ -11,12 +11,21 @@ private:
     double value;
 
 public:
+    // Default Contructor
     System(string name = "", double value = 0.0);
-    virtual ~System();
 
+    // Copy Constructor
+    System(const System& param_system);
+
+    // Destructor
+    ~System();
+
+    // Attribution Operator
+    System& operator=(const System& outra);
+
+    // Getters and Setters
     void setName(string name);
     string getName() const;
-
     void setValue(double value);
     double getValue() const;
 };

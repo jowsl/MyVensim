@@ -11,26 +11,34 @@ class Model {
 private:
     vector<System*> systems;
     vector<Flow*> flows;
-    
-public:
 
-    //definição dos iterators
+public:
+    // Iterator definitions
     using flowIterator = vector<Flow*>::iterator;
     using systemIterator = vector<System*>::iterator;
 
+    // Default Constructor
     Model();
+
+    // Copy Constructor
+    Model(const Model& other);
+
+    // Destructor
     virtual ~Model();
+
+    // Attribution Operator
+    Model& operator=(const Model& other);
 
     void add(System* sys);
     void add(Flow* flow);
 
-    //metodos de incio e fim dos iterators
+    // Iterator begin/end methods
     systemIterator beginSystems();
     systemIterator endSystems();
 
-    flowIterator beginFlows();  
+    flowIterator beginFlows();
     flowIterator endFlows();
-    
+
     void execute(double time_ini, double time_final);
 };
 
