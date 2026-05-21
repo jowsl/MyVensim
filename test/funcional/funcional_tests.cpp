@@ -74,11 +74,11 @@ void exponentialFuncionalTest() {
     model->execute(0, 100);
     
     // assert para validar os Critérios de Aceitação
-    // Multiplicamos por 10000 + 0.5 e convertendo para int evita problemas de precisão com double
-    assert((int)trunc(pop1->getValue() * 10000 + 0.5) == 366032);
-    assert((int)trunc(pop2->getValue() * 10000 + 0.5) == 633968);
-    cout << "POP1 :" << (int)trunc(pop1->getValue() * 10000 + 0.5) << endl;
-    cout << "POP2 :" << (int)trunc(pop2->getValue() * 10000 + 0.5) << endl;
+    // Multiplicamos por 10000 e convertendo para int
+    assert((int)round(pop1->getValue() * 10000) == 366032);
+    assert((int)round(pop2->getValue() * 10000) == 633968);
+    cout << "POP1 :" << (int)round(pop1->getValue() * 10000) << endl;
+    cout << "POP2 :" << (int)round(pop2->getValue() * 10000) << endl;
     
     //Limpeza de Memória
     delete model; delete pop1; delete pop2; delete expFlow;
@@ -102,11 +102,11 @@ void logisticalFuncionalTest() {
     
     model->execute(0, 100);
 
-    assert((int)trunc(p1->getValue() * 10000 + 0.5) == 882167);
-    assert((int)trunc(p2->getValue() * 10000 + 0.5) == 217833);
+    assert((int)round(p1->getValue() * 10000) == 882167);
+    assert((int)round(p2->getValue() * 10000) == 217833);
 
-    cout << "P1 :" << (int)trunc(p1->getValue() * 10000 + 0.5) << endl;
-    cout << "P2 :" << (int)trunc(p2->getValue() * 10000 + 0.5) << endl;
+    cout << "P1 :" << (int)round(p1->getValue() * 10000) << endl;
+    cout << "P2 :" << (int)round(p2->getValue() * 10000) << endl;
     
     delete model; delete p1; delete p2; delete logFlow;
     
@@ -137,18 +137,18 @@ void complexFuncionalTest() {
 
     model->execute(0, 100);
 
-    assert((int)trunc(q1->getValue() * 10000 + 0.5) == 318513);
-    assert((int)trunc(q2->getValue() * 10000 + 0.5) == 184003);
-    assert((int)trunc(q3->getValue() * 10000 + 0.5) == 771143);
-    assert((int)trunc(q4->getValue() * 10000 + 0.5) == 561728);
-    assert((int)trunc(q5->getValue() * 10000 + 0.5) == 164612);
+    assert((int)round(q1->getValue() * 10000) == 318513);
+    assert((int)round(q2->getValue() * 10000) == 184003);
+    assert((int)round(q3->getValue() * 10000) == 771143);
+    assert((int)round(q4->getValue() * 10000) == 561728);
+    assert((int)round(q5->getValue() * 10000) == 164612);
 
     //prints para facilitar a visualização dos resultados
-    cout << "Q1 :" << (int)trunc(q1->getValue() * 10000 + 0.5) << endl;
-    cout << "Q2 :" << (int)trunc(q2->getValue() * 10000 + 0.5) << endl;
-    cout << "Q3 :" << (int)trunc(q3->getValue() * 10000 + 0.5) << endl;
-    cout << "Q4 :" << (int)trunc(q4->getValue() * 10000 + 0.5) << endl;
-    cout << "Q5 :" << (int)trunc(q5->getValue() * 10000 + 0.5) << endl;
+    cout << "Q1 :" << (int)round(q1->getValue() * 10000) << endl;
+    cout << "Q2 :" << (int)round(q2->getValue() * 10000) << endl;
+    cout << "Q3 :" << (int)round(q3->getValue() * 10000) << endl;
+    cout << "Q4 :" << (int)round(q4->getValue() * 10000) << endl;
+    cout << "Q5 :" << (int)round(q5->getValue() * 10000) << endl;
 
     delete model; delete q1; delete q2; delete q3; delete q4; delete q5;
     delete f; delete g; delete r; delete t; delete u; delete v;
