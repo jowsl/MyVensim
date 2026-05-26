@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['projeto_20de_20estrutura_20de_20dados_0',['Projeto de Estrutura de Dados',['../dir_173402aa37563cd0f2d840aba18bcec7.html#autotoc_md0',1,'']]]
+  ['operator_3d_0',['operator=',['../class_flow.html#afc9b6f81dc7ad34c1ee340bcff7b5f86',1,'Flow::operator=()'],['../class_model.html#a8c13d044cf584e1e6ff8409723593eac',1,'Model::operator=()'],['../class_system.html#a87aa650632485dcfcff7f17594566e32',1,'System::operator=()']]],
+  ['origin_1',['origin',['../class_flow.html#ae45eeafa1931934bfb6c9386d84d8c21',1,'Flow']]]
 ];

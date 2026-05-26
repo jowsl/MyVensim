@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "MyVensim", "index.html", [
+    [ "MyVensim - System Dynamics Simulator", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
