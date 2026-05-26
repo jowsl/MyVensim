@@ -1,3 +1,26 @@
+/**
+ * @mainpage MyVensim - System Dynamics Simulator
+ *
+ * @section intro_sec Introduction
+ * MyVensim is a generic C++ API designed to simulate System Dynamics models, 
+ * closely mirroring behaviors found in professional tools like Vensim. It allows users 
+ * to model complex dynamic structures and run continuous numerical integration.
+ *
+ * @section arch_sec Core Architecture
+ * The framework is built upon three fundamental structural blocks:
+ * - @b System: Represents stocks (such as material, population, or energy) that store values over time.
+ * - @b Flow: Represents the transfer pathways and algebraic differential equations connecting the systems.
+ * - @b Model: The orchestration engine responsible for running the simulation timeline and ensuring synchronized updates.
+ *
+ *
+ * @section authors_sec Project Developers
+ * - @b Jouberth Matheus Simão Pereira
+ * - @b Enzo Bigodeiro Bernardes
+ *
+ * @note Developed as an academic assignment for the BCC322.
+ */
+
+
 #ifndef MODEL_H
 #define MODEL_H
 
@@ -9,7 +32,6 @@ using namespace std;
 
 /**
  * @brief Main class that manages the simulation.
- *
  * The Model acts as the simulation engine, storing stocks (Systems)
  * and transfer channels (Flows).
  */

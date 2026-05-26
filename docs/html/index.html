@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MyVensim: Main Page</title>
+<title>MyVensim: MyVensim - System Dynamics Simulator</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -30,9 +30,8 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MyVensim<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">MyVensim<span id="projectnumber">&#160;v1.0</span>
    </div>
-   <div id="projectbrief">MyVensim is a Dynamic Systems simulator written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -115,10 +114,28 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html',''
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">MyVensim Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">MyVensim - <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> Dynamics Simulator </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>MyVensim is a generic C++ API designed to simulate <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> Dynamics models, closely mirroring behaviors found in professional tools like Vensim. It allows users to model complex dynamic structures and run continuous numerical integration.</p>
+<h1 class="doxsection"><a class="anchor" id="arch_sec"></a>
+Core Architecture</h1>
+<p>The framework is built upon three fundamental structural blocks:</p><ul>
+<li><b><a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a>:</b> Represents stocks (such as material, population, or energy) that store values over time.</li>
+<li><b><a class="el" href="class_flow.html" title="Represents a transfer channel between two Systems.">Flow</a>:</b> Represents the transfer pathways and algebraic differential equations connecting the systems.</li>
+<li><b><a class="el" href="class_model.html" title="Main class that manages the simulation. The Model acts as the simulation engine, storing stocks (Syst...">Model</a>:</b> The orchestration engine responsible for running the simulation timeline and ensuring synchronized updates.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="authors_sec"></a>
+Project Developers</h1>
+<ul>
+<li><b>Jouberth</b> Matheus Simão Pereira</li>
+<li><b>Enzo</b> Bigodeiro Bernardes</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Developed as an academic assignment for the BCC322. </dd></dl>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->
