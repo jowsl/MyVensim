@@ -1,21 +1,20 @@
-#include "funcional_tests.h"
-#include "../../src/model.h"
-#include "../../src/system.h"
-#include "../../src/flow.h"
+#include "functional_tests.h"
+#include "../../src/modelImpl.h"
+#include "../../src/systemImpl.h"
+#include "../../src/flowImpl.h"
 #include <iostream>
 #include <cassert>
 #include <cmath>
 
 using namespace std;
-
 // Flow classes
 /**
  * @brief Exponential flow implementation.
  * Transfers a percentage of the origin system value to the destination.
  */
-class ExponentialFlow : public Flow {
+class ExponentialFlow : public FlowImpl {
 public:
-    ExponentialFlow(string name = "") : Flow(name) {}
+    ExponentialFlow(string name = "") : FlowImpl(name) {}
     
     double execute() override {
         if (getOrigin() != nullptr) {
@@ -29,9 +28,9 @@ public:
  * @brief Logistic flow implementation.
  * Computes a logistic transfer based on the destination system value.
  */
-class LogisticFlow : public Flow {
+class LogisticFlow : public FlowImpl {
 public:
-    LogisticFlow(string name = "") : Flow(name) {}
+    LogisticFlow(string name = "") : FlowImpl(name) {}
     
     double execute() override {
         if (getDestination() != nullptr) {
@@ -46,9 +45,9 @@ public:
  * @brief Complex flow implementation.
  * Uses the same transfer rule as the exponential flow for complex network tests.
  */
-class ComplexFlow : public Flow {
+class ComplexFlow : public FlowImpl {
 public:
-    ComplexFlow(string name = "") : Flow(name) {}
+    ComplexFlow(string name = "") : FlowImpl(name) {}
     
     double execute() override {
         if (getOrigin() != nullptr) {
@@ -60,13 +59,13 @@ public:
 
 
 //tests
-void exponentialFuncionalTest() {
+void exponentialFunctionalTest() {
     cout << "MODELO EXPONENCIAL" << endl;
     
     // instancia Modelo e Sistemas
-    Model* model = new Model();
-    System* pop1 = new System("pop1", 100.0);
-    System* pop2 = new System("pop2", 0.0);
+    Model* model = new ModelImpl();
+    System* pop1 = new SystemImpl("pop1", 100.0);
+    System* pop2 = new SystemImpl("pop2", 0.0);
     
     // Instancia o Fluxo Exponencial
     Flow* expFlow = new ExponentialFlow("exponencial");
@@ -95,12 +94,12 @@ void exponentialFuncionalTest() {
     cout << "Teste Exponencial: OK!\n" << endl;
 }
 
-void logisticalFuncionalTest() {
+void logisticalFunctionalTest() {
     cout << "TESTES: MODELO LOGISTICO" << endl;
     
-    Model* model = new Model();
-    System* p1 = new System("p1", 100.0);
-    System* p2 = new System("p2", 10.0);
+    Model* model = new ModelImpl();
+    System* p1 = new SystemImpl("p1", 100.0);
+    System* p2 = new SystemImpl("p2", 10.0);
     Flow* logFlow = new LogisticFlow("logistica");
     
     logFlow->connect(p1, p2);
@@ -122,15 +121,15 @@ void logisticalFuncionalTest() {
     cout << "Teste Logistico: OK!\n" << endl;
 }
 
-void complexFuncionalTest() {
+void complexFunctionalTest() {
     cout << "TESTES: MODELO COMPLEXO" << endl;
     
-    Model* model = new Model();
-    System* q1 = new System("Q1", 100.0);
-    System* q2 = new System("Q2", 0.0);
-    System* q3 = new System("Q3", 100.0);
-    System* q4 = new System("Q4", 0.0);
-    System* q5 = new System("Q5", 0.0);
+    Model* model = new ModelImpl();
+    System* q1 = new SystemImpl("Q1", 100.0);
+    System* q2 = new SystemImpl("Q2", 0.0);
+    System* q3 = new SystemImpl("Q3", 100.0);
+    System* q4 = new SystemImpl("Q4", 0.0);
+    System* q5 = new SystemImpl("Q5", 0.0);
 
     Flow* f = new ComplexFlow("f"); f->connect(q1, q2);
     Flow* g = new ComplexFlow("g"); g->connect(q1, q3);

@@ -1,22 +1,22 @@
-#ifndef FUNCIONAL_TESTS_H
-#define FUNCIONAL_TESTS_H
+#ifndef FUNCTIONAL_TESTS_H
+#define FUNCTIONAL_TESTS_H
 
 /**
  * @brief Run the exponential functional test.
  * This test verifies a simple exponential flow between two systems.
  */
-void exponentialFuncionalTest();
+void exponentialFunctionalTest();
 
 /**
  * @brief Run the logistic functional test.
  * This test verifies a logistic flow between two systems.
  */
-void logisticalFuncionalTest();
+void logisticalFunctionalTest();
 
 /**
  * @brief Run the complex functional test.
  * This test verifies a network of connected flows and systems.
  */
-void complexFuncionalTest();
+void complexFunctionalTest();
 
 #endif
