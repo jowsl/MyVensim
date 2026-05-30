@@ -8,9 +8,9 @@
  *
  * @section arch_sec Core Architecture
  * The framework is built upon three fundamental structural blocks:
- * - @b System: Represents stocks (such as material, population, or energy) that store values over time.
- * - @b Flow: Represents the transfer pathways and algebraic differential equations connecting the systems.
- * - @b Model: The orchestration engine responsible for running the simulation timeline and ensuring synchronized updates.
+ * - @b System: An interface representing stocks (such as material, population, or energy) that store values over time.
+ * - @b Flow: An interface representing the transfer pathways and algebraic differential equations connecting the systems.
+ * - @b Model: An interface representing the orchestration engine responsible for running the simulation timeline and ensuring synchronized updates.
  *
  *
  * @section authors_sec Project Developers
@@ -36,80 +36,59 @@ using namespace std;
  * and transfer channels (Flows).
  */
 class Model {
-private:
-    vector<System*> systems;
-    vector<Flow*> flows;
-
 public:
     // Iterator definitions
     using flowIterator = vector<Flow*>::iterator;
     using systemIterator = vector<System*>::iterator;
 
     /**
-     * @brief Construct a new Model object.
-     */
-    Model();
-
-    /**
-     * @brief Copy constructor.
-     * @param other The Model to copy.
-     */
-    Model(const Model& other);
-
-    /**
      * @brief Destroy the Model object.
      */
-    virtual ~Model();
+    virtual ~Model() {};
 
-    /**
-     * @brief Assignment operator.
-     * @param param_model The Model to assign from.
-     * @return Model& Reference to this object.
-     */
-    Model& operator=(const Model& param_model);
 
     /**
      * @brief Add a system to the model.
      * @param sys Pointer to the system to add.
      */
-    void add(System* sys);
+    virtual void add(System* sys) = 0;
 
     /**
      * @brief Add a flow to the model.
      * @param flow Pointer to the flow to add.
      */
-    void add(Flow* flow);
+    virtual void add(Flow* flow) = 0;
 
     /**
      * @brief Get iterator to the first system.
      * @return systemIterator Iterator to the beginning of the systems list.
      */
-    systemIterator beginSystems();
+    virtual systemIterator beginSystems() = 0;
 
     /**
      * @brief Get iterator to one past the last system.
      * @return systemIterator Iterator to the end of the systems list.
      */
-    systemIterator endSystems();
+    virtual systemIterator endSystems() = 0;
 
     /**
      * @brief Get iterator to the first flow.
      * @return flowIterator Iterator to the beginning of the flows list.
      */
-    flowIterator beginFlows();
+    virtual flowIterator beginFlows() = 0;
 
     /**
      * @brief Get iterator to one past the last flow.
      * @return flowIterator Iterator to the end of the flows list.
      */
-    flowIterator endFlows();
+    virtual flowIterator endFlows() = 0;
 
     /**
      * @brief Execute the model simulation for a time interval.
      * @param time_ini Initial simulation time.
      * @param time_final Final simulation time.
      */
-    void execute(double time_ini, double time_final);
+    virtual void execute(double time_ini, double time_final) = 0;
 };
 
 #endif

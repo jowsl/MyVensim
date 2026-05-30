@@ -12,80 +12,54 @@ using namespace std;
  * A Flow can move value from an origin System to a destination System.
  */
 class Flow {
-private:
-    string name;
-    System* origin;
-    System* destination;
-
 public:
-    /**
-     * @brief Construct a new Flow object.
-     * @param name The flow name.
-     * @param origin The source system.
-     * @param destination The destination system.
-     */
-    Flow(string name = "", System* origin = nullptr, System* destination = nullptr);
-
-    /**
-     * @brief Copy constructor.
-     * @param other The Flow to copy.
-     */
-    Flow(const Flow& other);
-
     /**
      * @brief Destroy the Flow object.
      */
-    virtual ~Flow();
-
-    /**
-     * @brief Assignment operator.
-     * @param param_flow The Flow to assign from.
-     * @return Flow& Reference to this object.
-     */
-    Flow& operator=(const Flow& param_flow);
+    virtual ~Flow() {};
 
     /**
      * @brief Set the flow name.
      * @param name New flow name.
      */
-    void setName(string name);
+    virtual void setName(string name) = 0;
 
     /**
      * @brief Get the flow name.
      * @return string The current name.
      */
-    string getName() const;
+    virtual string getName() const = 0;
 
     /**
      * @brief Set the origin system for this flow.
      * @param origin Origin system pointer.
      */
-    void setOrigin(System* origin);
+    virtual void setOrigin(System* origin) = 0;
 
     /**
      * @brief Get the origin system.
      * @return System* Pointer to the origin system.
      */
-    System* getOrigin() const;
+    virtual System* getOrigin() const = 0;
 
     /**
      * @brief Set the destination system for this flow.
      * @param destination Destination system pointer.
      */
-    void setDestination(System* destination);
+    virtual void setDestination(System* destination) = 0;
 
     /**
      * @brief Get the destination system.
      * @return System* Pointer to the destination system.
      */
-    System* getDestination() const;
+    virtual System* getDestination() const = 0;
 
     /**
      * @brief Connect origin and destination systems.
      * @param orig The origin system.
      * @param dest The destination system.
      */
-    void connect(System* orig, System* dest);
+    virtual void connect(System* orig, System* dest) = 0;
 
     /**
      * @brief Execute the flow calculation.
