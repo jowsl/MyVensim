@@ -1,5 +1,0 @@
-<map id="LogisticFlow" name="LogisticFlow">
-<area shape="rect" id="Node000001" title="Logistic flow implementation. Computes a logistic transfer based on the destination system value." alt="" coords="11,400,116,491"/>
-<area shape="rect" id="Node000002" href="$class_flow.html" title="Represents a transfer channel between two Systems." alt="" coords="5,5,121,352"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,364,66,401,61,400,62,369"/>
-</map>

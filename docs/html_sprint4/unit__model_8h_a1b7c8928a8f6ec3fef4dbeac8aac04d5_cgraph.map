@@ -1,0 +1,5 @@
+<map id="testModelAssignmentOperator" name="testModelAssignmentOperator">
+<area shape="rect" id="Node000001" title="Tests the assignment operator of ModelImpl. Verifies correct assignment including self&#45;assignment saf..." alt="" coords="5,13,203,40"/>
+<area shape="rect" id="Node000002" href="$class_unit_model.html#a6ac7595b1fd52e2890df200dbfac1cfb" title="Executes the assignment operator test." alt="" coords="251,5,486,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,24,238,26,232,27,203,29"/>
+</map>

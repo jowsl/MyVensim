@@ -1,0 +1,5 @@
+<map id="UnitSystem::runTestSystemGetName" name="UnitSystem::runTestSystemGetName">
+<area shape="rect" id="Node000001" title="Executes the getName test." alt="" coords="5,5,192,48"/>
+<area shape="rect" id="Node000002" href="$class_system_impl.html#a68ca2c650fa5669baec1bd4c05fa2bd0" title="Get the system name." alt="" coords="240,13,392,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,24,227,26,221,27,192,29"/>
+</map>

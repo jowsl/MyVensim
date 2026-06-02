@@ -1,0 +1,15 @@
+<map id="FlowImpl" name="FlowImpl">
+<area shape="rect" id="Node000001" title="Concrete implementation of the Flow interface." alt="" coords="287,293,403,640"/>
+<area shape="rect" id="Node000003" href="$class_complex_flow.html" title="Complex flow implementation. Uses the same transfer rule as the exponential flow for complex network ..." alt="" coords="5,688,117,779"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="279,534,110,690,106,686,275,530"/>
+<area shape="rect" id="Node000004" href="$class_exponential_flow.html" title="Exponential flow implementation. Transfers a percentage of the origin system value to the destination..." alt="" coords="141,688,269,779"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="283,589,230,690,226,687,278,592"/>
+<area shape="rect" id="Node000005" href="$class_logistic_flow.html" title="Logistic flow implementation. Computes a logistic transfer based on the destination system value." alt="" coords="293,688,398,779"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="347,653,348,690,343,687,344,657"/>
+<area shape="rect" id="Node000006" href="$class_model_test_flow.html" title="Minimal concrete flow used to instantiate FlowImpl inside model tests." alt="" coords="421,688,541,779"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="412,592,461,689,456,688,409,596"/>
+<area shape="rect" id="Node000007" href="$class_test_flow.html" title="Minimal concrete subclass used to instantiate FlowImpl in tests." alt="" coords="566,688,650,779"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="415,534,568,689,563,690,412,539"/>
+<area shape="rect" id="Node000002" href="$class_flow.html" title="Represents a transfer channel between two Systems." alt="" coords="287,5,403,245"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="346,258,348,294,343,293,344,263"/>
+</map>

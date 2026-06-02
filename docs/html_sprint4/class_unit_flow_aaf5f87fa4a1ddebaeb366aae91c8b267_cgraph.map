@@ -1,0 +1,5 @@
+<map id="UnitFlow::runTestFlowGetName" name="UnitFlow::runTestFlowGetName">
+<area shape="rect" id="Node000001" title="Executes the getName test." alt="" coords="5,5,214,32"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html#aff4ced90aedec7ff19ea84086ea0d412" title="Get the flow name." alt="" coords="262,5,397,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,16,249,19,243,19,214,21"/>
+</map>

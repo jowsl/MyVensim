@@ -1,0 +1,7 @@
+<map id="testFlowSetDestination" name="testFlowSetDestination">
+<area shape="rect" id="Node000001" title="Tests setDestination() of FlowImpl. Verifies that the destination system pointer is correctly stored ..." alt="" coords="5,13,163,40"/>
+<area shape="rect" id="Node000002" href="$class_unit_flow.html#a71c38dc0cec64b99c69342101e545dc1" title="Executes the setDestination test." alt="" coords="211,5,383,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,24,198,26,192,27,163,29"/>
+<area shape="rect" id="Node000003" href="$class_flow_impl.html#a53dbf2b266e62049ceb3371403924b5e" title="Set the destination system for this flow." alt="" coords="431,13,597,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,24,418,27,413,27,384,29"/>
+</map>

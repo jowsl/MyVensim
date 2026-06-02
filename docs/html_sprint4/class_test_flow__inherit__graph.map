@@ -1,0 +1,7 @@
+<map id="TestFlow" name="TestFlow">
+<area shape="rect" id="Node000001" title="Minimal concrete subclass used to instantiate FlowImpl in tests." alt="" coords="21,688,106,779"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Concrete implementation of the Flow interface." alt="" coords="5,293,121,640"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,652,66,689,61,688,62,657"/>
+<area shape="rect" id="Node000003" href="$class_flow.html" title="Represents a transfer channel between two Systems." alt="" coords="5,5,121,245"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,258,66,293,61,293,63,263"/>
+</map>

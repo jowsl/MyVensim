@@ -1,0 +1,13 @@
+<map id="testModelDefaultConstructor" name="testModelDefaultConstructor">
+<area shape="rect" id="Node000001" title="Tests the default constructor of ModelImpl. Verifies that a freshly constructed model has empty syste..." alt="" coords="5,81,194,108"/>
+<area shape="rect" id="Node000002" href="$class_unit_model.html#ac6ed594cdd30dbf833e94ecd0d0f6ed9" title="Executes the default constructor test." alt="" coords="242,73,450,116"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,92,229,94,223,95,194,97"/>
+<area shape="rect" id="Node000003" href="$class_model_impl.html#aabb7ccd08bd0cdc0883b0d8714ffc3c0" title="Get iterator to the first flow." alt="" coords="506,5,662,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="410,70,497,41,518,38,523,36,499,47,412,75"/>
+<area shape="rect" id="Node000004" href="$class_model_impl.html#ac5e8a352d633622b39b003e52935b459" title="Get iterator to the first system." alt="" coords="498,56,670,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="450,81,485,80,480,81,451,86"/>
+<area shape="rect" id="Node000005" href="$class_model_impl.html#a0a26320fa7a4526aa8813f0cc72627e6" title="Get iterator to one past the last flow." alt="" coords="512,107,657,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="451,103,499,111,493,111,451,108"/>
+<area shape="rect" id="Node000006" href="$class_model_impl.html#a7d9e741c5d207e60d762e5707fc64a19" title="Get iterator to one past the last system." alt="" coords="503,157,665,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="411,114,499,143,523,153,518,152,497,148,410,119"/>
+</map>

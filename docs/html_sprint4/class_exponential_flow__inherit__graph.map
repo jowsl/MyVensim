@@ -1,0 +1,7 @@
+<map id="ExponentialFlow" name="ExponentialFlow">
+<area shape="rect" id="Node000001" title="Exponential flow implementation. Transfers a percentage of the origin system value to the destination..." alt="" coords="5,688,133,779"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Concrete implementation of the Flow interface." alt="" coords="11,293,127,640"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,652,72,689,67,688,68,657"/>
+<area shape="rect" id="Node000003" href="$class_flow.html" title="Represents a transfer channel between two Systems." alt="" coords="11,5,127,245"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="70,258,72,294,67,293,69,263"/>
+</map>

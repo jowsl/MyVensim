@@ -1,0 +1,5 @@
+<map id="ModelTestFlow::ModelTestFlow" name="ModelTestFlow::ModelTestFlow">
+<area shape="rect" id="Node000001" title="Constructs a ModelTestFlow with optional name, origin, destination." alt="" coords="5,5,211,32"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html#a9ea3f961fe58dd3a2f17ef3d501193f5" title="Construct a new FlowImpl object. Initializes a flow with the given name, origin, and destination." alt="" coords="259,5,394,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,16,246,19,241,19,211,21"/>
+</map>

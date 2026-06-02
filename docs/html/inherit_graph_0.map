@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_flow.html" title="Represents a transfer channel between two Systems." alt="" coords="5,56,55,83"/>
-<area shape="rect" id="Node000001" href="$class_complex_flow.html" title="Complex flow implementation. Uses the same transfer rule as the exponential flow for complex network ..." alt="" coords="111,5,212,32"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="68,52,127,30,123,35,70,57"/>
-<area shape="rect" id="Node000002" href="$class_exponential_flow.html" title="Exponential flow implementation. Transfers a percentage of the origin system value to the destination..." alt="" coords="103,56,220,83"/>
-<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="69,67,105,68,100,71,71,72"/>
-<area shape="rect" id="Node000003" href="$class_logistic_flow.html" title="Logistic flow implementation. Computes a logistic transfer based on the destination system value." alt="" coords="114,107,208,133"/>
-<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="69,81,127,105,123,108,68,87"/>
-</map>

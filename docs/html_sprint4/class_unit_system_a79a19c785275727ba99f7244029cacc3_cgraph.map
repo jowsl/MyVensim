@@ -1,0 +1,5 @@
+<map id="UnitSystem::runTestSystemSetName" name="UnitSystem::runTestSystemSetName">
+<area shape="rect" id="Node000001" title="Executes the setName test." alt="" coords="5,5,192,48"/>
+<area shape="rect" id="Node000002" href="$class_system_impl.html#a6f8b5d409fd86c4690ba9c7990069c4a" title="Set the system name." alt="" coords="240,13,392,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,24,227,26,221,27,192,29"/>
+</map>

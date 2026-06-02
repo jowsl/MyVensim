@@ -1,0 +1,7 @@
+<map id="testModelAddFlow" name="testModelAddFlow">
+<area shape="rect" id="Node000001" title="Tests add(Flow*) of ModelImpl. Verifies that flows are correctly appended to the internal collection ..." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="Node000002" href="$class_unit_model.html#a4b1d266eec96894c17001395601b236d" title="Executes the addFlow test." alt="" coords="183,5,400,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,16,170,18,164,19,135,21"/>
+<area shape="rect" id="Node000003" href="$class_model_impl.html#a4f2039580d1464b29593df95f3979998" title="Add a system to the model." alt="" coords="448,5,558,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,16,435,19,430,19,400,21"/>
+</map>

@@ -1,5 +1,0 @@
-<map id="Flow::getDestination" name="Flow::getDestination">
-<area shape="rect" id="Node000001" title="Get the destination system." alt="" coords="202,5,343,32"/>
-<area shape="rect" id="Node000002" href="$class_logistic_flow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884" title="Execute the flow calculation." alt="" coords="5,5,154,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,19,154,21,154,16,189,19"/>
-</map>
