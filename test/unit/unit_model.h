@@ -7,7 +7,9 @@
  *
  * This file declares all unit test functions that exercise
  * ModelImpl's constructor, copy constructor, assignment operator,
- * add() methods, iterator methods, and execute().
+ * add() methods, iterator methods, and execute(). Validation is
+ * performed by directly accessing protected attributes to ensure
+ * single-method isolation.
  *
  * Because FlowImpl::execute() is pure virtual, a minimal concrete
  * subclass (ModelTestFlow) is used internally in the .cpp.
@@ -16,7 +18,7 @@
 /**
  * @brief Tests the default constructor of ModelImpl.
  * Verifies that a freshly constructed model has empty systems
- * and flows collections.
+ * and flows collections via direct attribute access.
  */
 void testModelDefaultConstructor();
 
@@ -29,31 +31,34 @@ void testModelCopyConstructor();
 
 /**
  * @brief Tests the assignment operator of ModelImpl.
- * Verifies correct assignment including self-assignment safety.
+ * Verifies correct assignment including self-assignment safety,
+ * directly validating internal collections.
  */
 void testModelAssignmentOperator();
 
 /**
  * @brief Tests add(System*) of ModelImpl.
- * Verifies that systems are correctly appended to the internal collection.
+ * Verifies that systems are correctly appended to the internal collection
+ * by checking the vector directly.
  */
 void testModelAddSystem();
 
 /**
  * @brief Tests add(Flow*) of ModelImpl.
- * Verifies that flows are correctly appended to the internal collection.
+ * Verifies that flows are correctly appended to the internal collection
+ * by checking the vector directly.
  */
 void testModelAddFlow();
 
 /**
  * @brief Tests the system iterators (beginSystems / endSystems) of ModelImpl.
- * Verifies that iteration covers exactly the added systems in insertion order.
+ * Verifies that iteration covers exactly the manually added systems in insertion order.
  */
 void testModelSystemIterators();
 
 /**
  * @brief Tests the flow iterators (beginFlows / endFlows) of ModelImpl.
- * Verifies that iteration covers exactly the added flows in insertion order.
+ * Verifies that iteration covers exactly the manually added flows in insertion order.
  */
 void testModelFlowIterators();
 

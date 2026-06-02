@@ -7,7 +7,9 @@
  *
  * This file declares all unit test functions that exercise
  * FlowImpl's constructor, copy constructor, assignment operator,
- * getter/setter methods, and the connect() method.
+ * getter/setter methods, and the connect() method. Each test validates
+ * a single method at a time, using a friend class to directly access
+ * protected attributes.
  *
  * Because FlowImpl::execute() is pure virtual, a minimal concrete
  * subclass (TestFlow) is used internally in the .cpp to instantiate
@@ -17,7 +19,7 @@
 /**
  * @brief Tests the default constructor of FlowImpl.
  * Verifies that a default-constructed flow has an empty name
- * and null origin/destination pointers.
+ * and null origin/destination pointers via direct attribute access.
  */
 void testFlowDefaultConstructor();
 
@@ -30,7 +32,7 @@ void testFlowParameterizedConstructor();
 /**
  * @brief Tests the copy constructor of FlowImpl.
  * Verifies that the copied flow shares the same pointer values,
- * and that changes to the copy do not affect the original's name.
+ * and that changes to the copy do not affect the original.
  */
 void testFlowCopyConstructor();
 
@@ -41,28 +43,45 @@ void testFlowCopyConstructor();
 void testFlowAssignmentOperator();
 
 /**
- * @brief Tests setName() and getName() of FlowImpl.
- * Verifies that the name is correctly set and retrieved.
+ * @brief Tests setName() of FlowImpl.
+ * Verifies that the name is correctly set by checking the protected attribute directly.
  */
-void testFlowSetGetName();
+void testFlowSetName();
 
 /**
- * @brief Tests setOrigin() / getOrigin() of FlowImpl.
- * Verifies that the origin system pointer is correctly stored and returned,
- * including setting it back to nullptr.
+ * @brief Tests getName() of FlowImpl.
+ * Verifies that the name is correctly retrieved after setting the protected attribute directly.
  */
-void testFlowSetGetOrigin();
+void testFlowGetName();
 
 /**
- * @brief Tests setDestination() / getDestination() of FlowImpl.
- * Verifies that the destination system pointer is correctly stored and returned.
+ * @brief Tests setOrigin() of FlowImpl.
+ * Verifies that the origin system pointer is correctly stored by checking the protected attribute directly.
  */
-void testFlowSetGetDestination();
+void testFlowSetOrigin();
+
+/**
+ * @brief Tests getOrigin() of FlowImpl.
+ * Verifies that the origin system pointer is correctly returned after setting the protected attribute directly.
+ */
+void testFlowGetOrigin();
+
+/**
+ * @brief Tests setDestination() of FlowImpl.
+ * Verifies that the destination system pointer is correctly stored by checking the protected attribute directly.
+ */
+void testFlowSetDestination();
+
+/**
+ * @brief Tests getDestination() of FlowImpl.
+ * Verifies that the destination system pointer is correctly returned after setting the protected attribute directly.
+ */
+void testFlowGetDestination();
 
 /**
  * @brief Tests the connect() method of FlowImpl.
  * Verifies that connect() correctly sets both origin and destination
- * in a single call, including overwriting previous connections.
+ * in a single call, checking the protected attributes directly.
  */
 void testFlowConnect();
 

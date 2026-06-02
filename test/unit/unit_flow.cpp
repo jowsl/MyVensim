@@ -7,8 +7,6 @@
 
 using namespace std;
 
-// TestFlow: subclasse concreta mínima de FlowImpl
-// necessária pois FlowImpl::execute() é virtual puro
 /**
  * @brief Minimal concrete subclass used to instantiate FlowImpl in tests.
  *
@@ -29,170 +27,252 @@ public:
     double execute() override { return 1.0; }
 };
 
-// UnitFlow: friend class para acessar os
-// atributos protegidos de FlowImpl diretamente
 /**
  * @brief Friend test class that accesses FlowImpl internals.
  *
- * Declared as friend in FlowImpl, so its static methods can
- * read the protected 'name', 'origin' and 'destination' fields directly.
+ * Declared as a friend in FlowImpl. Its static methods directly manipulate
+ * the protected 'name', 'origin', and 'destination' attributes. This ensures
+ * that tests are decoupled from other public methods, guaranteeing single-method
+ * isolation per test.
  */
 class UnitFlow {
 public:
-    /** @brief Returns the raw protected 'name' field. */
-    static string getName(const FlowImpl& f)        { return f.name; }
-    /** @brief Returns the raw protected 'origin' pointer. */
-    static System* getOrigin(const FlowImpl& f)     { return f.origin; }
-    /** @brief Returns the raw protected 'destination' pointer. */
-    static System* getDestination(const FlowImpl& f){ return f.destination; }
+    /**
+     * @brief Executes the default constructor test.
+     */
+    static void runTestFlowDefaultConstructor() {
+        // Execução: Método sob teste
+        TestFlow f; 
+
+        // Validação: Acesso direto aos atributos protegidos da classe base
+        assert(f.name == "");
+        assert(f.origin == nullptr);
+        assert(f.destination == nullptr);
+
+        cout << "  [OK] test Flow Default Constructor" << endl;
+    }
+
+    /**
+     * @brief Executes the parameterized constructor test.
+     */
+    static void runTestFlowParameterizedConstructor() {
+        SystemImpl s1, s2;
+        
+        // Execução: Método sob teste
+        TestFlow f("transfer", &s1, &s2); 
+
+        // Validação: Checagem direta dos ponteiros e string
+        assert(f.name == "transfer");
+        assert(f.origin == &s1);
+        assert(f.destination == &s2);
+
+        cout << "  [OK] test Flow Parameterized Constructor" << endl;
+    }
+
+    /**
+     * @brief Executes the copy constructor test.
+     */
+    static void runTestFlowCopyConstructor() {
+        SystemImpl s1, s2;
+        TestFlow original;
+        
+        // Setup: Configuração direta no objeto original
+        original.name = "flow1";
+        original.origin = &s1;
+        original.destination = &s2;
+
+        // Execução: Construtor de cópia (método sob teste)
+        TestFlow copy(original); 
+
+        // Validação: A cópia deve compartilhar as mesmas referências
+        assert(copy.name == "flow1");
+        assert(copy.origin == &s1);
+        assert(copy.destination == &s2);
+
+        cout << "  [OK] test Flow Copy Constructor" << endl;
+    }
+
+    /**
+     * @brief Executes the assignment operator test.
+     */
+    static void runTestFlowAssignmentOperator() {
+        SystemImpl s1, s2;
+        TestFlow f1;
+        
+        // Setup: Configuração direta do objeto fonte
+        f1.name = "flowA";
+        f1.origin = &s1;
+        f1.destination = &s2;
+        
+        TestFlow f2;
+
+        // Execução: Operador de atribuição (método sob teste)
+        f2 = f1; 
+
+        // Validação: O estado de f2 deve refletir o de f1 via acesso direto
+        assert(f2.name == "flowA");
+        assert(f2.origin == &s1);
+        assert(f2.destination == &s2);
+
+        cout << "  [OK] test Flow Assignment Operator" << endl;
+    }
+
+    /**
+     * @brief Executes the setName test.
+     */
+    static void runTestFlowSetName() {
+        TestFlow f;
+        
+        // Execução e Validação 1
+        f.setName("evaporation"); // Método sob teste
+        assert(f.name == "evaporation"); // Acesso direto
+
+        // Execução e Validação 2
+        f.setName("precipitation");
+        assert(f.name == "precipitation");
+
+        // Execução e Validação 3
+        f.setName(""); 
+        assert(f.name == "");
+
+        cout << "  [OK] test Flow Set Name" << endl;
+    }
+
+    /**
+     * @brief Executes the getName test.
+     */
+    static void runTestFlowGetName() {
+        TestFlow f;
+        
+        // Setup: Configuração direta na variável
+        f.name = "precipitation"; 
+
+        // Execução e Validação: O getter (método sob teste) deve retornar o valor
+        assert(f.getName() == "precipitation"); 
+
+        cout << "  [OK] test Flow Get Name" << endl;
+    }
+
+    /**
+     * @brief Executes the setOrigin test.
+     */
+    static void runTestFlowSetOrigin() {
+        SystemImpl s1;
+        TestFlow f;
+
+        // Execução 1
+        f.setOrigin(&s1); // Método sob teste
+        
+        // Validação 1: Acesso direto ao ponteiro origin
+        assert(f.origin == &s1);
+
+        // Execução 2: Reseta para nullptr
+        f.setOrigin(nullptr); 
+        
+        // Validação 2
+        assert(f.origin == nullptr);
+
+        cout << "  [OK] test Flow Set Origin" << endl;
+    }
+
+    /**
+     * @brief Executes the getOrigin test.
+     */
+    static void runTestFlowGetOrigin() {
+        TestFlow f;
+        SystemImpl s1;
+        
+        // Setup: Atribuição direta ao ponteiro
+        f.origin = &s1; 
+
+        // Execução e Validação: Método sob teste
+        assert(f.getOrigin() == &s1); 
+
+        cout << "  [OK] test Flow Get Origin" << endl;
+    }
+
+    /**
+     * @brief Executes the setDestination test.
+     */
+    static void runTestFlowSetDestination() {
+        SystemImpl s1;
+        TestFlow f;
+
+        // Execução 1
+        f.setDestination(&s1); // Método sob teste
+        
+        // Validação 1
+        assert(f.destination == &s1); // Acesso direto ao ponteiro
+
+        // Execução 2: Reseta para nullptr
+        f.setDestination(nullptr); 
+        
+        // Validação 2
+        assert(f.destination == nullptr);
+
+        cout << "  [OK] test Flow Set Destination" << endl;
+    }
+
+    /**
+     * @brief Executes the getDestination test.
+     */
+    static void runTestFlowGetDestination() {
+        TestFlow f;
+        SystemImpl s1;
+        
+        // Setup: Atribuição direta ao ponteiro
+        f.destination = &s1; 
+
+        // Execução e Validação: Método sob teste
+        assert(f.getDestination() == &s1); 
+
+        cout << "  [OK] test Flow Get Destination" << endl;
+    }
+
+    /**
+     * @brief Executes the connect test.
+     */
+    static void runTestFlowConnect() {
+        SystemImpl s1, s2, s3;
+        TestFlow f;
+
+        // Execução 1: Conecta origem e destino em um único chamado
+        f.connect(&s1, &s2); // Método sob teste
+        
+        // Validação 1
+        assert(f.origin == &s1);
+        assert(f.destination == &s2);
+
+        // Execução 2: Reconectar deve sobrescrever a conexão anterior
+        f.connect(&s3, &s1); 
+        
+        // Validação 2
+        assert(f.origin == &s3);
+        assert(f.destination == &s1);
+
+        // Execução 3: Conectar com nullptr (fluxo desconectado)
+        f.connect(nullptr, nullptr); 
+        
+        // Validação 3
+        assert(f.origin == nullptr);
+        assert(f.destination == nullptr);
+
+        cout << "  [OK] test Flow Connect" << endl;
+    }
 };
 
-// Test implementations
-void testFlowDefaultConstructor() {
-    TestFlow f;
-
-    // Valida via friend class (acesso direto aos atributos protegidos)
-    assert(UnitFlow::getName(f) == "");
-    assert(UnitFlow::getOrigin(f) == nullptr);
-    assert(UnitFlow::getDestination(f) == nullptr);
-
-    // Valida via interface pública
-    assert(f.getName() == "");
-    assert(f.getOrigin() == nullptr);
-    assert(f.getDestination() == nullptr);
-
-    cout << "  [OK] test Flow Default Constructor" << endl;
-}
-
-void testFlowParameterizedConstructor() {
-    SystemImpl s1("A", 10.0);
-    SystemImpl s2("B", 20.0);
-
-    TestFlow f("transfer", &s1, &s2);
-
-    assert(UnitFlow::getName(f) == "transfer");
-    assert(UnitFlow::getOrigin(f) == &s1);
-    assert(UnitFlow::getDestination(f) == &s2);
-
-    assert(f.getName() == "transfer");
-    assert(f.getOrigin() == &s1);
-    assert(f.getDestination() == &s2);
-
-    cout << "  [OK] test Flow Parameterized Constructor" << endl;
-}
-
-void testFlowCopyConstructor() {
-    SystemImpl s1("orig", 5.0);
-    SystemImpl s2("dest", 15.0);
-
-    TestFlow original("flow1", &s1, &s2);
-    TestFlow copy(original);
-
-    // A cópia deve referenciar os mesmos sistemas
-    assert(copy.getName() == "flow1");
-    assert(copy.getOrigin() == &s1);
-    assert(copy.getDestination() == &s2);
-
-    // Modificar o nome da cópia não deve afetar o original
-    copy.setName("flow_copy");
-    assert(original.getName() == "flow1");
-
-    cout << "  [OK] test Flow Copy Constructor" << endl;
-}
-
-void testFlowAssignmentOperator() {
-    SystemImpl s1("x", 1.0);
-    SystemImpl s2("y", 2.0);
-    SystemImpl s3("z", 3.0);
-
-    TestFlow f1("flowA", &s1, &s2);
-    TestFlow f2("flowB", &s3, nullptr);
-
-    f2 = f1;
-
-    assert(f2.getName() == "flowA");
-    assert(f2.getOrigin() == &s1);
-    assert(f2.getDestination() == &s2);
-
-    // Auto-atribuição: objeto não deve ser corrompido
-    f1 = f1;
-    assert(f1.getName() == "flowA");
-    assert(f1.getOrigin() == &s1);
-    assert(f1.getDestination() == &s2);
-
-    cout << "  [OK] test Flow Assignment Operator" << endl;
-}
-
-void testFlowSetGetName() {
-    TestFlow f;
-
-    f.setName("evaporation");
-    assert(f.getName() == "evaporation");
-
-    f.setName("precipitation");
-    assert(f.getName() == "precipitation");
-
-    f.setName("");
-    assert(f.getName() == "");
-
-    cout << "  [OK] test Flow Set/Get Name" << endl;
-}
-
-void testFlowSetGetOrigin() {
-    SystemImpl s1("tank", 50.0);
-    TestFlow f;
-
-    assert(f.getOrigin() == nullptr);
-
-    f.setOrigin(&s1);
-    assert(f.getOrigin() == &s1);
-
-    // Reseta para nullptr
-    f.setOrigin(nullptr);
-    assert(f.getOrigin() == nullptr);
-
-    cout << "  [OK] test Flow Set/Get Origin" << endl;
-}
-
-void testFlowSetGetDestination() {
-    SystemImpl s1("ocean", 1000.0);
-    TestFlow f;
-
-    assert(f.getDestination() == nullptr);
-
-    f.setDestination(&s1);
-    assert(f.getDestination() == &s1);
-
-    f.setDestination(nullptr);
-    assert(f.getDestination() == nullptr);
-
-    cout << "  [OK] test Flow Set/Get Destination" << endl;
-}
-
-void testFlowConnect() {
-    SystemImpl s1("source", 100.0);
-    SystemImpl s2("sink",     0.0);
-    SystemImpl s3("mid",     50.0);
-
-    TestFlow f;
-
-    // Conecta origem e destino em um único chamado
-    f.connect(&s1, &s2);
-    assert(f.getOrigin()      == &s1);
-    assert(f.getDestination() == &s2);
-
-    // Reconectar deve sobrescrever a conexão anterior
-    f.connect(&s3, &s1);
-    assert(f.getOrigin()      == &s3);
-    assert(f.getDestination() == &s1);
-
-    // Conectar com nullptr é permitido (fluxo sem origem/destino)
-    f.connect(nullptr, nullptr);
-    assert(f.getOrigin()      == nullptr);
-    assert(f.getDestination() == nullptr);
-
-    cout << "  [OK] test Flow Connect" << endl;
-}
+// Funções globais de teste (Repassam a execução para a Friend Class)
+void testFlowDefaultConstructor() { UnitFlow::runTestFlowDefaultConstructor(); }
+void testFlowParameterizedConstructor() { UnitFlow::runTestFlowParameterizedConstructor(); }
+void testFlowCopyConstructor() { UnitFlow::runTestFlowCopyConstructor(); }
+void testFlowAssignmentOperator() { UnitFlow::runTestFlowAssignmentOperator(); }
+void testFlowSetName() { UnitFlow::runTestFlowSetName(); }
+void testFlowGetName() { UnitFlow::runTestFlowGetName(); }
+void testFlowSetOrigin() { UnitFlow::runTestFlowSetOrigin(); }
+void testFlowGetOrigin() { UnitFlow::runTestFlowGetOrigin(); }
+void testFlowSetDestination() { UnitFlow::runTestFlowSetDestination(); }
+void testFlowGetDestination() { UnitFlow::runTestFlowGetDestination(); }
+void testFlowConnect() { UnitFlow::runTestFlowConnect(); }
 
 void runFlowTests() {
     cout << "\n=== Unit Tests: FlowImpl ===" << endl;
@@ -201,9 +281,12 @@ void runFlowTests() {
     testFlowParameterizedConstructor();
     testFlowCopyConstructor();
     testFlowAssignmentOperator();
-    testFlowSetGetName();
-    testFlowSetGetOrigin();
-    testFlowSetGetDestination();
+    testFlowSetName();
+    testFlowGetName();
+    testFlowSetOrigin();
+    testFlowGetOrigin();
+    testFlowSetDestination();
+    testFlowGetDestination();
     testFlowConnect();
 
     cout << "=== FlowImpl: All tests passed! ===" << endl;

@@ -7,18 +7,22 @@
  *
  * This file declares all unit test functions that exercise
  * SystemImpl's constructor, copy constructor, assignment operator,
- * and getter/setter methods.
+ * and getter/setter methods. Each test is strictly isolated to test
+ * a single method, using a friend class to directly access and
+ * validate internal state.
  */
 
 /**
  * @brief Tests the default constructor of SystemImpl.
- * Verifies that a default-constructed system has an empty name and zero value.
+ * Verifies that a default-constructed system has an empty name and zero value
+ * by directly reading protected attributes.
  */
 void testSystemDefaultConstructor();
 
 /**
  * @brief Tests the parameterized constructor of SystemImpl.
- * Verifies that name and value are correctly initialized.
+ * Verifies that name and value are correctly initialized
+ * by directly reading protected attributes.
  */
 void testSystemParameterizedConstructor();
 
@@ -31,22 +35,35 @@ void testSystemCopyConstructor();
 
 /**
  * @brief Tests the assignment operator of SystemImpl.
- * Verifies correct deep assignment and self-assignment safety.
+ * Verifies correct deep assignment and self-assignment safety,
+ * directly validating internal attributes.
  */
 void testSystemAssignmentOperator();
 
 /**
- * @brief Tests setName() and getName() of SystemImpl.
- * Verifies that the name is correctly set and retrieved.
+ * @brief Tests setName() of SystemImpl.
+ * Verifies that the name is correctly set by validating the protected attribute directly.
  */
-void testSystemSetGetName();
+void testSystemSetName();
 
 /**
- * @brief Tests setValue() and getValue() of SystemImpl.
- * Verifies that the value is correctly set and retrieved, including
- * negative and floating-point values.
+ * @brief Tests getName() of SystemImpl.
+ * Verifies that the name is correctly retrieved after setting the protected attribute directly.
  */
-void testSystemSetGetValue();
+void testSystemGetName();
+
+/**
+ * @brief Tests setValue() of SystemImpl.
+ * Verifies that the value is correctly set, including negative and floating-point values,
+ * by validating the protected attribute directly.
+ */
+void testSystemSetValue();
+
+/**
+ * @brief Tests getValue() of SystemImpl.
+ * Verifies that the value is correctly retrieved after setting the protected attribute directly.
+ */
+void testSystemGetValue();
 
 /**
  * @brief Aggregates and runs all SystemImpl unit tests.
