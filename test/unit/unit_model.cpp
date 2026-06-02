@@ -8,10 +8,8 @@
 
 using namespace std;
 
-// ─────────────────────────────────────────────
 // ModelTestFlow: subclasse concreta mínima de FlowImpl
 // necessária pois FlowImpl::execute() é virtual puro.
-// ─────────────────────────────────────────────
 /**
  * @brief Minimal concrete flow used to instantiate FlowImpl inside model tests.
  *
@@ -38,10 +36,8 @@ public:
     }
 };
 
-// ─────────────────────────────────────────────
 // UnitModel: friend class para acessar os
 // atributos protegidos de ModelImpl diretamente
-// ─────────────────────────────────────────────
 /**
  * @brief Friend test class that accesses ModelImpl internals.
  *
@@ -60,9 +56,7 @@ public:
     static Flow*   getFlow  (const ModelImpl& m, size_t i) { return m.flows[i];   }
 };
 
-// ─────────────────────────────────────────────
 // Test implementations
-// ─────────────────────────────────────────────
 
 void testModelDefaultConstructor() {
     ModelImpl model;

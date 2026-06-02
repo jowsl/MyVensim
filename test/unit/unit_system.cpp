@@ -6,10 +6,8 @@
 
 using namespace std;
 
-// ─────────────────────────────────────────────
 // UnitSystem: friend class para acessar os
 // atributos protegidos de SystemImpl diretamente
-// ─────────────────────────────────────────────
 /**
  * @brief Friend test class that accesses SystemImpl internals.
  *
@@ -33,9 +31,7 @@ public:
     static double getValue(const SystemImpl& s) { return s.value; }
 };
 
-// ─────────────────────────────────────────────
 // Test implementations
-// ─────────────────────────────────────────────
 
 void testSystemDefaultConstructor() {
     SystemImpl s;

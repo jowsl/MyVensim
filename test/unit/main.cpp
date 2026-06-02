@@ -31,17 +31,13 @@ using namespace std;
  * assert(), clearly indicating which test caused the failure.
  */
 void runAllUnitTests() {
-    cout << "========================================" << endl;
     cout << "               Unit Test" << endl;
-    cout << "========================================" << endl;
 
     runSystemTests();
     runFlowTests();
     runModelTests();
 
-    cout << "\n========================================" << endl;
     cout << "         All unit tests passed!" << endl;
-    cout << "==========================================" << endl;
 }
 
 int main() {

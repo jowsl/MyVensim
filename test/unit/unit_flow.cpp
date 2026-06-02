@@ -7,10 +7,8 @@
 
 using namespace std;
 
-// ─────────────────────────────────────────────
 // TestFlow: subclasse concreta mínima de FlowImpl
 // necessária pois FlowImpl::execute() é virtual puro
-// ─────────────────────────────────────────────
 /**
  * @brief Minimal concrete subclass used to instantiate FlowImpl in tests.
  *
@@ -31,10 +29,8 @@ public:
     double execute() override { return 1.0; }
 };
 
-// ─────────────────────────────────────────────
 // UnitFlow: friend class para acessar os
 // atributos protegidos de FlowImpl diretamente
-// ─────────────────────────────────────────────
 /**
  * @brief Friend test class that accesses FlowImpl internals.
  *
@@ -51,10 +47,7 @@ public:
     static System* getDestination(const FlowImpl& f){ return f.destination; }
 };
 
-// ─────────────────────────────────────────────
 // Test implementations
-// ─────────────────────────────────────────────
-
 void testFlowDefaultConstructor() {
     TestFlow f;
 
