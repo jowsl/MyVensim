@@ -49,7 +49,7 @@ public:
         assert(f.origin == nullptr);
         assert(f.destination == nullptr);
 
-        cout << "  [OK] test Flow Default Constructor" << endl;
+        cout << "  OK test Flow Default Constructor" << endl;
     }
 
     /**
@@ -66,7 +66,7 @@ public:
         assert(f.origin == &s1);
         assert(f.destination == &s2);
 
-        cout << "  [OK] test Flow Parameterized Constructor" << endl;
+        cout << "  OK test Flow Parameterized Constructor" << endl;
     }
 
     /**
@@ -89,7 +89,7 @@ public:
         assert(copy.origin == &s1);
         assert(copy.destination == &s2);
 
-        cout << "  [OK] test Flow Copy Constructor" << endl;
+        cout << "  OK test Flow Copy Constructor" << endl;
     }
 
     /**
@@ -114,7 +114,7 @@ public:
         assert(f2.origin == &s1);
         assert(f2.destination == &s2);
 
-        cout << "  [OK] test Flow Assignment Operator" << endl;
+        cout << "  OK test Flow Assignment Operator" << endl;
     }
 
     /**
@@ -135,7 +135,7 @@ public:
         f.setName(""); 
         assert(f.name == "");
 
-        cout << "  [OK] test Flow Set Name" << endl;
+        cout << "  OK test Flow Set Name" << endl;
     }
 
     /**
@@ -150,7 +150,7 @@ public:
         // Execução e Validação: O getter (método sob teste) deve retornar o valor
         assert(f.getName() == "precipitation"); 
 
-        cout << "  [OK] test Flow Get Name" << endl;
+        cout << "  OK test Flow Get Name" << endl;
     }
 
     /**
@@ -172,7 +172,7 @@ public:
         // Validação 2
         assert(f.origin == nullptr);
 
-        cout << "  [OK] test Flow Set Origin" << endl;
+        cout << "  OK test Flow Set Origin" << endl;
     }
 
     /**
@@ -188,7 +188,7 @@ public:
         // Execução e Validação: Método sob teste
         assert(f.getOrigin() == &s1); 
 
-        cout << "  [OK] test Flow Get Origin" << endl;
+        cout << "  OK test Flow Get Origin" << endl;
     }
 
     /**
@@ -210,7 +210,7 @@ public:
         // Validação 2
         assert(f.destination == nullptr);
 
-        cout << "  [OK] test Flow Set Destination" << endl;
+        cout << "  OK test Flow Set Destination" << endl;
     }
 
     /**
@@ -226,7 +226,7 @@ public:
         // Execução e Validação: Método sob teste
         assert(f.getDestination() == &s1); 
 
-        cout << "  [OK] test Flow Get Destination" << endl;
+        cout << "  OK test Flow Get Destination" << endl;
     }
 
     /**
@@ -257,7 +257,7 @@ public:
         assert(f.origin == nullptr);
         assert(f.destination == nullptr);
 
-        cout << "  [OK] test Flow Connect" << endl;
+        cout << "  OK test Flow Connect" << endl;
     }
 };
 
@@ -275,7 +275,7 @@ void testFlowGetDestination() { UnitFlow::runTestFlowGetDestination(); }
 void testFlowConnect() { UnitFlow::runTestFlowConnect(); }
 
 void runFlowTests() {
-    cout << "\n=== Unit Tests: FlowImpl ===" << endl;
+    cout << "\n Unit Tests: FlowImpl ==" << endl;
 
     testFlowDefaultConstructor();
     testFlowParameterizedConstructor();
@@ -289,5 +289,5 @@ void runFlowTests() {
     testFlowGetDestination();
     testFlowConnect();
 
-    cout << "=== FlowImpl: All tests passed! ===" << endl;
+    cout << " FlowImpl: All tests passed! ==" << endl;
 }

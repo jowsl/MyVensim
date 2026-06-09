@@ -28,7 +28,7 @@ public:
         assert(s.name == "");
         assert(s.value == 0.0);
 
-        cout << "  [OK] test System Default Constructor" << endl;
+        cout << "  OK test System Default Constructor" << endl;
     }
 
     /**
@@ -42,7 +42,7 @@ public:
         assert(s.name == "reservoir");
         assert(s.value == 200.5);
 
-        cout << "  [OK] test System Parameterized Constructor" << endl;
+        cout << "  OK test System Parameterized Constructor" << endl;
     }
 
     /**
@@ -62,7 +62,7 @@ public:
         assert(copy.name == "source");
         assert(copy.value == 42.0);
 
-        cout << "  [OK] test System Copy Constructor" << endl;
+        cout << "  OK test System Copy Constructor" << endl;
     }
 
     /**
@@ -91,7 +91,7 @@ public:
         assert(s1.name == "alpha");
         assert(s1.value == 10.0);
 
-        cout << "  [OK] test System Assignment Operator" << endl;
+        cout << "  OK test System Assignment Operator" << endl;
     }
 
     /**
@@ -114,7 +114,7 @@ public:
         s.setName(""); 
         assert(s.name == "");
 
-        cout << "  [OK] test System Set Name" << endl;
+        cout << "  OK test System Set Name" << endl;
     }
 
     /**
@@ -129,7 +129,7 @@ public:
         // Execução e Validação: O retorno do getter (método sob teste) deve bater com o estado interno
         assert(s.getName() == "biomass"); 
 
-        cout << "  [OK] test System Get Name" << endl;
+        cout << "  OK test System Get Name" << endl;
     }
 
     /**
@@ -156,7 +156,7 @@ public:
         s.setValue(3.14159265); 
         assert(s.value == 3.14159265);
 
-        cout << "  [OK] test System Set Value" << endl;
+        cout << "  OK test System Set Value" << endl;
     }
 
     /**
@@ -171,7 +171,7 @@ public:
         // Execução e Validação: O retorno do getter (método sob teste) deve bater com o internal
         assert(s.getValue() == 3.14159265); 
 
-        cout << "  [OK] test System Get Value" << endl;
+        cout << "  OK test System Get Value" << endl;
     }
 };
 
@@ -186,7 +186,7 @@ void testSystemSetValue() { UnitSystem::runTestSystemSetValue(); }
 void testSystemGetValue() { UnitSystem::runTestSystemGetValue(); }
 
 void runSystemTests() {
-    cout << "\n=== Unit Tests: SystemImpl ===" << endl;
+    cout << "\n Unit Tests: SystemImpl ==" << endl;
 
     testSystemDefaultConstructor();
     testSystemParameterizedConstructor();
@@ -197,5 +197,5 @@ void runSystemTests() {
     testSystemSetValue();
     testSystemGetValue();
 
-    cout << "=== SystemImpl: All tests passed! ===" << endl;
+    cout << " SystemImpl: All tests passed! ==" << endl;
 }

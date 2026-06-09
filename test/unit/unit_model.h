@@ -11,8 +11,8 @@
  * performed by directly accessing protected attributes to ensure
  * single-method isolation.
  *
- * Because FlowImpl::execute() is pure virtual, a minimal concrete
- * subclass (ModelTestFlow) is used internally in the .cpp.
+ * In order to guarantee complete isolation from concrete classes,
+ * MockSystem and MockFlow are used internally in the .cpp.
  */
 
 /**
@@ -63,11 +63,12 @@ void testModelSystemIterators();
 void testModelFlowIterators();
 
 /**
- * @brief Tests execute() with a simple exponential flow.
- * Verifies that after 100 steps the system values match the
- * expected acceptance criteria (same as the functional test).
+ * @brief Tests execute() using Mock objects.
+ * Verifies that the model correctly invokes the flow's execute() method
+ * and updates the systems' values in a single time step, completely
+ * isolated from complex math or concrete flow implementations.
  */
-void testModelExecuteExponential();
+void testModelExecute();
 
 /**
  * @brief Tests execute() with a flow that has a null origin.
