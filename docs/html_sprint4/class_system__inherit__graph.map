@@ -1,5 +1,0 @@
-<map id="System" name="System">
-<area shape="rect" id="Node000001" title="Represents a stock or reservoir in the simulation." alt="" coords="18,5,103,160"/>
-<area shape="rect" id="Node000002" href="$class_system_impl.html" title="Concrete implementation of the System interface." alt="" coords="5,208,115,448"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,172,63,208,58,208,60,177"/>
-</map>

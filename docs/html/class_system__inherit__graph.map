@@ -1,0 +1,7 @@
+<map id="System" name="System">
+<area shape="rect" id="Node000001" title="Represents a stock or reservoir in the simulation." alt="" coords="89,5,174,160"/>
+<area shape="rect" id="Node000002" href="$class_mock_system.html" title="MockSystem implementa a interface System. Usado exclusivamente para injetar valores previsíveis no Mo..." alt="" coords="5,229,122,427"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,171,94,230,89,229,106,176"/>
+<area shape="rect" id="Node000003" href="$class_system_impl.html" title="Concrete implementation of the System interface." alt="" coords="146,208,256,448"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,171,170,208,165,208,157,176"/>
+</map>

@@ -1,9 +1,0 @@
-<map id="testModelSystemIterators" name="testModelSystemIterators">
-<area shape="rect" id="Node000001" title="Tests the system iterators (beginSystems / endSystems) of ModelImpl. Verifies that iteration covers e..." alt="" coords="5,31,177,57"/>
-<area shape="rect" id="Node000002" href="$class_unit_model.html#a3baf3edb6aecf6381bf3f2c2f3ec9ed5" title="Executes the begin/end system iterators test." alt="" coords="225,23,436,65"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,41,212,44,206,44,177,47"/>
-<area shape="rect" id="Node000003" href="$class_model_impl.html#ac5e8a352d633622b39b003e52935b459" title="Get iterator to the first system." alt="" coords="484,5,656,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,30,471,29,466,30,437,35"/>
-<area shape="rect" id="Node000004" href="$class_model_impl.html#a7d9e741c5d207e60d762e5707fc64a19" title="Get iterator to one past the last system." alt="" coords="489,56,651,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="436,53,476,59,471,59,436,58"/>
-</map>

@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_system.html" title="Represents a stock or reservoir in the simulation." alt="" coords="5,31,72,57"/>
+<area shape="rect" id="Node000001" href="$class_mock_system.html" title="MockSystem implementa a interface System. Usado exclusivamente para injetar valores previsíveis no Mo..." alt="" coords="120,5,218,32"/>
+<area shape="poly" id="edge8_Node000000_Node000001" title=" " alt="" coords="86,32,122,27,117,29,88,37"/>
+<area shape="rect" id="Node000002" href="$class_system_impl.html" title="Concrete implementation of the System interface." alt="" coords="123,56,214,83"/>
+<area shape="poly" id="edge9_Node000000_Node000002" title=" " alt="" coords="87,51,125,60,120,61,87,56"/>
+</map>

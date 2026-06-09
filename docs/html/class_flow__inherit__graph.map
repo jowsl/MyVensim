@@ -1,0 +1,15 @@
+<map id="Flow" name="Flow">
+<area shape="rect" id="Node000001" title="Represents a transfer channel between two Systems." alt="" coords="286,5,402,245"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Concrete implementation of the Flow interface." alt="" coords="217,293,333,640"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="318,257,312,294,307,292,316,262"/>
+<area shape="rect" id="Node000007" href="$class_mock_flow.html" title="MockFlow implementa a interface Flow. Retorna um valor fixo no execute() para não depender de matemát..." alt="" coords="357,315,473,619"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="373,257,386,315,381,314,371,263"/>
+<area shape="rect" id="Node000003" href="$class_complex_flow.html" title="Complex flow implementation. Uses the same transfer rule as the exponential flow for complex network ..." alt="" coords="5,688,117,779"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,553,99,690,95,687,205,550"/>
+<area shape="rect" id="Node000004" href="$class_exponential_flow.html" title="Exponential flow implementation. Transfers a percentage of the origin system value to the destination..." alt="" coords="141,688,269,779"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="228,652,219,690,215,687,224,656"/>
+<area shape="rect" id="Node000005" href="$class_logistic_flow.html" title="Logistic flow implementation. Computes a logistic transfer based on the destination system value." alt="" coords="293,688,398,779"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="326,652,336,689,331,687,323,657"/>
+<area shape="rect" id="Node000006" href="$class_test_flow.html" title="Minimal concrete subclass used to instantiate FlowImpl in tests." alt="" coords="422,688,506,779"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="341,631,347,638,362,654,376,664,411,686,424,698,419,697,408,690,373,669,359,658,343,642,340,636"/>
+</map>
