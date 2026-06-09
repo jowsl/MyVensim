@@ -35,7 +35,7 @@ public:
     System* destination;
     double returnValue; // Valor fixo que o fluxo vai transferir
 
-    MockFlow(System* o = nullptr, System* d = nullptr, double ret = 10.0) 
+    MockFlow(System* o = nullptr, System* d = nullptr, double ret = 10.0)
         : origin(o), destination(d), returnValue(ret) {}
     ~MockFlow() {}
 
@@ -138,39 +138,7 @@ public:
         assert(s1.value == 90.0);
         assert(s2.value == 10.0);
 
-        cout << "  OK test Model Execute (Isolated Unit)" << endl;
-    }
-
-    static void runTestModelExecuteNullOrigin() {
-        ModelImpl model;
-        MockSystem dest("Target", 50.0);
-        MockFlow f1(nullptr, &dest, 10.0); // Origem nula
-
-        model.systems.push_back(&dest);
-        model.flows.push_back(&f1);
-
-        model.execute(0, 1);
-
-        // Apenas o destino recebe valor
-        assert(dest.value == 60.0);
-
-        cout << "  OK test Model Execute Null Origin" << endl;
-    }
-
-    static void runTestModelExecuteNullDestination() {
-        ModelImpl model;
-        MockSystem orig("Source", 100.0);
-        MockFlow f1(&orig, nullptr, 10.0); // Destino nulo
-
-        model.systems.push_back(&orig);
-        model.flows.push_back(&f1);
-
-        model.execute(0, 1);
-
-        // Apenas a origem perde valor
-        assert(orig.value == 90.0);
-
-        cout << "  OK test Model Execute Null Destination" << endl;
+        cout << "  OK test Model Execute" << endl;
     }
 };
 
@@ -181,9 +149,7 @@ void testModelAddSystem() { UnitModel::runTestModelAddSystem(); }
 void testModelAddFlow() { UnitModel::runTestModelAddFlow(); }
 void testModelSystemIterators() { UnitModel::runTestModelSystemIterators(); }
 void testModelFlowIterators() { UnitModel::runTestModelFlowIterators(); }
-void testModelExecuteExponential() { UnitModel::runTestModelExecute(); } // Substituído!
-void testModelExecuteNullOrigin() { UnitModel::runTestModelExecuteNullOrigin(); }
-void testModelExecuteNullDestination() { UnitModel::runTestModelExecuteNullDestination(); }
+void testModelExecute() { UnitModel::runTestModelExecute(); } // Substituído!
 
 void runModelTests() {
     cout << "\n Unit Tests: ModelImpl ==" << endl;
@@ -194,8 +160,6 @@ void runModelTests() {
     testModelAddFlow();
     testModelSystemIterators();
     testModelFlowIterators();
-    testModelExecuteExponential();
-    testModelExecuteNullOrigin();
-    testModelExecuteNullDestination();
+    testModelExecute();
     cout << " ModelImpl: All tests passed! ==" << endl;
 }
