@@ -1,5 +1,0 @@
-<map id="testModelDefaultConstructor" name="testModelDefaultConstructor">
-<area shape="rect" id="Node000001" title="Tests the default constructor of ModelImpl. Verifies that a freshly constructed model has empty syste..." alt="" coords="5,13,194,40"/>
-<area shape="rect" id="Node000002" href="$class_unit_model.html#ac6ed594cdd30dbf833e94ecd0d0f6ed9" title=" " alt="" coords="242,5,450,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,24,229,26,223,27,194,29"/>
-</map>

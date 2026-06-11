@@ -1,5 +1,0 @@
-<map id="ModelImpl::ModelImpl" name="ModelImpl::ModelImpl">
-<area shape="rect" id="Node000001" title="Construct a new ModelImpl object by copying another model." alt="" coords="5,5,155,32"/>
-<area shape="rect" id="Node000002" href="$class_model_impl.html#a081505846c37ce9928f2176d77db4bc8" title="Construct a new ModelImpl object. Initializes an empty model with no systems or flows." alt="" coords="203,5,352,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,16,190,19,185,19,155,21"/>
-</map>

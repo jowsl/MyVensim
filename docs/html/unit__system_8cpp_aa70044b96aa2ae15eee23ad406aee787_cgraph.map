@@ -1,5 +1,0 @@
-<map id="testSystemParameterizedConstructor" name="testSystemParameterizedConstructor">
-<area shape="rect" id="Node000001" title="Tests the parameterized constructor of SystemImpl. Verifies that name and value are correctly initial..." alt="" coords="5,13,246,40"/>
-<area shape="rect" id="Node000002" href="$class_unit_system.html#a0ae1e2e84f6edadf0936e409d20c6e2d" title="Executes the parameterized constructor test." alt="" coords="294,5,480,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,24,281,27,275,27,246,29"/>
-</map>

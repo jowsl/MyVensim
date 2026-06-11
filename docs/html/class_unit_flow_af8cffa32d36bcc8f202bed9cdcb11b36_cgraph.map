@@ -1,5 +1,0 @@
-<map id="UnitFlow::runTestFlowGetOrigin" name="UnitFlow::runTestFlowGetOrigin">
-<area shape="rect" id="Node000001" title="Executes the getOrigin test." alt="" coords="5,5,179,48"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html#aeb5a6173d25dbdaa19a17b6491336a71" title="Get the origin system." alt="" coords="227,13,361,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,24,214,26,208,27,179,29"/>
-</map>

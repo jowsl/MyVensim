@@ -1,5 +1,0 @@
-<map id="testFlowParameterizedConstructor" name="testFlowParameterizedConstructor">
-<area shape="rect" id="Node000001" title="Tests the parameterized constructor of FlowImpl. Verifies that name, origin, and destination are corr..." alt="" coords="5,13,229,40"/>
-<area shape="rect" id="Node000002" href="$class_unit_flow.html#ad9576aff59d4d2f93b5c14558fbe88e5" title="Executes the parameterized constructor test." alt="" coords="277,5,513,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,24,264,27,258,27,229,29"/>
-</map>

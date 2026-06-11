@@ -1,7 +1,0 @@
-<map id="ExponentialFlow::execute" name="ExponentialFlow::execute">
-<area shape="rect" id="Node000001" title="Execute the flow calculation." alt="" coords="5,31,177,57"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html#aeb5a6173d25dbdaa19a17b6491336a71" title="Get the origin system." alt="" coords="225,5,359,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,31,212,29,206,30,177,36"/>
-<area shape="rect" id="Node000003" href="$class_system.html#a41b673faa6c199eb8e4f204639fab4f2" title="Get the current system value." alt="" coords="230,56,354,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,52,217,59,212,60,177,57"/>
-</map>

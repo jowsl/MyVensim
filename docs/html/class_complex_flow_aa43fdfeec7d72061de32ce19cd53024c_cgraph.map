@@ -1,5 +1,0 @@
-<map id="ComplexFlow::ComplexFlow" name="ComplexFlow::ComplexFlow">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,195,32"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html#a9ea3f961fe58dd3a2f17ef3d501193f5" title="Construct a new FlowImpl object. Initializes a flow with the given name, origin, and destination." alt="" coords="243,5,378,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,16,230,19,224,19,195,21"/>
-</map>

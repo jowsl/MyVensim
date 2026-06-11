@@ -1,7 +1,0 @@
-<map id="MockFlow" name="MockFlow">
-<area shape="rect" id="Node000001" title="MockFlow implementa a interface Flow. Retorna um valor fixo no execute() para não depender de matemát..." alt="" coords="67,339,183,600"/>
-<area shape="rect" id="Node000002" href="$class_flow.html" title="Represents a transfer channel between two Systems." alt="" coords="5,5,121,245"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,258,104,339,99,339,87,263"/>
-<area shape="rect" id="Node000003" href="$class_system.html" title="Represents a stock or reservoir in the simulation." alt="" coords="145,48,230,203"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,200,154,323,149,321,172,205"/>
-</map>

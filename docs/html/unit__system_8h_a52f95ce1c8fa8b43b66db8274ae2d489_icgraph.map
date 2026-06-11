@@ -1,9 +1,0 @@
-<map id="testSystemGetName" name="testSystemGetName">
-<area shape="rect" id="Node000001" title="Tests getName() of SystemImpl. Verifies that the name is correctly retrieved after setting the protec..." alt="" coords="425,5,570,32"/>
-<area shape="rect" id="Node000002" href="$unit__system_8cpp.html#aa5040e76db7f8ea7305a283ce52ba86f" title="Aggregates and runs all SystemImpl unit tests. Calls every individual test function and reports overa..." alt="" coords="261,5,377,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="407,19,378,21,378,16,412,19"/>
-<area shape="rect" id="Node000003" href="$unit_2main_8cpp.html#a77abd4466fade7cd418daf2244c633be" title="Aggregates and runs the complete unit test suite." alt="" coords="103,5,213,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,19,213,21,213,16,248,19"/>
-<area shape="rect" id="Node000004" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="84,20,55,21,55,16,90,18"/>
-</map>

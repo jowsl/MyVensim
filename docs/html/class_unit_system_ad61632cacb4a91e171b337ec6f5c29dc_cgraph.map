@@ -1,5 +1,0 @@
-<map id="UnitSystem::runTestSystemGetValue" name="UnitSystem::runTestSystemGetValue">
-<area shape="rect" id="Node000001" title="Executes the getValue test." alt="" coords="5,5,192,48"/>
-<area shape="rect" id="Node000002" href="$class_system_impl.html#abd3ff91586d4474c0a747dc5dd6e0268" title="Get the current system value." alt="" coords="240,13,389,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,24,227,26,221,27,192,29"/>
-</map>

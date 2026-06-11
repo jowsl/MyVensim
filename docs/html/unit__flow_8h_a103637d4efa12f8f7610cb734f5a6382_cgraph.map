@@ -1,7 +1,0 @@
-<map id="testFlowGetName" name="testFlowGetName">
-<area shape="rect" id="Node000001" title="Tests getName() of FlowImpl. Verifies that the name is correctly retrieved after setting the protecte..." alt="" coords="5,5,133,32"/>
-<area shape="rect" id="Node000002" href="$class_unit_flow.html#aaf5f87fa4a1ddebaeb366aae91c8b267" title="Executes the getName test." alt="" coords="181,5,389,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,16,168,18,163,19,133,21"/>
-<area shape="rect" id="Node000003" href="$class_flow_impl.html#aff4ced90aedec7ff19ea84086ea0d412" title="Get the flow name." alt="" coords="437,5,572,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="390,16,424,19,419,19,390,21"/>
-</map>

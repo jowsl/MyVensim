@@ -1,19 +1,15 @@
 #include "unit_model.h"
 #include "../../src/modelImpl.h"
-#include "../../src/system.h" // Inclui apenas a INTERFACE!
-#include "../../src/flow.h"   // Inclui apenas a INTERFACE!
+#include "../../src/system.h" 
+#include "../../src/flow.h"   
 #include <cassert>
 #include <iostream>
 
 using namespace std;
 
-/**
- * @brief MockSystem implementa a interface System.
- * Usado exclusivamente para injetar valores previsíveis no Model.
- */
 class MockSystem : public System {
 public:
-    double value; // Público para facilitar a asserção no teste
+    double value; 
     string name;
 
     MockSystem(string n = "", double v = 0.0) : name(n), value(v) {}
@@ -25,18 +21,16 @@ public:
     string getName() const override { return name; }
 };
 
-/**
- * @brief MockFlow implementa a interface Flow.
- * Retorna um valor fixo no execute() para não depender de matemática complexa.
- */
 class MockFlow : public Flow {
 public:
     System* origin;
     System* destination;
-    double returnValue; // Valor fixo que o fluxo vai transferir
+    double returnValue;
+    string name;
 
-    MockFlow(System* o = nullptr, System* d = nullptr, double ret = 10.0)
-        : origin(o), destination(d), returnValue(ret) {}
+    // Construtor ajustado para ser compatível com a Fábrica genérica
+    MockFlow(string n = "", System* o = nullptr, System* d = nullptr, double ret = 10.0)
+        : name(n), origin(o), destination(d), returnValue(ret) {}
     ~MockFlow() {}
 
     void setOrigin(System* o) override { origin = o; }
@@ -44,122 +38,149 @@ public:
     void setDestination(System* d) override { destination = d; }
     System* getDestination() const override { return destination; }
     void connect(System* o, System* d) override { origin = o; destination = d; }
-    void setName(string n) override {}
-    string getName() const override { return "Mock"; }
+    void setName(string n) override { name = n; }
+    string getName() const override { return name; }
     
-    // Retorna o valor fixo injetado no construtor
     double execute() override { return returnValue; } 
 };
 
-
 class UnitModel {
 public:
-    static void runTestModelDefaultConstructor() {
-        ModelImpl model;
+    static void runTestModelSingletonAndClear() {
+        ModelImpl& model = ModelImpl::getInstance();
+        model.clear();
+        
         assert(model.systems.size() == 0);
         assert(model.flows.size() == 0);
-        cout << "  OK test Model Default Constructor" << endl;
+        cout << "  OK test Model Singleton & Clear" << endl;
     }
 
-    static void runTestModelCopyConstructor() {
-        ModelImpl model1;
-        MockSystem s1("s1", 10.0);
-        model1.systems.push_back(&s1);
-
-        ModelImpl model2(model1);
-        assert(model2.systems.size() == 1);
-        assert(model2.systems[0] == &s1);
-        cout << "  OK test Model Copy Constructor" << endl;
-    }
-
-    static void runTestModelAssignmentOperator() {
-        ModelImpl model1;
-        MockSystem s1("s1", 10.0);
-        model1.systems.push_back(&s1);
-
-        ModelImpl model2;
-        model2 = model1;
+    static void runTestModelCreateSystem() {
+        ModelImpl& model = ModelImpl::getInstance();
+        model.clear();
         
-        assert(model2.systems.size() == 1);
-        assert(model2.systems[0] == &s1);
-        cout << "  OK test Model Assignment Operator" << endl;
-    }
-
-    static void runTestModelAddSystem() {
-        ModelImpl model;
-        MockSystem s1("s1", 0.0);
-        model.add(&s1);
+        System& s1 = model.createSystem("s1", 10.0);
         assert(model.systems.size() == 1);
         assert(model.systems[0] == &s1);
-        cout << "  OK test Model Add System" << endl;
+        cout << "  OK test Model Create System Factory" << endl;
     }
 
-    static void runTestModelAddFlow() {
-        ModelImpl model;
-        MockFlow f1;
-        model.add(&f1);
+    static void runTestModelCreateFlow() {
+        ModelImpl& model = ModelImpl::getInstance();
+        model.clear();
+        
+        System& s1 = model.createSystem("s1", 0.0);
+        System& s2 = model.createSystem("s2", 0.0);
+        
+        Flow& f1 = model.createFlow<MockFlow>("Mock", &s1, &s2);
         assert(model.flows.size() == 1);
         assert(model.flows[0] == &f1);
-        cout << "  OK test Model Add Flow" << endl;
+        assert(f1.getOrigin() == &s1);
+        cout << "  OK test Model Create Flow Factory" << endl;
     }
 
+    // static void runTestModelSystemIterators() {
+    //     ModelImpl& model = ModelImpl::getInstance();
+    //     model.clear();
+          //da segmentation fault porque o MockSystem é criado na stack e o clear() tenta deletar ele depois. 
+    //     MockSystem s1;
+    //     model.add(&s1); // Usando add protegido via friend
+    //     assert(*(model.beginSystems()) == &s1);
+    //     cout << "  OK test Model System Iterators" << endl;
+    // }
+
+
     static void runTestModelSystemIterators() {
-        ModelImpl model;
-        MockSystem s1;
-        model.systems.push_back(&s1);
-        assert(*(model.beginSystems()) == &s1);
+        ModelImpl& model = ModelImpl::getInstance();
+        model.clear();
+        
+        MockSystem* s1 = new MockSystem(); // Usa 'new' para o clear() conseguir deletar depois
+        model.add(s1); 
+        assert(*(model.beginSystems()) == s1);
         cout << "  OK test Model System Iterators" << endl;
     }
 
     static void runTestModelFlowIterators() {
-        ModelImpl model;
-        MockFlow f1;
-        model.flows.push_back(&f1);
-        assert(*(model.beginFlows()) == &f1);
+        ModelImpl& model = ModelImpl::getInstance();
+        model.clear();
+        
+        MockFlow* f1 = new MockFlow(); // Usa 'new'
+        model.add(f1); 
+        assert(*(model.beginFlows()) == f1);
         cout << "  OK test Model Flow Iterators" << endl;
     }
 
     static void runTestModelExecute() {
-        ModelImpl model;
-        MockSystem s1("Source", 100.0);
-        MockSystem s2("Target", 0.0);
+        ModelImpl& model = ModelImpl::getInstance();
+        model.clear();
         
-        // Cria um fluxo que SEMPRE transfere o valor 10.0
-        MockFlow f1(&s1, &s2, 10.0); 
+        MockSystem* s1 = new MockSystem("Source", 100.0);
+        MockSystem* s2 = new MockSystem("Target", 0.0);
+        MockFlow* f1 = new MockFlow("Mock", s1, s2, 10.0); 
 
-        model.systems.push_back(&s1);
-        model.systems.push_back(&s2);
-        model.flows.push_back(&f1);
+        model.add(s1);
+        model.add(s2);
+        model.add(f1);
 
-        // Executa 1 único passo de tempo
         model.execute(0, 1);
 
-        // Verificamos o 'value' do mock diretamente!
-        assert(s1.value == 90.0);
-        assert(s2.value == 10.0);
+        assert(s1->value == 90.0);
+        assert(s2->value == 10.0);
 
         cout << "  OK test Model Execute" << endl;
     }
+
+    static void runTestModelExecuteNullOrigin() {
+        ModelImpl& model = ModelImpl::getInstance();
+        model.clear();
+        
+        MockSystem* dest = new MockSystem("Target", 50.0);
+        MockFlow* f1 = new MockFlow("Mock", nullptr, dest, 10.0);
+
+        model.add(dest);
+        model.add(f1);
+
+        model.execute(0, 1);
+
+        assert(dest->value == 60.0);
+        cout << "  OK test Model Execute Null Origin" << endl;
+    }
+
+    static void runTestModelExecuteNullDestination() {
+        ModelImpl& model = ModelImpl::getInstance();
+        model.clear();
+        
+        MockSystem* orig = new MockSystem("Source", 100.0);
+        MockFlow* f1 = new MockFlow("Mock", orig, nullptr, 10.0);
+
+        model.add(orig);
+        model.add(f1);
+
+        model.execute(0, 1);
+
+        assert(orig->value == 90.0);
+        cout << "  OK test Model Execute Null Destination" << endl;
+    }
 };
 
-void testModelDefaultConstructor() { UnitModel::runTestModelDefaultConstructor(); }
-void testModelCopyConstructor() { UnitModel::runTestModelCopyConstructor(); }
-void testModelAssignmentOperator() { UnitModel::runTestModelAssignmentOperator(); }
-void testModelAddSystem() { UnitModel::runTestModelAddSystem(); }
-void testModelAddFlow() { UnitModel::runTestModelAddFlow(); }
+void testModelSingletonAndClear() { UnitModel::runTestModelSingletonAndClear(); }
+void testModelCreateSystem() { UnitModel::runTestModelCreateSystem(); }
+void testModelCreateFlow() { UnitModel::runTestModelCreateFlow(); }
 void testModelSystemIterators() { UnitModel::runTestModelSystemIterators(); }
 void testModelFlowIterators() { UnitModel::runTestModelFlowIterators(); }
-void testModelExecute() { UnitModel::runTestModelExecute(); } // Substituído!
+void testModelExecute() { UnitModel::runTestModelExecute(); }
+void testModelExecuteNullOrigin() { UnitModel::runTestModelExecuteNullOrigin(); }
+void testModelExecuteNullDestination() { UnitModel::runTestModelExecuteNullDestination(); }
 
 void runModelTests() {
     cout << "\n Unit Tests: ModelImpl ==" << endl;
-    testModelDefaultConstructor();
-    testModelCopyConstructor();
-    testModelAssignmentOperator();
-    testModelAddSystem();
-    testModelAddFlow();
+    testModelSingletonAndClear();
+    testModelCreateSystem();
+    testModelCreateFlow();
     testModelSystemIterators();
     testModelFlowIterators();
     testModelExecute();
+    testModelExecuteNullOrigin();
+    testModelExecuteNullDestination();
     cout << " ModelImpl: All tests passed! ==" << endl;
 }

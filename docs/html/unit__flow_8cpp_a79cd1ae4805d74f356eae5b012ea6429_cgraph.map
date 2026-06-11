@@ -1,5 +1,0 @@
-<map id="testFlowDefaultConstructor" name="testFlowDefaultConstructor">
-<area shape="rect" id="Node000001" title="Tests the default constructor of FlowImpl. Verifies that a default&#45;constructed flow has an empty name..." alt="" coords="5,13,187,40"/>
-<area shape="rect" id="Node000002" href="$class_unit_flow.html#aaa7f7646f42b6dd76b8c06b79493c54c" title="Executes the default constructor test." alt="" coords="235,5,429,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,24,222,26,216,27,187,29"/>
-</map>

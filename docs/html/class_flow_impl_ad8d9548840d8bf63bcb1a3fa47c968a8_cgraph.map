@@ -1,5 +1,0 @@
-<map id="FlowImpl::FlowImpl" name="FlowImpl::FlowImpl">
-<area shape="rect" id="Node000001" title="Construct a new FlowImpl object by copying another flow." alt="" coords="5,5,141,32"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html#a9ea3f961fe58dd3a2f17ef3d501193f5" title="Construct a new FlowImpl object. Initializes a flow with the given name, origin, and destination." alt="" coords="189,5,324,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,16,176,18,171,19,141,21"/>
-</map>

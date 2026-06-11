@@ -1,5 +1,0 @@
-<map id="SystemImpl::operator=" name="SystemImpl::operator=">
-<area shape="rect" id="Node000001" title="Assign the values of another system to this system." alt="" coords="5,5,160,32"/>
-<area shape="rect" id="Node000002" href="$class_system_impl.html#a9209ceeaae6b903c846ce9e214417084" title="Construct a new SystemImpl object. Initializes a system with the given name and value." alt="" coords="208,5,377,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,16,195,19,189,19,160,21"/>
-</map>

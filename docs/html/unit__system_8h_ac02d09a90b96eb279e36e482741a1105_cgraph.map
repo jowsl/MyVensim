@@ -1,7 +1,0 @@
-<map id="testSystemGetValue" name="testSystemGetValue">
-<area shape="rect" id="Node000001" title="Tests getValue() of SystemImpl. Verifies that the value is correctly retrieved after setting the prot..." alt="" coords="5,13,147,40"/>
-<area shape="rect" id="Node000002" href="$class_unit_system.html#ad61632cacb4a91e171b337ec6f5c29dc" title="Executes the getValue test." alt="" coords="195,5,381,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,24,181,26,176,27,147,29"/>
-<area shape="rect" id="Node000003" href="$class_system_impl.html#abd3ff91586d4474c0a747dc5dd6e0268" title="Get the current system value." alt="" coords="429,13,578,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,24,416,27,411,27,381,29"/>
-</map>

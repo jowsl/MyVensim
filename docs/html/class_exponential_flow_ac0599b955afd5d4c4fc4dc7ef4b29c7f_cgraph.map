@@ -1,5 +1,0 @@
-<map id="ExponentialFlow::ExponentialFlow" name="ExponentialFlow::ExponentialFlow">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,227,32"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html#a9ea3f961fe58dd3a2f17ef3d501193f5" title="Construct a new FlowImpl object. Initializes a flow with the given name, origin, and destination." alt="" coords="275,5,410,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,16,262,19,257,19,227,21"/>
-</map>

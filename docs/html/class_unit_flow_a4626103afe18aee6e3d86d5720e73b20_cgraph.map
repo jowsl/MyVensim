@@ -1,5 +1,0 @@
-<map id="UnitFlow::runTestFlowGetDestination" name="UnitFlow::runTestFlowGetDestination">
-<area shape="rect" id="Node000001" title="Executes the getDestination test." alt="" coords="5,5,179,48"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html#ac8b68a380ffb64f82bda52e6c897de7a" title="Get the destination system." alt="" coords="227,13,393,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,24,214,26,209,27,179,29"/>
-</map>

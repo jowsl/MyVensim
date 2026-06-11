@@ -1,5 +1,0 @@
-<map id="testSystemAssignmentOperator" name="testSystemAssignmentOperator">
-<area shape="rect" id="Node000001" title="Tests the assignment operator of SystemImpl. Verifies correct deep assignment and self&#45;assignment saf..." alt="" coords="5,13,213,40"/>
-<area shape="rect" id="Node000002" href="$class_unit_system.html#a568a68faa6c055efeb8f7805188ed417" title="Executes the assignment operator test." alt="" coords="261,5,447,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,24,247,27,242,27,213,29"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="testSystemGetName" name="testSystemGetName">
-<area shape="rect" id="Node000001" title="Tests getName() of SystemImpl. Verifies that the name is correctly retrieved after setting the protec..." alt="" coords="5,13,150,40"/>
-<area shape="rect" id="Node000002" href="$class_unit_system.html#a5ca494f82f4c67067b1611d69c8aad3d" title="Executes the getName test." alt="" coords="198,5,384,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,24,185,26,179,27,150,29"/>
-<area shape="rect" id="Node000003" href="$class_system_impl.html#a68ca2c650fa5669baec1bd4c05fa2bd0" title="Get the system name." alt="" coords="432,13,584,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,24,419,27,414,27,385,29"/>
-</map>

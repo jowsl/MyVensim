@@ -1,7 +1,0 @@
-<map id="testSystemSetValue" name="testSystemSetValue">
-<area shape="rect" id="Node000001" title="Tests setValue() of SystemImpl. Verifies that the value is correctly set, including negative and floa..." alt="" coords="5,13,146,40"/>
-<area shape="rect" id="Node000002" href="$class_unit_system.html#adb8dfc63fa4504f47cc221f14fd9caab" title="Executes the setValue test." alt="" coords="194,5,380,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,24,181,26,175,27,146,29"/>
-<area shape="rect" id="Node000003" href="$class_system_impl.html#a3ebff8dd869e1fab281375d5c2ef8362" title="Set the system value." alt="" coords="428,13,577,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="380,24,415,27,410,27,380,29"/>
-</map>

@@ -20,13 +20,13 @@
  * @note Developed as an academic assignment for the BCC322.
  */
 
-
 #ifndef MODEL_H
 #define MODEL_H
 
 #include "system.h"
 #include "flow.h"
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -36,6 +36,21 @@ using namespace std;
  * and transfer channels (Flows).
  */
 class Model {
+protected:
+    /**
+     * @brief Add a system to the model.
+     * Protected to enforce the use of the Factory Method (createSystem).
+     * @param sys Pointer to the system to add.
+     */
+    virtual void add(System* sys) = 0;
+
+    /**
+     * @brief Add a flow to the model.
+     * Protected to enforce the use of the Factory Method (createFlow).
+     * @param flow Pointer to the flow to add.
+     */
+    virtual void add(Flow* flow) = 0;
+
 public:
     // Iterator definitions
     using flowIterator = vector<Flow*>::iterator;
@@ -48,16 +63,38 @@ public:
 
 
     /**
-     * @brief Add a system to the model.
-     * @param sys Pointer to the system to add.
+     * @brief Factory Method to create a System.
+     * @param name Name of the system.
+     * @param value Initial value of the system.
+     * @return System& Reference to the created system.
      */
-    virtual void add(System* sys) = 0;
+    virtual System& createSystem(string name, double value) = 0;
+
+    
+    /**
+     * @brief Factory Method to create a Flow using Generics (Templates).
+     * Instantiates a generic flow of type T_FLOW, connects it, and adds it to the model.
+     * @tparam T_FLOW The specific concrete class of the flow (e.g., ExponentialFlow).
+     * @param name Name of the flow.
+     * @param orig Pointer to the origin system.
+     * @param dest Pointer to the destination system.
+     * @return Flow& Reference to the created flow.
+     */
+    
+    template <typename T_FLOW>
+    Flow& createFlow(string name, System* orig = nullptr, System* dest = nullptr) {
+        // A fábrica instancia o tipo genérico, conecta e armazena na coleção protegida
+        Flow* f = new T_FLOW(name);
+        f->connect(orig, dest);
+        add(f); 
+        return *f;
+    }
 
     /**
-     * @brief Add a flow to the model.
-     * @param flow Pointer to the flow to add.
+     * @brief Clears all systems and flows from the model.
+     * Essential for resetting the Singleton state between tests.
      */
-    virtual void add(Flow* flow) = 0;
+    virtual void clear() = 0;
 
     /**
      * @brief Get iterator to the first system.

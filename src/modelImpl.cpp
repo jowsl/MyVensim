@@ -1,24 +1,33 @@
 #include "modelImpl.h"
+#include "systemImpl.h" // A Fábrica precisa conhecer a implementação concreta para dar o 'new'
 
 ModelImpl::ModelImpl() {}
-ModelImpl::~ModelImpl() {}
 
-ModelImpl::ModelImpl(const ModelImpl& param_model) {
-    this->systems = param_model.systems;
-    this->flows = param_model.flows;
+ModelImpl::~ModelImpl() {
+    // Reaproveita a lógica do clear para evitar repetição de código
+    clear();
 }
 
-ModelImpl& ModelImpl::operator=(const ModelImpl& param_model) {
-    if (this == &param_model) {
-        return *this;
+void ModelImpl::clear() {
+    // Deleta a memória alocada na RAM antes de esvaziar os vetores
+    for (System* s : systems) {
+        delete s;
     }
-    this->systems = param_model.systems;
-    this->flows = param_model.flows;
-    
-    return *this;
+    for (Flow* f : flows) {
+        delete f;
+    }
+    // Esvazia os vetores
+    systems.clear();
+    flows.clear();
 }
 
-//Impl da adição de Systems e Flows
+System& ModelImpl::createSystem(string id, double qtd) {
+    System* s = new SystemImpl(id, qtd); // A fábrica dá o 'new'
+    add(s); // Guarda no vetor interno
+    return *s; // Retorna a interface como referência
+}
+
+// Impl da adição de Systems e Flows (agora protegidos)
 void ModelImpl::add(System* sys) {
     systems.push_back(sys);
 }
@@ -43,7 +52,7 @@ Model::flowIterator ModelImpl::endFlows() {
     return flows.end();
 }
 
-// execução do modelo
+// Execução do modelo
 void ModelImpl::execute(double time_ini, double time_final) {
     for (double tempo = time_ini; tempo < time_final; tempo++) {
         
