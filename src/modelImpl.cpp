@@ -1,5 +1,5 @@
 #include "modelImpl.h"
-#include "systemImpl.h" // A Fábrica precisa conhecer a implementação concreta para dar o 'new'
+#include "systemImpl.h"
 
 ModelImpl::ModelImpl() {}
 
@@ -19,6 +19,10 @@ void ModelImpl::clear() {
     // Esvazia os vetores
     systems.clear();
     flows.clear();
+}
+
+Model& Model::createModel() {
+    return ModelImpl::getInstance();
 }
 
 System& ModelImpl::createSystem(string id, double qtd) {

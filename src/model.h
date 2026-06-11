@@ -35,7 +35,13 @@ using namespace std;
  * The Model acts as the simulation engine, storing stocks (Systems)
  * and transfer channels (Flows).
  */
+
+class UnitModel;
+
 class Model {
+
+friend class UnitModel;
+
 protected:
     /**
      * @brief Add a system to the model.
@@ -61,7 +67,7 @@ public:
      */
     virtual ~Model() {};
 
-
+    static Model& createModel();
     /**
      * @brief Factory Method to create a System.
      * @param name Name of the system.

@@ -1,5 +1,6 @@
 #include "unit_model.h"
-#include "../../src/modelImpl.h"
+
+#include "../../src/model.h"
 #include "../../src/system.h" 
 #include "../../src/flow.h"   
 #include <cassert>
@@ -7,6 +8,7 @@
 
 using namespace std;
 
+// Mocks ficam no escopo do teste para não poluir o sistema real
 class MockSystem : public System {
 public:
     double value; 
@@ -28,7 +30,6 @@ public:
     double returnValue;
     string name;
 
-    // Construtor ajustado para ser compatível com a Fábrica genérica
     MockFlow(string n = "", System* o = nullptr, System* d = nullptr, double ret = 10.0)
         : name(n), origin(o), destination(d), returnValue(ret) {}
     ~MockFlow() {}
@@ -44,74 +45,77 @@ public:
     double execute() override { return returnValue; } 
 };
 
+// Função auxiliar para contar elementos via iterador (já que não temos .size())
+int countSystems(Model& m) {
+    int count = 0;
+    for(auto it = m.beginSystems(); it != m.endSystems(); ++it) count++;
+    return count;
+}
+
+int countFlows(Model& m) {
+    int count = 0;
+    for(auto it = m.beginFlows(); it != m.endFlows(); ++it) count++;
+    return count;
+}
+
 class UnitModel {
 public:
     static void runTestModelSingletonAndClear() {
-        ModelImpl& model = ModelImpl::getInstance();
+        // Agora usamos o createModel() da interface!
+        Model& model = Model::createModel();
         model.clear();
         
-        assert(model.systems.size() == 0);
-        assert(model.flows.size() == 0);
+        assert(countSystems(model) == 0);
+        assert(countFlows(model) == 0);
         cout << "  OK test Model Singleton & Clear" << endl;
     }
 
     static void runTestModelCreateSystem() {
-        ModelImpl& model = ModelImpl::getInstance();
+        Model& model = Model::createModel();
         model.clear();
         
         System& s1 = model.createSystem("s1", 10.0);
-        assert(model.systems.size() == 1);
-        assert(model.systems[0] == &s1);
+        assert(countSystems(model) == 1);
+        assert(*(model.beginSystems()) == &s1);
         cout << "  OK test Model Create System Factory" << endl;
     }
 
     static void runTestModelCreateFlow() {
-        ModelImpl& model = ModelImpl::getInstance();
+        Model& model = Model::createModel();
         model.clear();
         
         System& s1 = model.createSystem("s1", 0.0);
         System& s2 = model.createSystem("s2", 0.0);
         
+        // Passando a classe Mock diretamente pro template da interface
         Flow& f1 = model.createFlow<MockFlow>("Mock", &s1, &s2);
-        assert(model.flows.size() == 1);
-        assert(model.flows[0] == &f1);
-        assert(f1.getOrigin() == &s1);
+        assert(countFlows(model) == 1);
+        assert(*(model.beginFlows()) == &f1);
         cout << "  OK test Model Create Flow Factory" << endl;
     }
 
-    // static void runTestModelSystemIterators() {
-    //     ModelImpl& model = ModelImpl::getInstance();
-    //     model.clear();
-          //da segmentation fault porque o MockSystem é criado na stack e o clear() tenta deletar ele depois. 
-    //     MockSystem s1;
-    //     model.add(&s1); // Usando add protegido via friend
-    //     assert(*(model.beginSystems()) == &s1);
-    //     cout << "  OK test Model System Iterators" << endl;
-    // }
-
-
     static void runTestModelSystemIterators() {
-        ModelImpl& model = ModelImpl::getInstance();
+        Model& model = Model::createModel();
         model.clear();
         
-        MockSystem* s1 = new MockSystem(); // Usa 'new' para o clear() conseguir deletar depois
-        model.add(s1); 
+        MockSystem* s1 = new MockSystem(); 
+        model.add(s1); // Válido graças ao 'friend class UnitModel' na interface Model
         assert(*(model.beginSystems()) == s1);
         cout << "  OK test Model System Iterators" << endl;
     }
 
     static void runTestModelFlowIterators() {
-        ModelImpl& model = ModelImpl::getInstance();
+        Model& model = Model::createModel();
         model.clear();
         
-        MockFlow* f1 = new MockFlow(); // Usa 'new'
+        MockFlow* f1 = new MockFlow(); 
         model.add(f1); 
         assert(*(model.beginFlows()) == f1);
         cout << "  OK test Model Flow Iterators" << endl;
     }
 
     static void runTestModelExecute() {
-        ModelImpl& model = ModelImpl::getInstance();
+        Model& model = Model::createModel();
         model.clear();
         
         MockSystem* s1 = new MockSystem("Source", 100.0);
@@ -131,7 +135,7 @@ public:
     }
 
     static void runTestModelExecuteNullOrigin() {
-        ModelImpl& model = ModelImpl::getInstance();
+        Model& model = Model::createModel();
         model.clear();
         
         MockSystem* dest = new MockSystem("Target", 50.0);
@@ -147,7 +151,7 @@ public:
     }
 
     static void runTestModelExecuteNullDestination() {
-        ModelImpl& model = ModelImpl::getInstance();
+        Model& model = Model::createModel();
         model.clear();
         
         MockSystem* orig = new MockSystem("Source", 100.0);
@@ -173,7 +177,7 @@ void testModelExecuteNullOrigin() { UnitModel::runTestModelExecuteNullOrigin(); 
 void testModelExecuteNullDestination() { UnitModel::runTestModelExecuteNullDestination(); }
 
 void runModelTests() {
-    cout << "\n Unit Tests: ModelImpl ==" << endl;
+    cout << "\n= Unit Tests: Model =" << endl;
     testModelSingletonAndClear();
     testModelCreateSystem();
     testModelCreateFlow();
@@ -182,5 +186,5 @@ void runModelTests() {
     testModelExecute();
     testModelExecuteNullOrigin();
     testModelExecuteNullDestination();
-    cout << " ModelImpl: All tests passed! ==" << endl;
+    cout << "= Model: All tests passed! =" << endl;
 }
