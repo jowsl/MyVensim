@@ -1,0 +1,13 @@
+<map id="FlowImpl::getName" name="FlowImpl::getName">
+<area shape="rect" id="Node000001" title="Get the flow name." alt="" coords="840,5,975,32"/>
+<area shape="rect" id="Node000002" href="$class_unit_flow.html#aaf5f87fa4a1ddebaeb366aae91c8b267" title="Executes the getName test." alt="" coords="584,5,792,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="821,19,793,21,793,16,827,19"/>
+<area shape="rect" id="Node000003" href="$unit__flow_8cpp.html#a103637d4efa12f8f7610cb734f5a6382" title="Tests getName() of FlowImpl. Verifies that the name is correctly retrieved after setting the protecte..." alt="" coords="408,5,536,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="565,19,536,21,536,16,571,19"/>
+<area shape="rect" id="Node000004" href="$unit__flow_8cpp.html#a0bc5e6a3277c6197d4dc99d3a192c562" title="Aggregates and runs all FlowImpl unit tests. Calls every individual test function and reports overall..." alt="" coords="261,5,360,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="390,19,361,21,361,16,395,19"/>
+<area shape="rect" id="Node000005" href="$unit_2main_8cpp.html#a77abd4466fade7cd418daf2244c633be" title="Aggregates and runs the complete unit test suite." alt="" coords="103,5,213,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="243,19,213,21,213,16,248,19"/>
+<area shape="rect" id="Node000006" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="84,20,55,21,55,16,90,18"/>
+</map>

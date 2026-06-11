@@ -30,7 +30,7 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MyVensim<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">MyVensim<span id="projectnumber">&#160;v2.1</span>
    </div>
   </td>
  </tr>
@@ -121,21 +121,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_model.ht
 
 <p>This is the complete list of members for <a class="el" href="class_model.html">Model</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_model.html#ad7e1460343a74a56fe20f417c1852eee">add</a>(System *sys)</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#ab69613bde0ace81c92bbf519660ccb2c">add</a>(Flow *flow)</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_model.html#a2c1ca83c40f2dea05e01275651a476b1">beginFlows</a>()</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#a79fe15fb9d2fbd880eaaf38b0f03e17e">beginSystems</a>()</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_model.html#abfae233cbcbc3b9875ee87698f1e140c">endFlows</a>()</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#a815cd0c70ae9cb2344cc7256e2dda35f">endSystems</a>()</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_model.html#afee110e3b39306bac7965980de447ad3">execute</a>(double time_ini, double time_final)</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model.html#a94c8319fa87ab9f33a4ac2b362837e5d">add</a>(System *sys)=0</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#ab7df81041f62f049cfc6e4d50dcaf721">add</a>(Flow *flow)=0</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model.html#a4c21fa615edc5d7b8a9696fe090707a4">beginFlows</a>()=0</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#af44c12bce2645f91b796e750ddbacbd2">beginSystems</a>()=0</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model.html#a27d6c506e46555299b4b4c8ae0990a7c">endFlows</a>()=0</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#a251f709667f7ca6aedc45dd7431e40c1">endSystems</a>()=0</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model.html#a30ffebb7d1dcc17053a6261027c2f1cb">execute</a>(double time_ini, double time_final)=0</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_model.html#ae3a9fed6721ae594442ddbcb048f4026">flowIterator</a> typedef</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_model.html#aa76c9411f1cf6da6f4c696b2feadcb1a">flows</a></td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#ae3b375de5f6df4faf74a95d64748e048">Model</a>()</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_model.html#a48858e5f328ba822b430d86a76a6ceeb">Model</a>(const Model &amp;other)</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#a8c13d044cf584e1e6ff8409723593eac">operator=</a>(const Model &amp;param_model)</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_model.html#a943f9337ccf8718afab20385ed893a74">systemIterator</a> typedef</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#ac7dea8829149e597d2671dbc0a538bf7">systems</a></td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_model.html#ad6ebd2062a0b823db841a0b88baac4c0">~Model</a>()</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_model.html#af032d8433c87a0a3a431faf6563a1f03">~Model</a>()</td><td class="entry"><a class="el" href="class_model.html">Model</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

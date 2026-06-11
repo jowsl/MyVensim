@@ -30,7 +30,7 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MyVensim<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">MyVensim<span id="projectnumber">&#160;v2.1</span>
    </div>
   </td>
  </tr>
@@ -121,22 +121,23 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_logistic
 
 <p>This is the complete list of members for <a class="el" href="class_logistic_flow.html">LogisticFlow</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_flow.html#aa683a59f13e3aaaa544f8b5bdac3904c">connect</a>(System *orig, System *dest)</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#a183323f0b723a6958b7314bab2c549a1">destination</a></td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_flow_impl.html#a7f25c340fa4d38df735cecfe4ea96dd8">connect</a>(System *orig, System *dest) override</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_flow_impl.html#a64bf7b28bcf3d607d7a137c7c03e17bb">destination</a></td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_logistic_flow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884">execute</a>() override</td><td class="entry"><a class="el" href="class_logistic_flow.html">LogisticFlow</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#abad53c6ca593c28455d263f60b9af1cd">Flow</a>(string name=&quot;&quot;, System *origin=nullptr, System *destination=nullptr)</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_flow.html#a5a65e36c874c5cd5283ac32a33eb0a8b">Flow</a>(const Flow &amp;other)</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#ac60f90fcf5c7744cb25bc0f592a76240">getDestination</a>() const</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_flow.html#a62bbc54ff95eeb0795511519edf32077">getName</a>() const</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#a1aa2688902566d7c093b923c80ee4594">getOrigin</a>() const</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_flow_impl.html#a9ea3f961fe58dd3a2f17ef3d501193f5">FlowImpl</a>(string name=&quot;&quot;, System *origin=nullptr, System *destination=nullptr)</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_flow_impl.html#ad8d9548840d8bf63bcb1a3fa47c968a8">FlowImpl</a>(const FlowImpl &amp;param_flow)</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_flow_impl.html#ac8b68a380ffb64f82bda52e6c897de7a">getDestination</a>() const override</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_flow_impl.html#aff4ced90aedec7ff19ea84086ea0d412">getName</a>() const override</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_flow_impl.html#aeb5a6173d25dbdaa19a17b6491336a71">getOrigin</a>() const override</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_logistic_flow.html#ad435e532c85519803c8fbf8240ae5258">LogisticFlow</a>(string name=&quot;&quot;)</td><td class="entry"><a class="el" href="class_logistic_flow.html">LogisticFlow</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#a8801d2ed91a9d96003d4bc8024451551">name</a></td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_flow.html#afc9b6f81dc7ad34c1ee340bcff7b5f86">operator=</a>(const Flow &amp;param_flow)</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#ae45eeafa1931934bfb6c9386d84d8c21">origin</a></td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_flow.html#a23098ec4e0ef46bd2abf6c7b84aff3d7">setDestination</a>(System *destination)</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#ac829599a96f9ae03979d762771a4fea0">setName</a>(string name)</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_flow.html#aa617798e94847f6044eb647e8e24cacc">setOrigin</a>(System *origin)</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#a5991efa6e8cf88c4ef2125cc727db333">~Flow</a>()</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_flow_impl.html#a4f3915297f6ef9d76acc5f9fef67342c">name</a></td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_flow_impl.html#a826f54ce13233177e442f4a5035f9dbb">operator=</a>(const FlowImpl &amp;param_flow)</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_flow_impl.html#a5a6226d0da34c1f51883531eb9f91e33">origin</a></td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_flow_impl.html#a53dbf2b266e62049ceb3371403924b5e">setDestination</a>(System *destination) override</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_flow_impl.html#a25eeba807fcaed9e47e1a8b2a7c0a819">setName</a>(string name) override</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_flow_impl.html#ad11905d4e94b97b5fdbf7297733b3c34">setOrigin</a>(System *origin) override</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_flow.html#a325d284a50ca3274b126b21f5c39b9af">~Flow</a>()</td><td class="entry"><a class="el" href="class_flow.html">Flow</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_flow_impl.html#a2d91539593b336aee4a19048f8a82e8c">~FlowImpl</a>()</td><td class="entry"><a class="el" href="class_flow_impl.html">FlowImpl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

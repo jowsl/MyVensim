@@ -1,6 +1,6 @@
 var searchData=
 [
   ['complexflow_0',['ComplexFlow',['../class_complex_flow.html#aa43fdfeec7d72061de32ce19cd53024c',1,'ComplexFlow']]],
-  ['complexfuncionaltest_1',['complexFuncionalTest',['../funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527',1,'complexFuncionalTest():&#160;funcional_tests.cpp'],['../funcional__tests_8h.html#a943dfe0c597a01c9760c140715fed527',1,'complexFuncionalTest():&#160;funcional_tests.cpp']]],
-  ['connect_2',['connect',['../class_flow.html#aa683a59f13e3aaaa544f8b5bdac3904c',1,'Flow']]]
+  ['complexfunctionaltest_1',['complexFunctionalTest',['../functional__tests_8cpp.html#ab5b2fd66ce3b2f1996afb4d0368962c3',1,'complexFunctionalTest():&#160;functional_tests.cpp'],['../functional__tests_8h.html#ab5b2fd66ce3b2f1996afb4d0368962c3',1,'complexFunctionalTest():&#160;functional_tests.cpp']]],
+  ['connect_2',['connect',['../class_flow.html#ad62846db6725b2fc0ad98e1c2ba0994b',1,'Flow::connect()'],['../class_flow_impl.html#a7f25c340fa4d38df735cecfe4ea96dd8',1,'FlowImpl::connect()'],['../class_mock_flow.html#a18f3171a1f6ba6364478aa8d5850b5d7',1,'MockFlow::connect()']]]
 ];

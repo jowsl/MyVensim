@@ -30,7 +30,7 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MyVensim<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">MyVensim<span id="projectnumber">&#160;v2.1</span>
    </div>
   </td>
  </tr>
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_system.h
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">System Class Reference</div></div>
+  <div class="headertitle"><div class="title">System Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -124,132 +124,64 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_system.h
 
 <p><code>#include &lt;<a class="el" href="system_8h_source.html">system.h</a>&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for System:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_system__inherit__graph.png" border="0" usemap="#a_system_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_system_inherit__map" id="a_system_inherit__map">
+<area shape="rect" title="Represents a stock or reservoir in the simulation." alt="" coords="89,5,174,160"/>
+<area shape="rect" href="class_mock_system.html" title="MockSystem implementa a interface System. Usado exclusivamente para injetar valores previsíveis no Mo..." alt="" coords="5,229,122,427"/>
+<area shape="poly" title=" " alt="" coords="108,171,94,230,89,229,106,176"/>
+<area shape="rect" href="class_system_impl.html" title="Concrete implementation of the System interface." alt="" coords="146,208,256,448"/>
+<area shape="poly" title=" " alt="" coords="158,171,170,208,165,208,157,176"/>
+</map>
+</div>
+<div class="dynheader">
 Collaboration diagram for System:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_system__coll__graph.png" border="0" usemap="#a_system_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_system_coll__map" id="a_system_coll__map">
-<area shape="rect" title="Represents a stock or reservoir in the simulation." alt="" coords="5,5,92,245"/>
+<area shape="rect" title="Represents a stock or reservoir in the simulation." alt="" coords="5,5,90,160"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a666ed721e77edc31b4971c643678aa51" id="r_a666ed721e77edc31b4971c643678aa51"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a666ed721e77edc31b4971c643678aa51">System</a> (string name=&quot;&quot;, double value=0.0)</td></tr>
-<tr class="memdesc:a666ed721e77edc31b4971c643678aa51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> object.  <br /></td></tr>
-<tr class="memitem:a332a4ba90876f028bc7b84151ae00eae" id="r_a332a4ba90876f028bc7b84151ae00eae"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a332a4ba90876f028bc7b84151ae00eae">System</a> (const <a class="el" href="class_system.html">System</a> &amp;param_system)</td></tr>
-<tr class="memdesc:a332a4ba90876f028bc7b84151ae00eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
-<tr class="memitem:a3be70bb338e3f062f821173fd15680d0" id="r_a3be70bb338e3f062f821173fd15680d0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3be70bb338e3f062f821173fd15680d0">~System</a> ()</td></tr>
-<tr class="memdesc:a3be70bb338e3f062f821173fd15680d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> object.  <br /></td></tr>
-<tr class="memitem:a87aa650632485dcfcff7f17594566e32" id="r_a87aa650632485dcfcff7f17594566e32"><td class="memItemLeft"><a class="el" href="class_system.html">System</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a87aa650632485dcfcff7f17594566e32">operator=</a> (const <a class="el" href="class_system.html">System</a> &amp;outra)</td></tr>
-<tr class="memdesc:a87aa650632485dcfcff7f17594566e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <br /></td></tr>
-<tr class="memitem:a8ca115c44d52a5bee53cfb7c6990d49e" id="r_a8ca115c44d52a5bee53cfb7c6990d49e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ca115c44d52a5bee53cfb7c6990d49e">setName</a> (string name)</td></tr>
-<tr class="memdesc:a8ca115c44d52a5bee53cfb7c6990d49e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the system name.  <br /></td></tr>
-<tr class="memitem:a47ece132a04247cd74aea11537830bd4" id="r_a47ece132a04247cd74aea11537830bd4"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a47ece132a04247cd74aea11537830bd4">getName</a> () const</td></tr>
-<tr class="memdesc:a47ece132a04247cd74aea11537830bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the system name.  <br /></td></tr>
-<tr class="memitem:a5343de0a45485edd88bc87f338fe9a19" id="r_a5343de0a45485edd88bc87f338fe9a19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5343de0a45485edd88bc87f338fe9a19">setValue</a> (double value)</td></tr>
-<tr class="memdesc:a5343de0a45485edd88bc87f338fe9a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the system value.  <br /></td></tr>
-<tr class="memitem:aa7d17369d1034e7d8643a63f69d1901d" id="r_aa7d17369d1034e7d8643a63f69d1901d"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#aa7d17369d1034e7d8643a63f69d1901d">getValue</a> () const</td></tr>
-<tr class="memdesc:aa7d17369d1034e7d8643a63f69d1901d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current system value.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a29fe2868c0d56fdebc67f1bef5d5cca3" id="r_a29fe2868c0d56fdebc67f1bef5d5cca3"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a29fe2868c0d56fdebc67f1bef5d5cca3">name</a></td></tr>
-<tr class="memitem:a879687b1125ef20757c2a61345fedd00" id="r_a879687b1125ef20757c2a61345fedd00"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a879687b1125ef20757c2a61345fedd00">value</a></td></tr>
+<tr class="memitem:a2fc0f34023977cab9b628aa9f734d88c" id="r_a2fc0f34023977cab9b628aa9f734d88c"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a2fc0f34023977cab9b628aa9f734d88c">~System</a> ()</td></tr>
+<tr class="memdesc:a2fc0f34023977cab9b628aa9f734d88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> object.  <br /></td></tr>
+<tr class="memitem:afe381855cfc606c7d109f590396928e7" id="r_afe381855cfc606c7d109f590396928e7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afe381855cfc606c7d109f590396928e7">setName</a> (string name)=0</td></tr>
+<tr class="memdesc:afe381855cfc606c7d109f590396928e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the system name.  <br /></td></tr>
+<tr class="memitem:ab4f23c21832d6bbef462a5a20b296912" id="r_ab4f23c21832d6bbef462a5a20b296912"><td class="memItemLeft">virtual string&#160;</td><td class="memItemRight"><a class="el" href="#ab4f23c21832d6bbef462a5a20b296912">getName</a> () const =0</td></tr>
+<tr class="memdesc:ab4f23c21832d6bbef462a5a20b296912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the system name.  <br /></td></tr>
+<tr class="memitem:a7421d2e6970a0c4169a2febe254f2060" id="r_a7421d2e6970a0c4169a2febe254f2060"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7421d2e6970a0c4169a2febe254f2060">setValue</a> (double value)=0</td></tr>
+<tr class="memdesc:a7421d2e6970a0c4169a2febe254f2060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the system value.  <br /></td></tr>
+<tr class="memitem:a41b673faa6c199eb8e4f204639fab4f2" id="r_a41b673faa6c199eb8e4f204639fab4f2"><td class="memItemLeft">virtual double&#160;</td><td class="memItemRight"><a class="el" href="#a41b673faa6c199eb8e4f204639fab4f2">getValue</a> () const =0</td></tr>
+<tr class="memdesc:a41b673faa6c199eb8e4f204639fab4f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current system value.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a stock or reservoir in the simulation. </p>
 <p>A <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> stores a name and a numeric value that can be modified by Flows. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a666ed721e77edc31b4971c643678aa51" name="a666ed721e77edc31b4971c643678aa51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a666ed721e77edc31b4971c643678aa51">&#9670;&#160;</a></span>System() <span class="overload">[1/2]</span></h2>
+<a id="a2fc0f34023977cab9b628aa9f734d88c" name="a2fc0f34023977cab9b628aa9f734d88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc0f34023977cab9b628aa9f734d88c">&#9670;&#160;</a></span>~System()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">System::System </td>
-          <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>The name of the system. </td></tr>
-    <tr><td class="paramname">value</td><td>The initial stored value. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_system_a666ed721e77edc31b4971c643678aa51_icgraph.png" border="0" usemap="#aclass_system_a666ed721e77edc31b4971c643678aa51_icgraph" loading="lazy" alt=""/></div>
-<map name="aclass_system_a666ed721e77edc31b4971c643678aa51_icgraph" id="aclass_system_a666ed721e77edc31b4971c643678aa51_icgraph">
-<area shape="rect" title="Construct a new System object." alt="" coords="183,31,302,57"/>
-<area shape="rect" href="class_system.html#a87aa650632485dcfcff7f17594566e32" title="Assignment operator." alt="" coords="5,5,135,32"/>
-<area shape="poly" title=" " alt="" coords="165,34,135,31,135,26,170,32"/>
-<area shape="rect" href="class_system.html#a332a4ba90876f028bc7b84151ae00eae" title="Copy constructor." alt="" coords="10,56,130,83"/>
-<area shape="poly" title=" " alt="" coords="165,55,131,63,130,58,170,55"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a332a4ba90876f028bc7b84151ae00eae" name="a332a4ba90876f028bc7b84151ae00eae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a332a4ba90876f028bc7b84151ae00eae">&#9670;&#160;</a></span>System() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">System::System </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_system.html">System</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>param_system</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copy constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">param_system</td><td>The <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> to copy. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_system_a332a4ba90876f028bc7b84151ae00eae_cgraph.png" border="0" usemap="#aclass_system_a332a4ba90876f028bc7b84151ae00eae_cgraph" loading="lazy" alt=""/></div>
-<map name="aclass_system_a332a4ba90876f028bc7b84151ae00eae_cgraph" id="aclass_system_a332a4ba90876f028bc7b84151ae00eae_cgraph">
-<area shape="rect" title="Copy constructor." alt="" coords="5,5,125,32"/>
-<area shape="rect" href="class_system.html#a666ed721e77edc31b4971c643678aa51" title="Construct a new System object." alt="" coords="173,5,292,32"/>
-<area shape="poly" title=" " alt="" coords="125,16,160,18,155,19,125,21"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a3be70bb338e3f062f821173fd15680d0" name="a3be70bb338e3f062f821173fd15680d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3be70bb338e3f062f821173fd15680d0">&#9670;&#160;</a></span>~System()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">System::~System </td>
+          <td class="memname">virtual System::~System </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Destroy the <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> object. </p>
@@ -257,124 +189,123 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a47ece132a04247cd74aea11537830bd4" name="a47ece132a04247cd74aea11537830bd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47ece132a04247cd74aea11537830bd4">&#9670;&#160;</a></span>getName()</h2>
+<a id="ab4f23c21832d6bbef462a5a20b296912" name="ab4f23c21832d6bbef462a5a20b296912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f23c21832d6bbef462a5a20b296912">&#9670;&#160;</a></span>getName()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string System::getName </td>
+          <td class="memname">virtual string System::getName </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the system name. </p>
 <dl class="section return"><dt>Returns</dt><dd>string The current name. </dd></dl>
 
+<p>Implemented in <a class="el" href="class_mock_system.html#a3d28ce456210f021c772dd7f71ee1e15">MockSystem</a>, and <a class="el" href="class_system_impl.html#a68ca2c650fa5669baec1bd4c05fa2bd0">SystemImpl</a>.</p>
+
 </div>
 </div>
-<a id="aa7d17369d1034e7d8643a63f69d1901d" name="aa7d17369d1034e7d8643a63f69d1901d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7d17369d1034e7d8643a63f69d1901d">&#9670;&#160;</a></span>getValue()</h2>
+<a id="a41b673faa6c199eb8e4f204639fab4f2" name="a41b673faa6c199eb8e4f204639fab4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b673faa6c199eb8e4f204639fab4f2">&#9670;&#160;</a></span>getValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double System::getValue </td>
+          <td class="memname">virtual double System::getValue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the current system value. </p>
 <dl class="section return"><dt>Returns</dt><dd>double The current numeric value. </dd></dl>
+
+<p>Implemented in <a class="el" href="class_mock_system.html#ad6db4383e8ceacd6759395241585c10f">MockSystem</a>, and <a class="el" href="class_system_impl.html#abd3ff91586d4474c0a747dc5dd6e0268">SystemImpl</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_system_aa7d17369d1034e7d8643a63f69d1901d_icgraph.png" border="0" usemap="#aclass_system_aa7d17369d1034e7d8643a63f69d1901d_icgraph" loading="lazy" alt=""/></div>
-<map name="aclass_system_aa7d17369d1034e7d8643a63f69d1901d_icgraph" id="aclass_system_aa7d17369d1034e7d8643a63f69d1901d_icgraph">
-<area shape="rect" title="Get the current system value." alt="" coords="538,132,663,159"/>
-<area shape="rect" href="funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Run the complex functional test. This test verifies a network of connected flows and systems." alt="" coords="111,5,262,32"/>
-<area shape="poly" title=" " alt="" coords="578,119,541,79,516,59,489,44,433,25,373,15,315,12,264,13,262,8,315,7,374,10,434,20,491,39,519,55,544,75,583,120"/>
-<area shape="rect" href="class_complex_flow.html#a744cb3029e9335038f3f8c1da6daea4d" title="Execute the flow calculation." alt="" coords="327,183,482,209"/>
-<area shape="poly" title=" " alt="" coords="529,164,460,185,458,179,534,162"/>
-<area shape="rect" href="class_exponential_flow.html#aafb074830c5c18138913cb10da3b8782" title="Execute the flow calculation." alt="" coords="319,233,490,260"/>
-<area shape="poly" title=" " alt="" coords="573,168,535,198,492,224,462,235,461,230,489,219,532,194,569,170"/>
-<area shape="rect" href="class_logistic_flow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884" title="Execute the flow calculation." alt="" coords="330,284,479,311"/>
-<area shape="poly" title=" " alt="" coords="586,170,547,224,521,251,492,274,468,286,467,281,489,270,517,247,543,221,581,173"/>
-<area shape="rect" href="class_model.html#afee110e3b39306bac7965980de447ad3" title="Execute the model simulation for a time interval." alt="" coords="350,81,460,108"/>
-<area shape="poly" title=" " alt="" coords="529,128,459,111,459,106,534,127"/>
-<area shape="rect" href="funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Run the exponential functional test. This test verifies a simple exponential flow between two systems..." alt="" coords="103,56,271,83"/>
-<area shape="poly" title=" " alt="" coords="572,122,536,95,489,72,434,59,377,54,322,55,273,59,271,54,322,50,378,49,435,54,491,67,539,90,578,122"/>
-<area shape="rect" href="funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Run the logistic functional test. This test verifies a logistic flow between two systems." alt="" coords="110,107,264,133"/>
-<area shape="poly" title=" " alt="" coords="521,142,264,127,264,122,525,139"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
-<area shape="poly" title=" " alt="" coords="122,39,104,47,57,63,53,59,102,41,126,35"/>
-<area shape="poly" title=" " alt="" coords="352,76,270,47,236,35,235,30,272,41,357,74"/>
-<area shape="poly" title=" " alt="" coords="332,88,272,82,271,77,337,86"/>
-<area shape="poly" title=" " alt="" coords="332,104,265,114,263,109,336,102"/>
-<area shape="poly" title=" " alt="" coords="85,71,56,72,54,67,89,68"/>
-<area shape="poly" title=" " alt="" coords="122,103,102,97,56,81,54,75,104,92,126,100"/>
+<div class="center"><img src="class_system_a41b673faa6c199eb8e4f204639fab4f2_icgraph.png" border="0" usemap="#aclass_system_a41b673faa6c199eb8e4f204639fab4f2_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_system_a41b673faa6c199eb8e4f204639fab4f2_icgraph" id="aclass_system_a41b673faa6c199eb8e4f204639fab4f2_icgraph">
+<area shape="rect" title="Get the current system value." alt="" coords="1072,157,1197,184"/>
+<area shape="rect" href="functional__tests_8cpp.html#ab5b2fd66ce3b2f1996afb4d0368962c3" title="Run the complex functional test. This test verifies a network of connected flows and systems." alt="" coords="860,5,1016,32"/>
+<area shape="poly" title=" " alt="" coords="1115,143,1077,95,1051,69,1023,46,1001,35,1002,30,1026,42,1055,65,1081,91,1120,145"/>
+<area shape="rect" href="class_complex_flow.html#a744cb3029e9335038f3f8c1da6daea4d" title="Execute the flow calculation." alt="" coords="860,56,1016,83"/>
+<area shape="poly" title=" " alt="" coords="1102,147,1066,122,1023,97,995,86,995,81,1025,92,1069,118,1108,148"/>
+<area shape="rect" href="class_exponential_flow.html#aafb074830c5c18138913cb10da3b8782" title="Execute the flow calculation." alt="" coords="852,107,1024,133"/>
+<area shape="poly" title=" " alt="" coords="1062,153,993,137,993,131,1068,153"/>
+<area shape="rect" href="class_logistic_flow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884" title="Execute the flow calculation." alt="" coords="864,157,1012,184"/>
+<area shape="poly" title=" " alt="" coords="1054,171,1013,173,1013,168,1059,170"/>
+<area shape="rect" href="class_model_impl.html#aff7dc6de15c80813a5e5c069028f35ce" title="Execute the model simulation for a time interval." alt="" coords="870,309,1006,336"/>
+<area shape="poly" title=" " alt="" coords="1120,196,1081,250,1055,277,1026,300,1002,311,1001,306,1023,295,1051,273,1077,246,1115,198"/>
+<area shape="rect" href="functional__tests_8cpp.html#ab8a16a2ec03d4962454728491b968d6b" title="Run the exponential functional test. This test verifies a simple exponential flow between two systems..." alt="" coords="852,208,1024,235"/>
+<area shape="poly" title=" " alt="" coords="1068,188,993,210,992,205,1062,189"/>
+<area shape="rect" href="functional__tests_8cpp.html#a873703af6cfeefd5cfd67aef5493ea68" title="Run the logistic functional test. This test verifies a logistic flow between two systems." alt="" coords="860,259,1017,285"/>
+<area shape="poly" title=" " alt="" coords="1107,193,1069,224,1025,249,996,261,995,256,1023,244,1066,219,1103,195"/>
+<area shape="rect" href="functional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="672,208,722,235"/>
+<area shape="poly" title=" " alt="" coords="864,38,854,46,805,86,763,132,730,176,708,210,705,205,726,173,759,128,801,82,850,42,859,40"/>
+<area shape="rect" href="class_unit_model.html#aea1901fe473554e7bf6d435a7e6710c4" title=" " alt="" coords="590,309,804,336"/>
+<area shape="poly" title=" " alt="" coords="852,323,805,325,805,320,858,323"/>
+<area shape="rect" href="unit__model_8cpp.html#a5088abd5078bbe5ef5feca3180ddb463" title="Tests execute() using Mock objects. Verifies that the model correctly invokes the flow&#39;s execute() me..." alt="" coords="415,309,542,336"/>
+<area shape="poly" title=" " alt="" coords="572,323,542,325,542,320,577,323"/>
+<area shape="rect" href="unit__model_8cpp.html#a06f4ece39e6b63ddfa7c8fd22ab37770" title="Aggregates and runs all ModelImpl unit tests. Calls every individual test function and reports overal..." alt="" coords="261,309,367,336"/>
+<area shape="poly" title=" " alt="" coords="397,323,368,325,368,320,403,323"/>
+<area shape="rect" href="unit_2main_8cpp.html#a77abd4466fade7cd418daf2244c633be" title="Aggregates and runs the complete unit test suite." alt="" coords="103,309,213,336"/>
+<area shape="poly" title=" " alt="" coords="242,323,214,325,213,320,248,323"/>
+<area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,309,55,336"/>
+<area shape="poly" title=" " alt="" coords="84,324,55,325,55,320,90,322"/>
+<area shape="poly" title=" " alt="" coords="833,222,722,224,722,219,839,221"/>
+<area shape="poly" title=" " alt="" coords="853,255,721,229,722,224,859,255"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a87aa650632485dcfcff7f17594566e32" name="a87aa650632485dcfcff7f17594566e32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87aa650632485dcfcff7f17594566e32">&#9670;&#160;</a></span>operator=()</h2>
+<a id="afe381855cfc606c7d109f590396928e7" name="afe381855cfc606c7d109f590396928e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe381855cfc606c7d109f590396928e7">&#9670;&#160;</a></span>setName()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_system.html">System</a> &amp; System::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_system.html">System</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>outra</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Assignment operator. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">outra</td><td>The <a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a> to assign from. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a>&amp; Reference to this object. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_system_a87aa650632485dcfcff7f17594566e32_cgraph.png" border="0" usemap="#aclass_system_a87aa650632485dcfcff7f17594566e32_cgraph" loading="lazy" alt=""/></div>
-<map name="aclass_system_a87aa650632485dcfcff7f17594566e32_cgraph" id="aclass_system_a87aa650632485dcfcff7f17594566e32_cgraph">
-<area shape="rect" title="Assignment operator." alt="" coords="5,5,135,32"/>
-<area shape="rect" href="class_system.html#a666ed721e77edc31b4971c643678aa51" title="Construct a new System object." alt="" coords="183,5,302,32"/>
-<area shape="poly" title=" " alt="" coords="135,16,169,18,164,19,135,21"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8ca115c44d52a5bee53cfb7c6990d49e" name="a8ca115c44d52a5bee53cfb7c6990d49e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ca115c44d52a5bee53cfb7c6990d49e">&#9670;&#160;</a></span>setName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void System::setName </td>
+          <td class="memname">virtual void System::setName </td>
           <td>(</td>
           <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the system name. </p>
@@ -385,21 +316,31 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
+<p>Implemented in <a class="el" href="class_mock_system.html#ac36b4aafc6232dcfeba7dbcce2fd5318">MockSystem</a>, and <a class="el" href="class_system_impl.html#a6f8b5d409fd86c4690ba9c7990069c4a">SystemImpl</a>.</p>
+
 </div>
 </div>
-<a id="a5343de0a45485edd88bc87f338fe9a19" name="a5343de0a45485edd88bc87f338fe9a19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5343de0a45485edd88bc87f338fe9a19">&#9670;&#160;</a></span>setValue()</h2>
+<a id="a7421d2e6970a0c4169a2febe254f2060" name="a7421d2e6970a0c4169a2febe254f2060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7421d2e6970a0c4169a2febe254f2060">&#9670;&#160;</a></span>setValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void System::setValue </td>
+          <td class="memname">virtual void System::setValue </td>
           <td>(</td>
           <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the system value. </p>
@@ -409,77 +350,33 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p>Implemented in <a class="el" href="class_mock_system.html#aea8099f74e7f021d91b4ef89978b7473">MockSystem</a>, and <a class="el" href="class_system_impl.html#a3ebff8dd869e1fab281375d5c2ef8362">SystemImpl</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_system_a5343de0a45485edd88bc87f338fe9a19_icgraph.png" border="0" usemap="#aclass_system_a5343de0a45485edd88bc87f338fe9a19_icgraph" loading="lazy" alt=""/></div>
-<map name="aclass_system_a5343de0a45485edd88bc87f338fe9a19_icgraph" id="aclass_system_a5343de0a45485edd88bc87f338fe9a19_icgraph">
-<area shape="rect" title="Set the system value." alt="" coords="477,56,602,83"/>
-<area shape="rect" href="class_model.html#afee110e3b39306bac7965980de447ad3" title="Execute the model simulation for a time interval." alt="" coords="319,56,429,83"/>
-<area shape="poly" title=" " alt="" coords="459,70,430,72,429,67,464,69"/>
-<area shape="rect" href="funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Run the complex functional test. This test verifies a network of connected flows and systems." alt="" coords="111,5,262,32"/>
-<area shape="poly" title=" " alt="" coords="305,52,239,35,239,30,310,51"/>
-<area shape="rect" href="funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Run the exponential functional test. This test verifies a simple exponential flow between two systems..." alt="" coords="103,56,271,83"/>
-<area shape="poly" title=" " alt="" coords="301,70,272,72,271,67,306,69"/>
-<area shape="rect" href="funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Run the logistic functional test. This test verifies a logistic flow between two systems." alt="" coords="110,107,264,133"/>
-<area shape="poly" title=" " alt="" coords="310,87,240,109,238,103,305,88"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
-<area shape="poly" title=" " alt="" coords="122,39,104,47,56,63,54,58,102,41,126,36"/>
-<area shape="poly" title=" " alt="" coords="85,71,56,72,54,67,89,68"/>
-<area shape="poly" title=" " alt="" coords="121,102,102,97,55,81,55,75,104,92,127,101"/>
+<div class="center"><img src="class_system_a7421d2e6970a0c4169a2febe254f2060_icgraph.png" border="0" usemap="#aclass_system_a7421d2e6970a0c4169a2febe254f2060_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_system_a7421d2e6970a0c4169a2febe254f2060_icgraph" id="aclass_system_a7421d2e6970a0c4169a2febe254f2060_icgraph">
+<area shape="rect" title="Set the system value." alt="" coords="1035,5,1160,32"/>
+<area shape="rect" href="class_model_impl.html#aff7dc6de15c80813a5e5c069028f35ce" title="Execute the model simulation for a time interval." alt="" coords="852,5,987,32"/>
+<area shape="poly" title=" " alt="" coords="1017,19,988,21,988,16,1022,19"/>
+<area shape="rect" href="class_unit_model.html#aea1901fe473554e7bf6d435a7e6710c4" title=" " alt="" coords="590,5,804,32"/>
+<area shape="poly" title=" " alt="" coords="834,19,804,21,804,16,839,19"/>
+<area shape="rect" href="unit__model_8cpp.html#a5088abd5078bbe5ef5feca3180ddb463" title="Tests execute() using Mock objects. Verifies that the model correctly invokes the flow&#39;s execute() me..." alt="" coords="415,5,542,32"/>
+<area shape="poly" title=" " alt="" coords="572,19,542,21,542,16,577,19"/>
+<area shape="rect" href="unit__model_8cpp.html#a06f4ece39e6b63ddfa7c8fd22ab37770" title="Aggregates and runs all ModelImpl unit tests. Calls every individual test function and reports overal..." alt="" coords="261,5,367,32"/>
+<area shape="poly" title=" " alt="" coords="397,19,368,21,368,16,403,19"/>
+<area shape="rect" href="unit_2main_8cpp.html#a77abd4466fade7cd418daf2244c633be" title="Aggregates and runs the complete unit test suite." alt="" coords="103,5,213,32"/>
+<area shape="poly" title=" " alt="" coords="242,19,214,21,213,16,248,19"/>
+<area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,90,18"/>
 </map>
 </div>
 
 </div>
 </div>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a29fe2868c0d56fdebc67f1bef5d5cca3" name="a29fe2868c0d56fdebc67f1bef5d5cca3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29fe2868c0d56fdebc67f1bef5d5cca3">&#9670;&#160;</a></span>name</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string System::name</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a879687b1125ef20757c2a61345fedd00" name="a879687b1125ef20757c2a61345fedd00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a879687b1125ef20757c2a61345fedd00">&#9670;&#160;</a></span>value</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double System::value</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>//wsl.localhost/Ubuntu/home/jouberthsl/Dev/Eng1/sprints/sprint1/MyVensim/src/<a class="el" href="system_8h_source.html">system.h</a></li>
-<li>//wsl.localhost/Ubuntu/home/jouberthsl/Dev/Eng1/sprints/sprint1/MyVensim/src/<a class="el" href="system_8cpp.html">system.cpp</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>//wsl.localhost/Ubuntu/home/jouberthsl/Dev/Eng1/sprints/MyVensim/src/<a class="el" href="system_8h_source.html">system.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

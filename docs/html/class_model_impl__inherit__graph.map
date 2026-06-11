@@ -1,0 +1,5 @@
+<map id="ModelImpl" name="ModelImpl">
+<area shape="rect" id="Node000001" title="Concrete implementation of the Model interface." alt="" coords="5,272,120,576"/>
+<area shape="rect" id="Node000002" href="$class_model.html" title="Main class that manages the simulation. The Model acts as the simulation engine, storing stocks (Syst..." alt="" coords="5,5,120,224"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,236,65,272,60,272,63,242"/>
+</map>

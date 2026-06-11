@@ -1,0 +1,101 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,904,55,931"/>
+<area shape="rect" id="Node000002" href="$unit_2main_8cpp.html#a77abd4466fade7cd418daf2244c633be" title="Aggregates and runs the complete unit test suite." alt="" coords="103,904,213,931"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,915,89,915,85,919,57,919"/>
+<area shape="rect" id="Node000003" href="$unit__flow_8cpp.html#a0bc5e6a3277c6197d4dc99d3a192c562" title="Aggregates and runs all FlowImpl unit tests. Calls every individual test function and reports overall..." alt="" coords="270,351,369,377"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,903,310,390,309,395,166,904"/>
+<area shape="rect" id="Node000033" href="$unit__model_8cpp.html#a06f4ece39e6b63ddfa7c8fd22ab37770" title="Aggregates and runs all ModelImpl unit tests. Calls every individual test function and reports overal..." alt="" coords="266,904,372,931"/>
+<area shape="poly" id="edge25_Node000002_Node000033" title=" " alt="" coords="212,915,252,916,248,919,215,920"/>
+<area shape="rect" id="Node000056" href="$unit__system_8cpp.html#aa5040e76db7f8ea7305a283ce52ba86f" title="Aggregates and runs all SystemImpl unit tests. Calls every individual test function and reports overa..." alt="" coords="261,1284,377,1311"/>
+<area shape="poly" id="edge41_Node000002_Node000056" title=" " alt="" coords="167,929,309,1269,304,1270,163,933"/>
+<area shape="rect" id="Node000004" href="$unit__flow_8cpp.html#aac6fd08e4fed976e262948be178b851b" title="Tests the assignment operator of FlowImpl. Verifies correct assignment and self&#45;assignment safety." alt="" coords="450,21,641,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="319,350,324,298,340,222,353,181,371,139,394,101,424,67,447,53,444,57,427,71,399,104,376,142,358,182,345,223,329,299,324,351"/>
+<area shape="rect" id="Node000006" href="$unit__flow_8cpp.html#ab3289d4a7dc091a88ea313db980e44ff" title="Tests the connect() method of FlowImpl. Verifies that connect() correctly sets both origin and destin..." alt="" coords="485,81,606,108"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="320,349,329,307,348,247,378,184,399,154,424,129,445,114,472,105,468,109,448,119,427,133,403,158,383,187,353,249,334,308,325,351"/>
+<area shape="rect" id="Node000009" href="$unit__flow_8cpp.html#aca5738aa364aa486cb5b27c6a720e3e3" title="Tests the copy constructor of FlowImpl. Verifies that the copied flow shares the same pointer values,..." alt="" coords="460,143,631,169"/>
+<area shape="poly" id="edge7_Node000003_Node000009" title=" " alt="" coords="323,349,336,317,357,275,386,231,424,193,462,173,458,177,427,197,390,234,361,278,340,320,328,351"/>
+<area shape="rect" id="Node000011" href="$unit__flow_8cpp.html#a79cd1ae4805d74f356eae5b012ea6429" title="Tests the default constructor of FlowImpl. Verifies that a default&#45;constructed flow has an empty name..." alt="" coords="455,207,636,233"/>
+<area shape="poly" id="edge9_Node000003_Node000011" title=" " alt="" coords="328,349,366,302,393,276,424,254,464,237,461,241,427,258,397,280,370,306,332,352"/>
+<area shape="rect" id="Node000013" href="$unit__flow_8cpp.html#a90c07e0da7da2bed5ff60d537ba1dd7a" title="Tests getDestination() of FlowImpl. Verifies that the destination system pointer is correctly returne..." alt="" coords="466,268,625,295"/>
+<area shape="poly" id="edge11_Node000003_Node000013" title=" " alt="" coords="343,348,424,310,467,297,464,301,426,314,347,352"/>
+<area shape="rect" id="Node000016" href="$unit__flow_8cpp.html#a103637d4efa12f8f7610cb734f5a6382" title="Tests getName() of FlowImpl. Verifies that the name is correctly retrieved after setting the protecte..." alt="" coords="482,324,609,351"/>
+<area shape="poly" id="edge13_Node000003_Node000016" title=" " alt="" coords="367,356,468,345,464,348,371,360"/>
+<area shape="rect" id="Node000019" href="$unit__flow_8cpp.html#a9f7134507403cd7516d20698bebfcf63" title="Tests getOrigin() of FlowImpl. Verifies that the origin system pointer is correctly returned after se..." alt="" coords="482,376,609,403"/>
+<area shape="poly" id="edge15_Node000003_Node000019" title=" " alt="" coords="368,367,469,379,464,382,370,372"/>
+<area shape="rect" id="Node000022" href="$unit__flow_8cpp.html#a109d2eab2dd3fed2ad99ea5dc6adf0d4" title="Tests the parameterized constructor of FlowImpl. Verifies that name, origin, and destination are corr..." alt="" coords="434,431,657,457"/>
+<area shape="poly" id="edge17_Node000003_Node000022" title=" " alt="" coords="344,375,426,412,465,425,460,427,424,417,346,380"/>
+<area shape="rect" id="Node000024" href="$unit__flow_8cpp.html#af8a77a34a15f54b80bbc75030d10906d" title="Tests setDestination() of FlowImpl. Verifies that the destination system pointer is correctly stored ..." alt="" coords="467,488,624,515"/>
+<area shape="poly" id="edge19_Node000003_Node000024" title=" " alt="" coords="330,375,371,421,397,446,427,467,457,482,452,484,424,472,394,450,367,425,331,381"/>
+<area shape="rect" id="Node000027" href="$unit__flow_8cpp.html#ac3c337778e456ec192c856c0cd6a4b87" title="Tests setName() of FlowImpl. Verifies that the name is correctly set by checking the protected attrib..." alt="" coords="482,552,609,579"/>
+<area shape="poly" id="edge21_Node000003_Node000027" title=" " alt="" coords="325,375,341,407,362,447,391,489,427,525,447,537,470,548,465,550,444,542,424,529,387,492,358,450,336,409,326,380"/>
+<area shape="rect" id="Node000030" href="$unit__flow_8cpp.html#ad0730c67b886d14cc68452c6e5a70d11" title="Tests setOrigin() of FlowImpl. Verifies that the origin system pointer is correctly stored by checkin..." alt="" coords="483,631,608,657"/>
+<area shape="poly" id="edge23_Node000003_Node000030" title=" " alt="" coords="323,375,336,417,356,474,386,535,405,563,427,589,452,608,482,624,477,626,449,612,424,593,401,566,381,537,351,476,331,419,323,380"/>
+<area shape="rect" id="Node000005" href="$class_unit_flow.html#a1e0bd2e5260dccb7fed42720de4d30e8" title="Executes the assignment operator test." alt="" coords="721,5,942,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="640,30,708,29,704,32,643,34"/>
+<area shape="rect" id="Node000007" href="$class_unit_flow.html#a20addf242bdbd8fe934729680f28affe" title="Executes the connect test." alt="" coords="731,72,932,99"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="605,90,718,88,713,91,608,95"/>
+<area shape="rect" id="Node000010" href="$class_unit_flow.html#a9f6c7358dc64d4335c5655dff1d0cd1e" title="Executes the copy constructor test." alt="" coords="740,123,924,165"/>
+<area shape="poly" id="edge8_Node000009_Node000010" title=" " alt="" coords="630,150,727,147,722,150,633,155"/>
+<area shape="rect" id="Node000012" href="$class_unit_flow.html#aaa7f7646f42b6dd76b8c06b79493c54c" title="Executes the default constructor test." alt="" coords="735,189,929,232"/>
+<area shape="poly" id="edge10_Node000011_Node000012" title=" " alt="" coords="635,215,722,213,717,216,638,219"/>
+<area shape="rect" id="Node000014" href="$class_unit_flow.html#a4626103afe18aee6e3d86d5720e73b20" title="Executes the getDestination test." alt="" coords="745,256,918,299"/>
+<area shape="poly" id="edge12_Node000013_Node000014" title=" " alt="" coords="624,278,732,277,727,280,626,283"/>
+<area shape="rect" id="Node000017" href="$class_unit_flow.html#aaf5f87fa4a1ddebaeb366aae91c8b267" title="Executes the getName test." alt="" coords="728,323,936,349"/>
+<area shape="poly" id="edge14_Node000016_Node000017" title=" " alt="" coords="609,335,714,335,710,338,611,339"/>
+<area shape="rect" id="Node000020" href="$class_unit_flow.html#af8cffa32d36bcc8f202bed9cdcb11b36" title="Executes the getOrigin test." alt="" coords="745,373,918,416"/>
+<area shape="poly" id="edge16_Node000019_Node000020" title=" " alt="" coords="608,388,732,391,727,394,610,393"/>
+<area shape="rect" id="Node000023" href="$class_unit_flow.html#ad9576aff59d4d2f93b5c14558fbe88e5" title="Executes the parameterized constructor test." alt="" coords="714,440,950,483"/>
+<area shape="poly" id="edge18_Node000022_Node000023" title=" " alt="" coords="657,448,700,452,696,455,659,453"/>
+<area shape="rect" id="Node000025" href="$class_unit_flow.html#a71c38dc0cec64b99c69342101e545dc1" title="Executes the setDestination test." alt="" coords="746,507,918,549"/>
+<area shape="poly" id="edge20_Node000024_Node000025" title=" " alt="" coords="624,506,733,517,728,520,626,511"/>
+<area shape="rect" id="Node000028" href="$class_unit_flow.html#ac7fae0f00370b858b24e86bd53c5d249" title="Executes the setName test." alt="" coords="728,573,936,600"/>
+<area shape="poly" id="edge22_Node000027_Node000028" title=" " alt="" coords="608,568,715,577,710,579,610,572"/>
+<area shape="rect" id="Node000031" href="$class_unit_flow.html#a93bb8b66e2d8e3c4be8b3c76e340b3b2" title="Executes the setOrigin test." alt="" coords="746,624,918,667"/>
+<area shape="poly" id="edge24_Node000030_Node000031" title=" " alt="" coords="608,642,732,644,728,646,610,647"/>
+<area shape="rect" id="Node000034" href="$unit__model_8cpp.html#a6725e58eccb578ea3ac1dd4def13c006" title="Tests add(Flow*) of ModelImpl. Verifies that flows are correctly appended to the internal collection ..." alt="" coords="481,699,610,725"/>
+<area shape="poly" id="edge26_Node000033_Node000034" title=" " alt="" coords="323,902,335,870,356,828,386,783,424,745,443,732,468,724,464,728,446,737,427,749,390,786,361,830,340,872,328,905"/>
+<area shape="rect" id="Node000037" href="$unit__model_8cpp.html#a4a36d8e51d0d09134fa3a3048e9a8648" title="Tests add(System*) of ModelImpl. Verifies that systems are correctly appended to the internal collect..." alt="" coords="472,759,619,785"/>
+<area shape="poly" id="edge28_Node000033_Node000037" title=" " alt="" coords="328,902,366,855,393,828,424,806,464,789,460,793,427,810,397,833,370,858,332,905"/>
+<area shape="rect" id="Node000039" href="$unit__model_8cpp.html#a1b7c8928a8f6ec3fef4dbeac8aac04d5" title="Tests the assignment operator of ModelImpl. Verifies correct assignment including self&#45;assignment saf..." alt="" coords="447,820,644,847"/>
+<area shape="poly" id="edge30_Node000033_Node000039" title=" " alt="" coords="344,901,424,864,474,850,470,853,426,869,347,906"/>
+<area shape="rect" id="Node000041" href="$unit__model_8cpp.html#a306fe4889583e345ba3eff9b22256ca0" title="Tests the copy constructor of ModelImpl. Verifies that the copied model references the same system an..." alt="" coords="457,879,634,905"/>
+<area shape="poly" id="edge32_Node000033_Node000041" title=" " alt="" coords="372,909,443,902,439,905,374,914"/>
+<area shape="rect" id="Node000043" href="$unit__model_8cpp.html#a920c9d020273812f44d2628457bb8e57" title="Tests the default constructor of ModelImpl. Verifies that a freshly constructed model has empty syste..." alt="" coords="451,929,640,956"/>
+<area shape="poly" id="edge34_Node000033_Node000043" title=" " alt="" coords="372,921,438,929,433,932,374,926"/>
+<area shape="rect" id="Node000045" href="$unit__model_8cpp.html#a5088abd5078bbe5ef5feca3180ddb463" title="Tests execute() using Mock objects. Verifies that the model correctly invokes the flow&#39;s execute() me..." alt="" coords="482,980,609,1007"/>
+<area shape="poly" id="edge36_Node000033_Node000045" title=" " alt="" coords="344,929,383,948,426,965,469,979,464,981,424,971,381,953,345,934"/>
+<area shape="rect" id="Node000050" href="$unit__model_8cpp.html#a615d166edb821a9f5188ca57d7b0e25d" title="Tests the flow iterators (beginFlows / endFlows) of ModelImpl. Verifies that iteration covers exactly..." alt="" coords="468,1031,623,1057"/>
+<area shape="poly" id="edge38_Node000033_Node000050" title=" " alt="" coords="331,929,371,973,397,997,427,1016,456,1029,450,1031,424,1021,394,1001,367,977,331,934"/>
+<area shape="rect" id="Node000053" href="$unit__model_8cpp.html#a05a415a3174c57592a1785e7b289bc75" title="Tests the system iterators (beginSystems / endSystems) of ModelImpl. Verifies that iteration covers e..." alt="" coords="460,1081,631,1108"/>
+<area shape="poly" id="edge40_Node000033_Node000053" title=" " alt="" coords="326,929,342,960,363,997,391,1035,427,1067,448,1080,443,1081,424,1072,387,1039,358,1000,337,962,326,934"/>
+<area shape="rect" id="Node000035" href="$class_unit_model.html#a4b1d266eec96894c17001395601b236d" title=" " alt="" coords="723,691,940,717"/>
+<area shape="poly" id="edge27_Node000034_Node000035" title=" " alt="" coords="609,708,710,706,705,709,612,713"/>
+<area shape="rect" id="Node000038" href="$class_unit_model.html#ab221e8abdbea13719b4db48c402bef62" title=" " alt="" coords="737,741,926,784"/>
+<area shape="poly" id="edge29_Node000037_Node000038" title=" " alt="" coords="618,767,724,765,719,768,620,772"/>
+<area shape="rect" id="Node000040" href="$class_unit_model.html#a6ac7595b1fd52e2890df200dbfac1cfb" title=" " alt="" coords="714,808,950,851"/>
+<area shape="poly" id="edge31_Node000039_Node000040" title=" " alt="" coords="643,829,701,830,696,832,645,834"/>
+<area shape="rect" id="Node000042" href="$class_unit_model.html#a94744ad3926ecc63fc04797bb2c1fd75" title=" " alt="" coords="733,875,930,917"/>
+<area shape="poly" id="edge33_Node000041_Node000042" title=" " alt="" coords="634,891,720,893,715,895,635,896"/>
+<area shape="rect" id="Node000044" href="$class_unit_model.html#ac6ed594cdd30dbf833e94ecd0d0f6ed9" title=" " alt="" coords="728,941,936,984"/>
+<area shape="poly" id="edge35_Node000043_Node000044" title=" " alt="" coords="639,947,715,953,710,955,641,952"/>
+<area shape="rect" id="Node000046" href="$class_unit_model.html#aea1901fe473554e7bf6d435a7e6710c4" title=" " alt="" coords="725,1008,939,1035"/>
+<area shape="poly" id="edge37_Node000045_Node000046" title=" " alt="" coords="608,997,712,1008,707,1010,610,1002"/>
+<area shape="rect" id="Node000051" href="$class_unit_model.html#aefb84ebb563ce86d258bcc55298ec161" title=" " alt="" coords="735,1059,929,1101"/>
+<area shape="poly" id="edge39_Node000050_Node000051" title=" " alt="" coords="623,1051,722,1065,717,1067,624,1056"/>
+<area shape="rect" id="Node000057" href="$unit__system_8cpp.html#ae81bd46ad33422afc932233b36540c75" title="Tests the assignment operator of SystemImpl. Verifies correct deep assignment and self&#45;assignment saf..." alt="" coords="442,1132,649,1159"/>
+<area shape="poly" id="edge42_Node000056_Node000057" title=" " alt="" coords="326,1282,362,1226,390,1195,424,1168,438,1164,433,1167,427,1173,394,1199,366,1230,330,1285"/>
+<area shape="rect" id="Node000059" href="$unit__system_8cpp.html#ad04244e8babe6da7f4230f1d9e6e60c2" title="Tests the copy constructor of SystemImpl. Verifies that the copied system has the same name and value..." alt="" coords="452,1183,639,1209"/>
+<area shape="poly" id="edge43_Node000056_Node000059" title=" " alt="" coords="333,1282,372,1250,424,1219,446,1213,441,1216,427,1224,375,1254,336,1286"/>
+<area shape="rect" id="Node000061" href="$unit__system_8cpp.html#a4726628a702f6e581f42e654b606fb84" title="Tests the default constructor of SystemImpl. Verifies that a default&#45;constructed system has an empty ..." alt="" coords="446,1233,645,1260"/>
+<area shape="poly" id="edge44_Node000056_Node000061" title=" " alt="" coords="376,1281,425,1269,465,1263,460,1265,426,1275,378,1286"/>
+<area shape="rect" id="Node000063" href="$unit__system_8cpp.html#a52f95ce1c8fa8b43b66db8274ae2d489" title="Tests getName() of SystemImpl. Verifies that the name is correctly retrieved after setting the protec..." alt="" coords="473,1284,618,1311"/>
+<area shape="poly" id="edge45_Node000056_Node000063" title=" " alt="" coords="377,1295,460,1296,455,1298,378,1300"/>
+<area shape="rect" id="Node000066" href="$unit__system_8cpp.html#ac02d09a90b96eb279e36e482741a1105" title="Tests getValue() of SystemImpl. Verifies that the value is correctly retrieved after setting the prot..." alt="" coords="475,1335,616,1361"/>
+<area shape="poly" id="edge46_Node000056_Node000066" title=" " alt="" coords="377,1309,426,1320,465,1331,460,1331,425,1325,377,1314"/>
+<area shape="rect" id="Node000069" href="$unit__system_8cpp.html#aa70044b96aa2ae15eee23ad406aee787" title="Tests the parameterized constructor of SystemImpl. Verifies that name and value are correctly initial..." alt="" coords="425,1385,666,1412"/>
+<area shape="poly" id="edge47_Node000056_Node000069" title=" " alt="" coords="335,1308,375,1340,427,1371,446,1380,441,1380,424,1376,372,1345,334,1313"/>
+<area shape="rect" id="Node000071" href="$unit__system_8cpp.html#a13a8e862e115266d6469bfdb0a63a9c8" title="Tests setName() of SystemImpl. Verifies that the name is correctly set by validating the protected at..." alt="" coords="474,1436,617,1463"/>
+<area shape="poly" id="edge48_Node000056_Node000071" title=" " alt="" coords="329,1308,366,1365,394,1396,427,1422,461,1439,456,1438,424,1426,390,1400,362,1368,327,1313"/>
+<area shape="rect" id="Node000074" href="$unit__system_8cpp.html#ad01cddc7ca1eb9522ac2386eea2994f1" title="Tests setValue() of SystemImpl. Verifies that the value is correctly set, including negative and floa..." alt="" coords="475,1487,616,1513"/>
+<area shape="poly" id="edge49_Node000056_Node000074" title=" " alt="" coords="325,1309,339,1344,359,1388,388,1434,406,1455,427,1472,463,1492,458,1491,424,1477,403,1459,384,1437,354,1391,334,1346,323,1313"/>
+</map>

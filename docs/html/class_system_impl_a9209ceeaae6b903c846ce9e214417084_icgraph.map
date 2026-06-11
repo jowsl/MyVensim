@@ -1,0 +1,7 @@
+<map id="SystemImpl::SystemImpl" name="SystemImpl::SystemImpl">
+<area shape="rect" id="Node000001" title="Construct a new SystemImpl object. Initializes a system with the given name and value." alt="" coords="223,31,392,57"/>
+<area shape="rect" id="Node000002" href="$class_system_impl.html#af60b24cd34d93803581c9785f7751459" title="Assign the values of another system to this system." alt="" coords="13,5,167,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,33,168,30,168,25,210,32"/>
+<area shape="rect" id="Node000003" href="$class_system_impl.html#a527e8eadf87c3d4a7b8401ae8702d925" title="Construct a new SystemImpl object by copying another system." alt="" coords="5,56,175,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,56,175,62,175,57,210,55"/>
+</map>

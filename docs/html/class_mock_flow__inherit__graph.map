@@ -1,0 +1,5 @@
+<map id="MockFlow" name="MockFlow">
+<area shape="rect" id="Node000001" title="MockFlow implementa a interface Flow. Retorna um valor fixo no execute() para não depender de matemát..." alt="" coords="5,293,121,597"/>
+<area shape="rect" id="Node000002" href="$class_flow.html" title="Represents a transfer channel between two Systems." alt="" coords="5,5,121,245"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,258,66,294,61,294,63,263"/>
+</map>

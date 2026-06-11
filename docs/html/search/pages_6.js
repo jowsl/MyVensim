@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['project_20developers_0',['Project Developers',['../index.html#authors_sec',1,'']]],
-  ['projeto_20de_20estrutura_20de_20dados_1',['Projeto de Estrutura de Dados',['../dir_173402aa37563cd0f2d840aba18bcec7.html#autotoc_md0',1,'']]]
+  ['o_20projeto_0',['Compilar o projeto',['../dir_5a0f4e6b676885105bffd71b0bc95ed2.html#autotoc_md4',1,'']]]
 ];

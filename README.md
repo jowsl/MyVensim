@@ -23,7 +23,11 @@ Executar os testes
 Para rodar a suíte de testes funcionais e verificar a precisão do simulador:
 
 ```bash
-make run
+make run-func
+```
+Para rodar os testes unitários, garantindo a integridade dos componentes individuais:
+```bash
+make run-unit
 ```
 
 Project Developers

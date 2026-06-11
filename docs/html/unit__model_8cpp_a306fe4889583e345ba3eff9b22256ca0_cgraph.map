@@ -1,0 +1,5 @@
+<map id="testModelCopyConstructor" name="testModelCopyConstructor">
+<area shape="rect" id="Node000001" title="Tests the copy constructor of ModelImpl. Verifies that the copied model references the same system an..." alt="" coords="5,13,183,40"/>
+<area shape="rect" id="Node000002" href="$class_unit_model.html#a94744ad3926ecc63fc04797bb2c1fd75" title=" " alt="" coords="231,5,428,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,24,218,26,212,27,183,29"/>
+</map>

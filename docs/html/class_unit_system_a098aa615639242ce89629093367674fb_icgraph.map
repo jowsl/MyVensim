@@ -1,0 +1,11 @@
+<map id="UnitSystem::runTestSystemCopyConstructor" name="UnitSystem::runTestSystemCopyConstructor">
+<area shape="rect" id="Node000001" title="Executes the copy constructor test." alt="" coords="661,5,847,48"/>
+<area shape="rect" id="Node000002" href="$unit__system_8cpp.html#ad04244e8babe6da7f4230f1d9e6e60c2" title="Tests the copy constructor of SystemImpl. Verifies that the copied system has the same name and value..." alt="" coords="425,13,613,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="642,27,613,29,613,24,647,27"/>
+<area shape="rect" id="Node000003" href="$unit__system_8cpp.html#aa5040e76db7f8ea7305a283ce52ba86f" title="Aggregates and runs all SystemImpl unit tests. Calls every individual test function and reports overa..." alt="" coords="261,13,377,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,27,378,29,378,24,413,27"/>
+<area shape="rect" id="Node000004" href="$unit_2main_8cpp.html#a77abd4466fade7cd418daf2244c633be" title="Aggregates and runs the complete unit test suite." alt="" coords="103,13,213,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="243,27,213,29,213,24,248,27"/>
+<area shape="rect" id="Node000005" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="85,28,55,29,55,24,89,26"/>
+</map>

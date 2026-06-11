@@ -30,7 +30,7 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MyVensim<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">MyVensim<span id="projectnumber">&#160;v2.1</span>
    </div>
   </td>
  </tr>
@@ -124,9 +124,9 @@ Introduction</h1>
 <h1 class="doxsection"><a class="anchor" id="arch_sec"></a>
 Core Architecture</h1>
 <p>The framework is built upon three fundamental structural blocks:</p><ul>
-<li><b><a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a>:</b> Represents stocks (such as material, population, or energy) that store values over time.</li>
-<li><b><a class="el" href="class_flow.html" title="Represents a transfer channel between two Systems.">Flow</a>:</b> Represents the transfer pathways and algebraic differential equations connecting the systems.</li>
-<li><b><a class="el" href="class_model.html" title="Main class that manages the simulation. The Model acts as the simulation engine, storing stocks (Syst...">Model</a>:</b> The orchestration engine responsible for running the simulation timeline and ensuring synchronized updates.</li>
+<li><b><a class="el" href="class_system.html" title="Represents a stock or reservoir in the simulation.">System</a>:</b> An interface representing stocks (such as material, population, or energy) that store values over time.</li>
+<li><b><a class="el" href="class_flow.html" title="Represents a transfer channel between two Systems.">Flow</a>:</b> An interface representing the transfer pathways and algebraic differential equations connecting the systems.</li>
+<li><b><a class="el" href="class_model.html" title="Main class that manages the simulation. The Model acts as the simulation engine, storing stocks (Syst...">Model</a>:</b> An interface representing the orchestration engine responsible for running the simulation timeline and ensuring synchronized updates.</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="authors_sec"></a>
 Project Developers</h1>

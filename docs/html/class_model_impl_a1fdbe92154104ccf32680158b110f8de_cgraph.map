@@ -1,0 +1,5 @@
+<map id="ModelImpl::operator=" name="ModelImpl::operator=">
+<area shape="rect" id="Node000001" title="Assign the values of another model to this model." alt="" coords="5,5,150,32"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a081505846c37ce9928f2176d77db4bc8" title="Construct a new ModelImpl object. Initializes an empty model with no systems or flows." alt="" coords="198,5,347,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,16,185,19,179,19,150,21"/>
+</map>
