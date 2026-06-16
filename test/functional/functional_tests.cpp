@@ -1,16 +1,13 @@
 #include "functional_tests.h"
-#include "../../src/model.h"  // APENAS INTERFACE
-#include "../../src/system.h" // APENAS INTERFACE
-#include "../../src/flow.h"   // APENAS INTERFACE
+#include "../../src/model.h"  
+#include "../../src/system.h" 
+#include "../../src/flow.h"   
 #include <iostream>
 #include <cassert>
 #include <cmath>
 
 using namespace std;
 
-// ====================================================================
-// BASE DE FLUXO PARA TESTES (Substitui a necessidade do FlowImpl)
-// ====================================================================
 class TestFlow : public Flow {
 protected:
     System* origin;
@@ -36,9 +33,6 @@ public:
     virtual double execute() = 0; 
 };
 
-// ====================================================================
-// CLASSES MATEMÁTICAS (Agora herdam do TestFlow)
-// ====================================================================
 
 /**
  * @brief Exponential flow implementation.
@@ -89,16 +83,11 @@ public:
     }
 };
 
-// ====================================================================
-// TESTES FUNCIONAIS
-// ====================================================================
-
 void exponentialFunctionalTest() {
     cout << "MODELO EXPONENCIAL" << endl;
 
-    // Acessa o modelo global usando apenas a interface
-    Model& model = Model::createModel();
-    model.clear();
+    // 1. Cria um modelo novinho (sem precisar de clear)
+    Model& model = Model::createModel("Exponencial");
 
     System& pop1 = model.createSystem("pop1", 100.0);
     System& pop2 = model.createSystem("pop2", 0.0);
@@ -109,8 +98,12 @@ void exponentialFunctionalTest() {
 
     assert((int)round(pop1.getValue() * 10000) == 366032);
     assert((int)round(pop2.getValue() * 10000) == 633968);
+    
     cout << "POP1 :" << (int)round(pop1.getValue() * 10000) << endl;
     cout << "POP2 :" << (int)round(pop2.getValue() * 10000) << endl;
+
+    // 2. Aciona o destrutor exigido pelo professor para limpar tudo!
+    delete &model;
 
     cout << "Teste Exponencial: OK!\n" << endl;
 }
@@ -118,8 +111,7 @@ void exponentialFunctionalTest() {
 void logisticalFunctionalTest() {
     cout << "TESTES: MODELO LOGISTICO" << endl;
 
-    Model& model = Model::createModel();
-    model.clear();
+    Model& model = Model::createModel("Logistico");
 
     System& p1 = model.createSystem("p1", 100.0);
     System& p2 = model.createSystem("p2", 10.0);
@@ -130,8 +122,11 @@ void logisticalFunctionalTest() {
 
     assert((int)round(p1.getValue() * 10000) == 882167);
     assert((int)round(p2.getValue() * 10000) == 217833);
+    
     cout << "P1 :" << (int)round(p1.getValue() * 10000) << endl;
     cout << "P2 :" << (int)round(p2.getValue() * 10000) << endl;
+
+    delete &model;
 
     cout << "Teste Logistico: OK!\n" << endl;
 }
@@ -139,8 +134,7 @@ void logisticalFunctionalTest() {
 void complexFunctionalTest() {
     cout << "TESTES: MODELO COMPLEXO" << endl;
 
-    Model& model = Model::createModel();
-    model.clear();
+    Model& model = Model::createModel("Complexo");
 
     System& q1 = model.createSystem("Q1", 100.0);
     System& q2 = model.createSystem("Q2", 0.0);
@@ -168,6 +162,8 @@ void complexFunctionalTest() {
     cout << "Q3 :" << (int)round(q3.getValue() * 10000) << endl;
     cout << "Q4 :" << (int)round(q4.getValue() * 10000) << endl;
     cout << "Q5 :" << (int)round(q5.getValue() * 10000) << endl;
+
+    delete &model;
 
     cout << "Teste Complexo: OK!\n" << endl;
 }

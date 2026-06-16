@@ -10,27 +10,31 @@ using namespace std;
 /**
  * @brief Concrete implementation of the Model interface.
  */
-class ModelImpl : public Model, public TempSingleton<ModelImpl> {
-    // Permite que a classe de testes acesse 'systems' e 'flows' diretamente
+class ModelImpl : public Model {
+    //Permite que a classe de testes acesse 'systems' e 'flows' diretamente
     friend class UnitModel;
+    friend class Model;
 
-    // Permite que o template instancie o objeto acessando o construtor privado
-    friend class TempSingleton<ModelImpl>;
+    //Permite que o template instancie o objeto acessando o construtor privado
+protected:
+    vector<System*> systems;
+    vector<Flow*> flows;
+
+    // vector for keeping track of all created model instances
+    static vector<Model*> models;
+    
+    //métodos add() protegidos para forçar o uso da Fábrica
+    void add(System* sys) override;
+    void add(Flow* flow) override;
 
 private:
     /**
      * @brief Construct a new ModelImpl object.
      * Initializes an empty model with no systems or flows.
+     * That constructor is private to enforce the use of the Factory Method (createModel).
+     * @param name Optional name for the model.
      */
-    ModelImpl();
-
-protected:
-    vector<System*> systems;
-    vector<Flow*> flows;
-
-    // Métodos add() protegidos para forçar o uso da Fábrica
-    void add(System* sys) override;
-    void add(Flow* flow) override;
+    ModelImpl(string name = "");
 
 public:
     /**

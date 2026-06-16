@@ -16,6 +16,8 @@ O framework é construído sobre três blocos estruturais fundamentais:
 
 ### Compilar o projeto
 Para gerar o binário dos testes funcionais, execute o comando `make` na raiz do projeto:
+Isso vai gerar os aquivos binarios e a biblioteca dinâmica necessária para rodar os testes funcionais e unitários.
+
 ```bash
 make
 ```

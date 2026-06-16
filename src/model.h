@@ -67,7 +67,7 @@ public:
      */
     virtual ~Model() {};
 
-    static Model& createModel();
+    static Model& createModel(string name = "");
     /**
      * @brief Factory Method to create a System.
      * @param name Name of the system.

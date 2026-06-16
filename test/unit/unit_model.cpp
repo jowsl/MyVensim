@@ -1,5 +1,4 @@
 #include "unit_model.h"
-
 #include "../../src/model.h"
 #include "../../src/system.h" 
 #include "../../src/flow.h"   
@@ -122,7 +121,7 @@ public:
         MockSystem* s2 = new MockSystem("Target", 0.0);
         MockFlow* f1 = new MockFlow("Mock", s1, s2, 10.0); 
 
-        model.add(s1);
+        model.add(s1); //erro aqui
         model.add(s2);
         model.add(f1);
 

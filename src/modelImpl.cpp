@@ -1,12 +1,15 @@
 #include "modelImpl.h"
 #include "systemImpl.h"
 
-ModelImpl::ModelImpl() {}
+vector<Model*> ModelImpl::models;
+
+ModelImpl::ModelImpl(string name) {}
 
 ModelImpl::~ModelImpl() {
     // Reaproveita a lógica do clear para evitar repetição de código
     clear();
 }
+
 
 void ModelImpl::clear() {
     // Deleta a memória alocada na RAM antes de esvaziar os vetores
@@ -21,17 +24,19 @@ void ModelImpl::clear() {
     flows.clear();
 }
 
-Model& Model::createModel() {
-    return ModelImpl::getInstance();
+Model& Model::createModel(string name) { 
+    Model* m = new ModelImpl(name); 
+    ModelImpl::models.push_back(m); 
+    return *m; 
 }
 
 System& ModelImpl::createSystem(string id, double qtd) {
-    System* s = new SystemImpl(id, qtd); // A fábrica dá o 'new'
-    add(s); // Guarda no vetor interno
-    return *s; // Retorna a interface como referência
+    System* s = new SystemImpl(id, qtd); 
+    add(s); 
+    return *s;
 }
 
-// Impl da adição de Systems e Flows (agora protegidos)
+// Impl da adição de Systems e Flows
 void ModelImpl::add(System* sys) {
     systems.push_back(sys);
 }
