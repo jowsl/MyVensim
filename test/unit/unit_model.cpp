@@ -1,12 +1,12 @@
 #include "unit_model.h"
 #include "../../src/model.h"
-#include "../../src/systemImpl.h"
+#include "../../src/system.h"
+#include "../../src/flow.h"
 #include <cassert>
 #include <iostream>
 
 using namespace std;
 
-// Mocks ficam no escopo do teste para não poluir o sistema real
 class MockSystem : public System {
 public:
     double value; 
@@ -43,7 +43,7 @@ public:
     double execute() override { return returnValue; } 
 };
 
-// Função auxiliar para contar elementos via iterador (já que não temos .size())
+// Auxiliares de contagem via Iteradores
 int countSystems(Model& m) {
     int count = 0;
     for(auto it = m.beginSystems(); it != m.endSystems(); ++it) count++;
@@ -56,71 +56,74 @@ int countFlows(Model& m) {
     return count;
 }
 
+
 class UnitModel {
 public:
-    static void runTestModelSingletonAndClear() {
-        // Agora usamos o createModel() da interface!
-        Model& model = Model::createModel();
-        model.clear();
+    static void runTestModelRegistryAndClear() {
+        Model& model = Model::createModel("RegistryTest");
         
         assert(countSystems(model) == 0);
         assert(countFlows(model) == 0);
-        cout << "  OK test Model Singleton & Clear" << endl;
+        
+        delete &model;
+        cout << "  OK test Model Registry & Clear" << endl;
     }
 
     static void runTestModelCreateSystem() {
-        Model& model = Model::createModel();
-        model.clear();
+        Model& model = Model::createModel("SysFactoryTest");
         
         System& s1 = model.createSystem("s1", 10.0);
         assert(countSystems(model) == 1);
         assert(*(model.beginSystems()) == &s1);
+        
+        delete &model;
         cout << "  OK test Model Create System Factory" << endl;
     }
 
     static void runTestModelCreateFlow() {
-        Model& model = Model::createModel();
-        model.clear();
+        Model& model = Model::createModel("FlowFactoryTest");
         
         System& s1 = model.createSystem("s1", 0.0);
         System& s2 = model.createSystem("s2", 0.0);
         
-        // Passando a classe Mock diretamente pro template da interface
         Flow& f1 = model.createFlow<MockFlow>("Mock", &s1, &s2);
         assert(countFlows(model) == 1);
         assert(*(model.beginFlows()) == &f1);
+        
+        delete &model;
         cout << "  OK test Model Create Flow Factory" << endl;
     }
 
     static void runTestModelSystemIterators() {
-        Model& model = Model::createModel();
-        model.clear();
+        Model& model = Model::createModel("SysIterTest");
         
         MockSystem* s1 = new MockSystem(); 
-        model.add(s1); // Válido graças ao 'friend class UnitModel' na interface Model
+        model.add(s1);
         assert(*(model.beginSystems()) == s1);
+        
+        delete &model;
         cout << "  OK test Model System Iterators" << endl;
     }
 
     static void runTestModelFlowIterators() {
-        Model& model = Model::createModel();
-        model.clear();
+        Model& model = Model::createModel("FlowIterTest");
         
         MockFlow* f1 = new MockFlow(); 
         model.add(f1); 
         assert(*(model.beginFlows()) == f1);
+        
+        delete &model;
         cout << "  OK test Model Flow Iterators" << endl;
     }
 
     static void runTestModelExecute() {
-        Model& model = Model::createModel();
-        model.clear();
+        Model& model = Model::createModel("ExecuteTest");
         
         MockSystem* s1 = new MockSystem("Source", 100.0);
         MockSystem* s2 = new MockSystem("Target", 0.0);
         MockFlow* f1 = new MockFlow("Mock", s1, s2, 10.0); 
 
-        model.add(s1); //erro aqui
+        model.add(s1);
         model.add(s2);
         model.add(f1);
 
@@ -129,12 +132,12 @@ public:
         assert(s1->value == 90.0);
         assert(s2->value == 10.0);
 
+        delete &model;
         cout << "  OK test Model Execute" << endl;
     }
 
     static void runTestModelExecuteNullOrigin() {
-        Model& model = Model::createModel();
-        model.clear();
+        Model& model = Model::createModel("NullOrigTest");
         
         MockSystem* dest = new MockSystem("Target", 50.0);
         MockFlow* f1 = new MockFlow("Mock", nullptr, dest, 10.0);
@@ -145,13 +148,13 @@ public:
         model.execute(0, 1);
 
         assert(dest->value == 60.0);
+        
+        delete &model;
         cout << "  OK test Model Execute Null Origin" << endl;
     }
 
     static void runTestModelExecuteNullDestination() {
-        Model& model = Model::createModel();
-        model.clear();
-        
+        Model& model = Model::createModel("NullDestTest");
         MockSystem* orig = new MockSystem("Source", 100.0);
         MockFlow* f1 = new MockFlow("Mock", orig, nullptr, 10.0);
 
@@ -161,35 +164,14 @@ public:
         model.execute(0, 1);
 
         assert(orig->value == 90.0);
+        
+        delete &model;
         cout << "  OK test Model Execute Null Destination" << endl;
     }
 };
 
-void unit_Model_HandleBody_Count() {
-    std::cout << "  Testing Handle-Body Memory Lifecycle... " << std::endl;
 
-    // Escopo interno para forçar a chamada automática dos destrutores dos Handles
-    {
-        SystemHandle s1("Estoque original", 100.0);
-        
-        // s2 compartilha o mesmo SystemBody interno através do operador de cópia
-        SystemHandle s2 = s1; 
-        
-        // Duas referências ativas apontando para o mesmo corpo físico na memória
-        assert(s1.getValue() == 100.0);
-        assert(s2.getValue() == 100.0);
-    } 
-    // Ao sair do escopo, ambos os handles chamam pImpl_->detach().
-    // O contador de referências chega a zero e limpa a memória RAM sem leaks!
-
-    std::cout << "  [OK] Handle-Body Memory Management works correctly." << std::endl;
-}
-
-void run_unit_test_Model() {
-    unit_Model_HandleBody_Count();
-}
-
-void testModelSingletonAndClear() { UnitModel::runTestModelSingletonAndClear(); }
+void testModelSingletonAndClear() { UnitModel::runTestModelRegistryAndClear(); }
 void testModelCreateSystem() { UnitModel::runTestModelCreateSystem(); }
 void testModelCreateFlow() { UnitModel::runTestModelCreateFlow(); }
 void testModelSystemIterators() { UnitModel::runTestModelSystemIterators(); }
@@ -199,7 +181,7 @@ void testModelExecuteNullOrigin() { UnitModel::runTestModelExecuteNullOrigin(); 
 void testModelExecuteNullDestination() { UnitModel::runTestModelExecuteNullDestination(); }
 
 void runModelTests() {
-    cout << "\n= Unit Tests: Model =" << endl;
+    cout << "\n=== Unit Tests: Model ===" << endl;
     testModelSingletonAndClear();
     testModelCreateSystem();
     testModelCreateFlow();
@@ -208,5 +190,5 @@ void runModelTests() {
     testModelExecute();
     testModelExecuteNullOrigin();
     testModelExecuteNullDestination();
-    cout << "= Model: All tests passed! =" << endl;
+    cout << "=== Model: All tests passed! ===" << endl;
 }

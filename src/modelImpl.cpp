@@ -7,26 +7,23 @@ vector<Model*> ModelImpl::models;
 ModelImpl::ModelImpl(string name) {}
 
 ModelImpl::~ModelImpl() {
-    // Reaproveita a lógica do clear para evitar repetição de código
     clear();
 }
 
 
 void ModelImpl::clear() {
-    // Deleta a memória alocada na RAM antes de esvaziar os vetores
     for (System* s : systems) {
         delete s;
     }
     for (Flow* f : flows) {
         delete f;
     }
-    // Esvazia os vetores
     systems.clear();
     flows.clear();
 }
 
 Model& Model::createModel(string name) { 
-    Model* m = new ModelImpl(name); 
+    Model* m = new ModelImpl(name);
     ModelImpl::models.push_back(m); 
     return *m; 
 }
@@ -89,15 +86,14 @@ void ModelImpl::execute(double time_ini, double time_final) {
 
 std::vector<Model*> ModelHandle::models;
 
-Model& Model::createModel(std::string name) {
-    Model* m = new ModelHandle(name);
-    ModelHandle::models.push_back(m);
-    return *m;
-}
 
 ModelBody::ModelBody(std::string name) : name(name) {}
 
 ModelBody::~ModelBody() {
+    clear();
+}
+
+void ModelBody::clear() {
     for (System* s : systems) delete s;
     for (Flow* f : flows) delete f;
     systems.clear();
@@ -134,6 +130,10 @@ ModelHandle::~ModelHandle() {
             break;
         }
     }
+}
+
+void ModelHandle::clear() {
+    this->pImpl_->clear();
 }
 
 System& ModelHandle::createSystem(std::string name, double value) {

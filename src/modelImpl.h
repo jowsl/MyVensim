@@ -68,6 +68,7 @@ public:
     ModelBody(std::string name = "");
     virtual ~ModelBody();
 
+    void clear();
     System& createSystem(std::string name, double value);
     void add(System* sys) { systems.push_back(sys); }
     void add(Flow* fl) { flows.push_back(fl); }
@@ -82,12 +83,19 @@ public:
 
 class ModelHandle : public Model, public Handle<ModelBody> {
     friend class Model;
+    friend class UnitModel; //para acessar metodos protegidos
+
 protected:
-    static std::vector<Model*> models;
+    static vector<Model*> models;
+    
+    void add(System* sys) override { this->pImpl_->add(sys); }
+    void add(Flow* flow) override { this->pImpl_->add(flow); }
+
 public:
-    ModelHandle(std::string name = "");
+    ModelHandle(string name = "");
     virtual ~ModelHandle();
 
+    void clear() override;
     System& createSystem(std::string name, double value) override;
     
     template <typename T_FLOW>
