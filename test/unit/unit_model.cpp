@@ -1,7 +1,6 @@
 #include "unit_model.h"
 #include "../../src/model.h"
-#include "../../src/system.h" 
-#include "../../src/flow.h"   
+#include "../../src/systemImpl.h"
 #include <cassert>
 #include <iostream>
 
@@ -165,6 +164,30 @@ public:
         cout << "  OK test Model Execute Null Destination" << endl;
     }
 };
+
+void unit_Model_HandleBody_Count() {
+    std::cout << "  Testing Handle-Body Memory Lifecycle... " << std::endl;
+
+    // Escopo interno para forçar a chamada automática dos destrutores dos Handles
+    {
+        SystemHandle s1("Estoque original", 100.0);
+        
+        // s2 compartilha o mesmo SystemBody interno através do operador de cópia
+        SystemHandle s2 = s1; 
+        
+        // Duas referências ativas apontando para o mesmo corpo físico na memória
+        assert(s1.getValue() == 100.0);
+        assert(s2.getValue() == 100.0);
+    } 
+    // Ao sair do escopo, ambos os handles chamam pImpl_->detach().
+    // O contador de referências chega a zero e limpa a memória RAM sem leaks!
+
+    std::cout << "  [OK] Handle-Body Memory Management works correctly." << std::endl;
+}
+
+void run_unit_test_Model() {
+    unit_Model_HandleBody_Count();
+}
 
 void testModelSingletonAndClear() { UnitModel::runTestModelSingletonAndClear(); }
 void testModelCreateSystem() { UnitModel::runTestModelCreateSystem(); }

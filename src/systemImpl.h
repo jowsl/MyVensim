@@ -3,6 +3,7 @@
 
 #include "system.h"
 #include <string>
+#include "handleBody.h"
 
 using namespace std;
 
@@ -53,5 +54,34 @@ public:
     void setValue(double value) override;
     double getValue() const override;
 };
+
+class SystemBody : public Body {
+protected:
+    std::string name;
+    double value;
+public:
+    SystemBody(std::string name = "", double value = 0.0) : name(name), value(value) {}
+    virtual ~SystemBody() {}
+
+    double getValue() const { return value; }
+    void setValue(double v) { value = v; }
+    std::string getName() const { return name; }
+    void setName(std::string n) { name = n; }
+};
+
+class SystemHandle : public System, public Handle<SystemBody> {
+public:
+    SystemHandle(std::string name = "", double value = 0.0) {
+        pImpl_->setName(name);
+        pImpl_->setValue(value);
+    }
+    virtual ~SystemHandle() {}
+
+    double getValue() const override { return pImpl_->getValue(); }
+    void setValue(double value) override { pImpl_->setValue(value); }
+    std::string getName() const override { return pImpl_->getName(); }
+    void setName(std::string name) override { pImpl_->setName(name); }
+};
+
 
 #endif
