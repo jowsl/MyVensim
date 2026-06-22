@@ -15,7 +15,10 @@ protected:
     string name;
 
 public:
-    TestFlow(string name = "") : name(name), origin(nullptr), destination(nullptr) {}
+    // Construtor ajustado para bater com os 3 parâmetros da Fábrica
+    TestFlow(string name = "", System* orig = nullptr, System* dest = nullptr) 
+        : name(name), origin(orig), destination(dest) {}
+    
     virtual ~TestFlow() {}
 
     void setOrigin(System* o) override { origin = o; }
@@ -29,18 +32,15 @@ public:
     void setName(string n) override { name = n; }
     string getName() const override { return name; }
     
-    // Mantém virtual puro para as classes matemáticas implementarem
     virtual double execute() = 0; 
 };
 
 
-/**
- * @brief Exponential flow implementation.
- * Transfers a percentage of the origin system value to the destination.
- */
+
 class ExponentialFlow : public TestFlow {
 public:
-    ExponentialFlow(string name = "") : TestFlow(name) {}
+    ExponentialFlow(string name = "", System* orig = nullptr, System* dest = nullptr) 
+        : TestFlow(name, orig, dest) {}
     
     double execute() override {
         if (getOrigin() != nullptr) {
@@ -50,13 +50,10 @@ public:
     }
 };
 
-/**
- * @brief Logistic flow implementation.
- * Computes a logistic transfer based on the destination system value.
- */
 class LogisticFlow : public TestFlow {
 public:
-    LogisticFlow(string name = "") : TestFlow(name) {}
+    LogisticFlow(string name = "", System* orig = nullptr, System* dest = nullptr) 
+        : TestFlow(name, orig, dest) {}
     
     double execute() override {
         if (getDestination() != nullptr) {
@@ -67,13 +64,10 @@ public:
     }
 };
 
-/**
- * @brief Complex flow implementation.
- * Uses the same transfer rule as the exponential flow for complex network tests.
- */
 class ComplexFlow : public TestFlow {
 public:
-    ComplexFlow(string name = "") : TestFlow(name) {}
+    ComplexFlow(string name = "", System* orig = nullptr, System* dest = nullptr) 
+        : TestFlow(name, orig, dest) {}
     
     double execute() override {
         if (getOrigin() != nullptr) {
@@ -83,10 +77,10 @@ public:
     }
 };
 
+
 void exponentialFunctionalTest() {
     cout << "MODELO EXPONENCIAL" << endl;
 
-    // 1. Cria um modelo novinho (sem precisar de clear)
     Model& model = Model::createModel("Exponencial");
 
     System& pop1 = model.createSystem("pop1", 100.0);
@@ -102,7 +96,6 @@ void exponentialFunctionalTest() {
     cout << "POP1 :" << (int)round(pop1.getValue() * 10000) << endl;
     cout << "POP2 :" << (int)round(pop2.getValue() * 10000) << endl;
 
-    // 2. Aciona o destrutor exigido pelo professor para limpar tudo!
     delete &model;
 
     cout << "Teste Exponencial: OK!\n" << endl;
